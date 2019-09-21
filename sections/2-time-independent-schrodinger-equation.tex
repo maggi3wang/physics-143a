@@ -1,0 +1,78 @@
+\section{2. Time-Independent Schr\"{o}dinger Equation} \hrule height 0.3pt \thinspace
+
+\subsection{\underline{2.1 Stationary States}}
+Separation of variables: $\Psi(x, t) = \psi(x) \varphi(t)$ \\
+
+$\varphi(t) = e^{-iEt/\hbar}$, separable solutions: $\Psi(x, t) = \psi(x) e^{-iEt / \hbar}$ \\
+
+Time-independent Schr\"{o}dinger equation:
+$$-\frac{\hbar^2 }{2m} \dv[2]{\psi}{x} + V \psi = E \psi $$ \\
+
+Why separable solutions? \\
+1. Stationary states - time-dependence cancels out
+    $$|\Psi(x,t)|^2 = \Psi^* \Psi = \psi^* e^{+iEt/\hbar} \psi e^{-iEt/\hbar} = |\Psi(x)|^2$$
+
+    Same thing happens in calculating the expectation value of any dynamical variable. Every expectation value is constant in time. \\
+
+2. There are states of definite total energy. The total energy (kinetic plus potential) is the Hamiltonian: $H(x, p) = \frac{p^2}{2m} + V(x)$. \\
+
+Hamiltonian operator: $\widehat{H} = -\frac{\hbar^2}{2m} \pdv[2]{}{x} + V(x)$ \\
+Variance of $H$: $\sigma_{H}^2 = \langle H^2 \rangle - \langle H \rangle ^2 = E^2 - E^2 = 0$ \\
+A separable solution has the property that every measurement of the total energy is certain to return the value $E$. \\
+
+3. The general solution is a linear combination of separable solutions. There is a different wave function for each allowed energy: $\Psi_1(x,t) = \psi_1(x) e^{-iE_1 t / \hbar}, \Psi_2(x,t) = \psi_2 (x) e^{-iE_2 t \hbar}, ...$
+
+Now the time dependent Schr\"{o}dinger equation has the property that any linear combo of solutions is itself a solution.
+
+$$\Psi(x, t) = \sum_{n=1}^{\infty} c_n \psi_n(x) e^{-iE_n t / \hbar} = \sum_{n=1}^{\infty} c_n \Psi_n(x, t)$$
+
+Euler's formula: $e^{i \theta} = \cos \theta + i \sin \theta$
+
+\subsection{\underline{2.2 The Infinite Square Well}}
+
+Suppose
+    $$V(x) = \begin{cases} 0, \textrm{if } 0 \leq x \leq a \\ \infty, \textrm{otherwise} \end{cases}$$
+
+Classic simple harmonic oscillator, $\psi(x) = A \sin(kx) + B \cos(kx)$ \\
+
+Boundary conditions \\
+
+$$E_n = \frac{\hbar^2 k_n^2}{2m} - \frac{n^2 \pi^2 \hbar^2}{2ma^2}$$
+
+$$\phi_n(x) = \sqrt(\frac{2}{a} \sin(\frac{n \pi}{a} x)$$
+
+$\phi_1$ is the ground state, others are excited states. \\
+
+Properties of $\phi_n(x)$: \\
+1. Alternatively even and odd. \\
+2. As you go up in energy, each successive state has one more node. \\
+3. They are mutually orthogonal, in the sense that $\int \psi_m(x)* \psi_n(x) dx = 0$ whenever $m \neq n$. \\
+
+$\int \psi_m (x)* \psi_n(x) dx = \delta_{mn}$
+where $\delta_{mn}$ (Kronecker delta) is 0 if $m \neq n$ and 1 if $m=n$. We say that the $\phi$'s are orthonormal.
+
+4. They are complete, in the sense that any other function, $f(x)$, can be expressed as a linear combination of them (Fourier series), Dirichlet's theorem:
+    $$f(x) = \sum_{n=1}^{\infty} c_n \psi_n(x) = \sqrt{\frac{2}{a}} \sum_{n=1}^{\infty} c_n \sin(\frac{n \pi}{a} x)$$
+
+Fourier's trick: $c_n = \int \psi_n(x)^* f(x) dx$ \\
+
+$|c_n|^2$ tells you the probability that a measurement of the energy would yield the value $E_n$. \\
+
+Sum of these probabilities should be 1: 
+    $$\sum_{n=1}^{\infty} |c_n|^2 = 1$$
+
+The expectation value of the energy is
+    $$\langle H \rangle = \sum_{n=1}^{\infty} |c_n|^2 E_n$$
+
+Conservation of energy in QM
+
+\subsection{\underline{2.3 The Harmonic Oscillator}}
+Hooke's law: $F = -kx = m \frac{d^2 x}{d t^2}$
+
+\subsection{\underline{2.4 The Free Particle}}
+
+\subsection{\underline{2.5 The Delta-Function Potential}}
+
+\subsection{\underline{2.6 The Finite Square Well}}
+
+

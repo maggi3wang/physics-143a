@@ -1,4 +1,4 @@
-\section{1. The Wave Function} \thinspace \hrule height 0.3pt
+\section{1. The Wave Function} \hrule height 0.3pt \thinspace
 
 \subsection{\underline{1.1 The Schr\"{o}dinger Equation}}
 
@@ -13,14 +13,29 @@ $\int_{a}^{b} |\Psi(x, t)|^2 dx = \left\{ \textrm{P of finding the particle btwn
 
 \subsection{\underline{1.3 Probability}}
 Standard deviation: $\sigma = \sqrt{\langle j^2 \rangle - \langle j \rangle ^2}$ \\
-Expectation value of $x$ given $\Psi$: $\langle x \rangle = \int x |\Psi|^2 dx$
+Expectation value of $x$ given $\Psi$: $\langle x \rangle = \int x |\Psi|^2 dx$ \\
+Probability current: $J(x, t)=\frac{i \hbar}{2m} (\Psi \pdv{\Psi^*}{x} - \Psi^* \pdv{\Psi}{x})$
 
 \subsection{\underline{1.4 Normalization}}
 
 $\int_{-\infty}^{+\infty} |\Psi (x, t)|^2 dx = 1$
 
 \subsection{\underline{1.5 Momentum}}
-For a particle in state $\Phi$, the expectation value of $x$ is \\
+For a particle in state $\Phi$, the expectation value of $x$ is
+    $$\langle x \rangle = \int_{-\infty}^{+\infty} x |\Psi(x, t)|^2 dx$$
+
+Momentum:
+    $$\langle p \rangle = m \frac{d \langle x \rangle}{dt} = -i \hbar \int (\Psi^* \pdv{\Psi}{x}) dx$$
+
+To calculate the expectation value of any quantity, $Q(x, p)$:
+$$\langle Q(x, p) \rangle = \int \Psi^* Q(x, \frac{\hbar}{i}, \pdv{}{x}) \Psi dx$$
+
+\subsection{\underline{1.6: The Uncertainty Principle}}
+The wavelength of $\Psi$ is related to the momentum of the particle by the de Broglie formula:
+    $$p = \frac{h}{\lambda} = \frac{2 \pi \hbar}{\lambda}$$
+
+The more precisely determined a particle's position is, the less precisely is its momentum. The Heisenberg's uncertainty principle:
+    $$\sigma_x \sigma_p \geq \frac{\hbar}{2}$$
 
 \subsection{\underline{Other: Blackbody Spectrum}}
 $E = hv = \hbar \omega$ \\
