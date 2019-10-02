@@ -17,6 +17,7 @@ Why separable solutions? \\
 2. There are states of definite total energy. The total energy (kinetic plus potential) is the Hamiltonian: $H(x, p) = \frac{p^2}{2m} + V(x)$. \\
 
 Hamiltonian operator: $\widehat{H} = -\frac{\hbar^2}{2m} \pdv[2]{}{x} + V(x)$ \\
+Thus the TISE can be written as $\widehat{H} \psi = E \psi$ \\
 Variance of $H$: $\sigma_{H}^2 = \langle H^2 \rangle - \langle H \rangle ^2 = E^2 - E^2 = 0$ \\
 A separable solution has the property that every measurement of the total energy is certain to return the value $E$. \\
 
@@ -39,11 +40,11 @@ Boundary conditions \\
 
 $$E_n = \frac{\hbar^2 k_n^2}{2m} - \frac{n^2 \pi^2 \hbar^2}{2ma^2}$$
 
-$$\phi_n(x) = \sqrt(\frac{2}{a} \sin(\frac{n \pi}{a} x)$$
+$$\psi_n(x) = \sqrt{\frac{2}{a}} \sin(\frac{n \pi}{a} x)$$
 
-$\phi_1$ is the ground state, others are excited states. \\
+$\psi_1$ is the ground state, others are excited states. \\
 
-Properties of $\phi_n(x)$: \\
+Properties of $\psi_n(x)$: \\
 1. Alternatively even and odd. \\
 2. As you go up in energy, each successive state has one more node. \\
 3. They are mutually orthogonal, in the sense that $\int \psi_m(x)* \psi_n(x) dx = 0$ whenever $m \neq n$. \\
@@ -55,6 +56,7 @@ where $\delta_{mn}$ (Kronecker delta) is 0 if $m \neq n$ and 1 if $m=n$. We say 
     $$f(x) = \sum_{n=1}^{\infty} c_n \psi_n(x) = \sqrt{\frac{2}{a}} \sum_{n=1}^{\infty} c_n \sin(\frac{n \pi}{a} x)$$
 
 Fourier's trick: $c_n = \int \psi_n(x)^* f(x) dx$ \\
+$$c_m = \frac{2}{a} \int_0^a f(x) \sin(\frac{m \pi x}{a}) dx$$
 
 $|c_n|^2$ tells you the probability that a measurement of the energy would yield the value $E_n$. \\
 
@@ -67,9 +69,40 @@ The expectation value of the energy is
 Conservation of energy in QM
 
 \subsection{\underline{2.3 The Harmonic Oscillator}}
-Hooke's law: $F = -kx = m \frac{d^2 x}{d t^2}$
+Hooke's law: $F = -kx = m \frac{d^2 x}{d t^2}$ \\
+Solution is $x(t) = A \sin(\omega t) + B \cos(\omega t)$, where $\omega = \sqrt{\frac{k}{m}}$, $V(x) = \frac{1}{2} k x^2$. \\
+
+Taylor series: $V(x) = V(x_0) + V'(x_0) (x - x_0) + \frac{1}{2} V''(x_0)(x- x_0)^2 + \cdots$ \\
+
+The Schr\"{o}diner Equation for the harmonic oscillator: $-\frac{\hbar^2}{2m} \dv[2]{\psi}{x} + \frac{1}{2} m \omega^2 x^2 \psi = E \psi$ \\
+Introduce $\xi \equiv \sqrt{\frac{m \omega}{\hbar}} x$, so we have $\dv[2]{\psi}{\xi} = (\xi^2 - K) \psi$, where $K \equiv \frac{2E}{\hbar \omega}$. \\
+
+The recursion formula: $a_{j+2} = \frac{(2j + 1 - K)}{(j + 1)(j + 2)} a_j$ \\
+The complete solution is $h(\xi) = h_{\text{even}}(\xi) + h_{\text{odd}}(\xi)$ \\
+
+$K = 2n + 1$, so $E_n = (n + \frac{1}{2}) \hbar \omega$ \\
+
+Recursion formula for allowed $K$: $a_{j+2} = \frac{-2(n - j)}{(j+1)(j+2)} a_j$ \\
+
+Hermite polynomials: $H_0 = 1$, $H_1 = 2 \xi$, $H_2 = 4 \xi^2 - 2$, $H_3 = 8 \xi^3 - 12 \xi$, $H_4 = 16 \xi^4 - 48 \xi^2 + 12$, $H_5 = 32 \xi^5 - 160 \xi^3 + 120 \xi$ \\
+
+The normalized stationary states: $\psi_n(x) = (\frac{m \omega}{\pi \hbar})^{1/4} \frac{1}{\sqrt{2^n n!}} H_n(\xi) e^{-\xi^2 / 2}$ \\
+
+Rodrigues formula: $H_n(\xi) = (-1)^n e^(\xi^2) (\dv{}{\xi})^n e^{-\xi^2}$
 
 \subsection{\underline{2.4 The Free Particle}}
+$$\pdv[2]{\xi}{x} = -k^2 \xi, k = \frac{\sqrt{2mE}}{\hbar}$$
+
+General solution to the TISE: wave packet, $\Psi(x, t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}{\infty} \psi(k) e^{i (kx - \frac{\hbar k^2}{2m} t)} dk$ \\
+$$\phi(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{+\infty} \Psi(x, 0) e^{-ikx} dx$$
+
+Plancherel's theorem: $$f(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} F(k) e^{ikx} dk \leftrightarrow F(k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(x) e^{-kx} dx$$
+
+$F(k)$ is the Fourier transform of $f(x)$; $f(x)$ is the inverse Fourier transform of $F(k)$ \\
+
+Phase velocity: speed of individual ripples; grouop velocity: speed of the envelope \\
+
+Dispersion relation: the formula for $\omega$ as a function of $k$
 
 \subsection{\underline{2.5 The Delta-Function Potential}}
 
