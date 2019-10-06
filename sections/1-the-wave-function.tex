@@ -2,7 +2,10 @@
 
 \subsection{\underline{1.1 The Schr\"{o}dinger Equation}}
 
-$i \hbar \pdv{\Psi}{t} = - \frac{h^2}{2m} \pdv[2]{\Psi}{x} + V \Psi$ \\
+$i \hbar \pdv{\Psi}{t} = - \frac{\hbar^2}{2m} \pdv[2]{\Psi}{x} + V \Psi$ \\ or
+$i \hbar \pdv{\Psi(\vec{r}, t)}{t} = -\frac{\hbar^2}{2m} \vec{\grad}^2 \Psi(\vec{r}, t) + V(\vec{r}, t) \Psi(\vec{r}, t)$ \\
+where $\vec{\grad}^2 = \pdv[2]{}{x} + \pdv[2]{}{y} + \pdv[3]{}{z}$ \\
+
 Solve for the particle's wave function $\Psi(x, t)$
 
 $\hbar = \frac{h}{2\pi} = 1.054572 \times 10^{-34}$ Js \\
@@ -18,7 +21,14 @@ Probability current: $J(x, t)=\frac{i \hbar}{2m} (\Psi \pdv{\Psi^*}{x} - \Psi^* 
 
 \subsection{\underline{1.4 Normalization}}
 
-$\int_{-\infty}^{+\infty} |\Psi (x, t)|^2 dx = 1$
+$\int_{-\infty}^{+\infty} |\Psi (x, t)|^2 dx = 1$ \\
+
+The Schr\"odinger equation produces unitary time evolution: \\
+$\vec{J} = - \frac{i \hbar}{2m} (\psi(\vec(r), t)^* \vec{\grad} \psi(\vec{r}, t) - \psi(\vec{r}, t) \vec{\grad} \psi(\vec{r}, t)^*)$ \\
+The probability density satisfies the continuity equation, $\pdv{}{t} \mathcal{P} + \vec{\grad} \cdot J = 0$ \\
+Because the probability for finding the particle at infinity is 0 (otherwise non-normalizable), $\vec{J} = 0$ at infinity. \\
+Therefore, $\dv{}{t} \int_{-\infty}^{\infty} \mathcal{P} d^3 \vec{r} = \dv{}{t} P = 0$, where $P$ is the total probability $\rightarrow$
+the total probability is constant in time.
 
 \subsection{\underline{1.5 Momentum}}
 For a particle in state $\Phi$, the expectation value of $x$ is
@@ -30,12 +40,24 @@ Momentum:
 To calculate the expectation value of any quantity, $Q(x, p)$:
 $$\langle Q(x, p) \rangle = \int \Psi^* Q(x, \frac{\hbar}{i}, \pdv{}{x}) \Psi dx$$
 
+Position and momentum operators: $\widehat{\vec{r}} = \vec{r}$, $\widehat{\vec{p}} = -i \hbar \vec{\grad}$
+
 \subsection{\underline{1.6: The Uncertainty Principle}}
 The wavelength of $\Psi$ is related to the momentum of the particle by the de Broglie formula:
     $$p = \frac{h}{\lambda} = \frac{2 \pi \hbar}{\lambda}$$
 
 The more precisely determined a particle's position is, the less precisely is its momentum. The Heisenberg's uncertainty principle:
     $$\sigma_x \sigma_p \geq \frac{\hbar}{2}$$
+
+Commutation relation btwn position and momentum:
+$$\widehat{p}_x (\widehat{x} \psi(x, t)) = -i \hbar \pdv{}{x} [x \psi(x, t)] = -i \hbar \psi(x, t) - i \hbar x \pdv{}{x} \psi(x, t)$$
+    $$\widehat{x} (\widehat{p}_x \psi(x, t)) = x (-i \hbar \pdv{}{x} \psi(x, t))$$
+
+    $\widehat{x} \widehat{p}_x - \widehat{p}_x \widehat{x} = [\widehat{x}, \widehat{p}_x] = i \hbar$
+
+    $[\widehat{x}_i, \widehat{p}_j ] = i \hbar \delta_{ij}, [\widehat{x}_i, \widehat{x}_j] = [\widehat{p}_i, \widehat{p}_j] = 0$, \\ where $\delta_{ij} = 1$ for $i=j$ and $\delta_{ij} = 0$ for $i \neq j$ \\
+
+Given three operators $\widehat{A}, \widehat{B}, \widehat{C}$, we have $[\widehat{A}, \widehat{B}\widehat{C}] = [\widehat{A}, \widehat{B}] \widehat{C} + \widehat{B} [\widehat{A}, \widehat{C}]$.
 
 \subsection{\underline{Other: Blackbody Spectrum}}
 $E = hv = \hbar \omega$ \\
@@ -44,3 +66,4 @@ Only two spin states occur (quantum number $m$ is +1 or -1). \\
 
 $\rho(\omega) = \frac{\hbar \omega^3}{\pi^2 c^3 (e^{\hbar \omega / {k_b T}} - 1)}$ \\
 Wien displacement law: $\lambda_{\text{max}} = \frac{2.90 \times 10^{-3} \text{mK}}{T}$ \\
+

@@ -1,18 +1,28 @@
 \section{2. Time-Independent Schr\"{o}dinger Equation} \hrule height 0.3pt \thinspace
 
 \subsection{\underline{2.1 Stationary States}}
-Separation of variables: $\Psi(x, t) = \psi(x) \varphi(t)$ \\
+Suppose PE is independent of time, $V(\vec{r}, t) = V(\vec{r})$. \\
+Separation of variables: $\Psi(\vec{r}, t) = \psi(\vec{r}) \varphi(t)$ \\
 
-$\varphi(t) = e^{-iEt/\hbar}$, separable solutions: $\Psi(x, t) = \psi(x) e^{-iEt / \hbar}$ \\
+Eq of motion for $\varphi(t)$: $\varphi(t) = e^{-iEt/\hbar}$ \\
 
-Time-independent Schr\"{o}dinger equation:
-$$-\frac{\hbar^2 }{2m} \dv[2]{\psi}{x} + V \psi = E \psi $$ \\
+Eq of motion for $\psi(\vec{r})$ is the time-independent Schr\"{o}dinger equation:
+$$-\frac{\hbar^2 }{2m} \dv[2]{\psi(\vec{r})}{x} + V(\vec{r}) \psi(\vec{r}) = E \psi(\vec{r}) $$ \\
+
+TD of the wavefunction that corresponds to the constant $E$ is easily written once we solve the TISE: $\Psi_{E}(\vec{r}, t) = \psi_{E}(\vec{r}) e^{-iEt / \hbar}$ \\
+
+\medskip
 
 Why separable solutions? \\
+
+\smallskip
+
 1. Stationary states - time-dependence cancels out
     $$|\Psi(x,t)|^2 = \Psi^* \Psi = \psi^* e^{+iEt/\hbar} \psi e^{-iEt/\hbar} = |\Psi(x)|^2$$
 
     Same thing happens in calculating the expectation value of any dynamical variable. Every expectation value is constant in time. \\
+
+\smallskip
 
 2. There are states of definite total energy. The total energy (kinetic plus potential) is the Hamiltonian: $H(x, p) = \frac{p^2}{2m} + V(x)$. \\
 
@@ -21,11 +31,15 @@ Thus the TISE can be written as $\widehat{H} \psi = E \psi$ \\
 Variance of $H$: $\sigma_{H}^2 = \langle H^2 \rangle - \langle H \rangle ^2 = E^2 - E^2 = 0$ \\
 A separable solution has the property that every measurement of the total energy is certain to return the value $E$. \\
 
+\smallskip
+
 3. The general solution is a linear combination of separable solutions. There is a different wave function for each allowed energy: $\Psi_1(x,t) = \psi_1(x) e^{-iE_1 t / \hbar}, \Psi_2(x,t) = \psi_2 (x) e^{-iE_2 t \hbar}, ...$
 
 Now the time dependent Schr\"{o}dinger equation has the property that any linear combo of solutions is itself a solution.
 
 $$\Psi(x, t) = \sum_{n=1}^{\infty} c_n \psi_n(x) e^{-iE_n t / \hbar} = \sum_{n=1}^{\infty} c_n \Psi_n(x, t)$$
+
+\smallskip
 
 Euler's formula: $e^{i \theta} = \cos \theta + i \sin \theta$
 
