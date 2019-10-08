@@ -13,40 +13,91 @@ TD of the wavefunction that corresponds to the constant $E$ is easily written on
 
 \medskip
 
-Why separable solutions? \\
+Properties of solutions for TI potentials: \\
 
-\smallskip
+\begin{itemize}[noitemsep,wide=0pt, leftmargin=\dimexpr\labelwidth + 2\labelsep\relax]
+%\setlength{\itemindent}{-1.5em}
+%\setlength{\parskip}{-1pt}
+%\setlength{\parsep}{0pt}   
+%\addtolength{\itemindent}{-2em}
 
-1. Stationary states - time-dependence cancels out
-    $$|\Psi(x,t)|^2 = \Psi^* \Psi = \psi^* e^{+iEt/\hbar} \psi e^{-iEt/\hbar} = |\Psi(x)|^2$$
+    \item \textbf{The constant $E$ must be real.}
+    
+    \item \textbf{Stationary wavefunction.} \\
+        $\mathcal{P}(\vec{r}, t) = |\psi_E(\vec{r}, t)|^2 = |\psi_E(\vec{r})|^2$ (TD cancels out).
 
-    Same thing happens in calculating the expectation value of any dynamical variable. Every expectation value is constant in time. \\
+    \item \textbf{Stationary wavefunction is a state of definite energy.} \\
+        The total energy (kinetic plus potential) is the Hamiltonian: $H(x, p) = \frac{p^2}{2m} + V(x)$. \\
 
-\smallskip
+        Hamiltonian operator: $\widehat{H} = -\frac{\hbar^2}{2m} \pdv[2]{}{x} + V(x)$ \\
+        Thus the TISE can be written as $\widehat{H} \psi = E \psi$ \\
 
-2. There are states of definite total energy. The total energy (kinetic plus potential) is the Hamiltonian: $H(x, p) = \frac{p^2}{2m} + V(x)$. \\
+        $\langle \widehat{H} \rangle = E$, $\langle \widehat{H} ^2 \rangle = E^2$, $\Delta E = \sqrt{\langle \widehat{H}^2 \rangle - \langle \widehat{H} \rangle ^2} = 0$
 
-Hamiltonian operator: $\widehat{H} = -\frac{\hbar^2}{2m} \pdv[2]{}{x} + V(x)$ \\
-Thus the TISE can be written as $\widehat{H} \psi = E \psi$ \\
-Variance of $H$: $\sigma_{H}^2 = \langle H^2 \rangle - \langle H \rangle ^2 = E^2 - E^2 = 0$ \\
-A separable solution has the property that every measurement of the total energy is certain to return the value $E$. \\
+    \item Spatial part of stationary wavefunction can be chosen to be real. \\
+        $\psi^*(\vec{r})$ is a soln w/ same $E$ \\
+        Solns can be chosen to be real: $\psi(\vec{r}) + \psi^*(\vec{r})$ and $\frac{\psi(\vec{r}) - \psi^*(\vec{r})}{i}$.
 
-\smallskip
+    \item \textbf{Parity symmetry: even and odd wavefunctions.}
+        Suppose $V(-\vec{r}) = V(\vec{r})$. Then, $\psi_E(-\vec{r})$ is a soln w the same energy. \\
+        $\psi_E(\vec{r}) + \psi_E(-\vec{r})$ is even under reflection, $\psi_E(\vec{r}) - \psi_E(-\vec{r})$ is odd. \\
+        When the potential is symmetric under reflection, we can choose the stationary states to be either even or odd under reflection.
 
-3. The general solution is a linear combination of separable solutions. There is a different wave function for each allowed energy: $\Psi_1(x,t) = \psi_1(x) e^{-iE_1 t / \hbar}, \Psi_2(x,t) = \psi_2 (x) e^{-iE_2 t \hbar}, ...$
+    \item \textbf{Orthogonality/orthonormality.} \\
+        $\int \psi_m (\vec{r})^* \psi_n (\vec{r}) d^3 \vec{r} = \delta_{mn}$ where $\delta_{mn}$ is 0 if $m \neq n$ and 1 if $m = n$.
 
-Now the time dependent Schr\"{o}dinger equation has the property that any linear combo of solutions is itself a solution.
+    \item \textbf{Linearity.} \\
+        The SE is linear. Given stationary states, a linear combo of these
+            $$\psi(\vec{r}, t) = \sum_{n} c_n \psi_n(\vec{r}, t) = \sum_n c_n \psi_n(\vec{r}) e^{-\frac{i}{\hbar} E_n t}$$
+        where $c_n$ are complex constants, is a solution to the TDSE 
+        $$i \hbar \pdv{\psi(\vec{r}, t)}{t} = \widehat{H} \psi(\vec{r}, t)$$
 
-$$\Psi(x, t) = \sum_{n=1}^{\infty} c_n \psi_n(x) e^{-iE_n t / \hbar} = \sum_{n=1}^{\infty} c_n \Psi_n(x, t)$$
+    \item \textbf{Time evolution.}
+        Given $$\psi(\vec{r}, 0) = \sum_n c_n \psi_n(\vec{r}, 0) = \sum_n c_n \psi_n (\vec{r})$$
+        at time $t$, the time evolution is 
+        $$\psi(\vec{r}, t) = \sum_n c_n \psi_n(\vec{r}, t) = \sum_n c_n \psi_n(\vec{r}) e^{-\frac{i}{\hbar} E_n t}$$
 
-\smallskip
+        Once we've expanded a given initial wavefunction in terms of a linear combo of the stationary wavefunctions $\psi_n(\vec{r})$, the time evolution follows simply by putting a factor of $e^{-i/\hbar E_n t}$ to each term containing $\psi_n(\vec{r})$.
 
-Euler's formula: $e^{i \theta} = \cos \theta + i \sin \theta$
+    \item \textbf{Normalization.} \\
+        The constant coefficients are constrained by $\sum_n |c_n|^2 = 1$
+
+    \item \textbf{Completeness.} \\
+        The stationary states form a complete set if
+            $$\sum_n \psi_n (\vec{r'}, t)^* \psi_{n} (\vec{r}, t) = \delta^3 (\vec{r'} - \vec{r})$$
+
+        where $\delta^3(\vec{r'} - \vec{r})$ is the Dirac-delta function in 3D defined by $$\int d^3 \vec{r'} \psi(\vec{r'}, t) \delta^3(\vec{r'} - \vec{r}) = \psi(\vec{r}, t)$$
+\end{itemize}
+
+\textbf{Euler's formula}: $e^{i \theta} = \cos \theta + i \sin \theta$
+
+\textbf{Delta function}: Given $f(x)$, $\delta(x - x')$ is defined as $f(x') = \int f(x) \delta(x - x') dx$ \\
+$\int \delta(x - x') dx = 1$, note this is not the area \\
+
+    $\delta_{\alpha}(x) = \frac{1}{\alpha \sqrt{\pi}} e^{-\frac{x^2}{\alpha^2}}$,
+    $\delta_{\alpha}(x) = \frac{1}{\pi x} \sin(\frac{x}{a})$, 
+    $\delta_{\alpha}(x) = \frac{\alpha}{\pi x^2} \sin^2 (\frac{x}{\alpha})$ \\
+
+\subsection{\underline{One-dimensional systems}}
+Wavefunction for a system containing a single particle of mass $m$ in 1D with TI potentials.
+    $$- \frac{\hbar^2}{2m} \dv[2]{\psi(x)}{x} + V(x) \psi(x) = E \psi(x)$$
+
+Once we find the wavefunction $\psi_E(x)$ of energy $E$, its time dependence follows easily:
+    $$\psi_E(x, t) = \psi_E(x) e^{-\frac{i}{\hbar} E t}$$
+
+\textbf{Boundary conditions} \\
+1. When the potential $V(x)$ has a finite jump at $x = a$, both $\psi(x)$ and $\psi'(x)$ are continuous across $x = a$.
+2. When the potential $V(x)$ has an infinite jump at $x = a$, $\psi(x)$ is continuous but $\psi'(x)$ is discontinuous across $x = a$.
+
+Futhermore, the wavefunction must vanish at $x = \pm \infty$ for a normalizable wavefunction.
 
 \subsection{\underline{2.2 The Infinite Square Well}}
-
 Suppose
     $$V(x) = \begin{cases} 0, \textrm{if } 0 \leq x \leq a \\ \infty, \textrm{otherwise} \end{cases}$$
+
+    $$\psi(x) = 0 \textrm{ for } x < 0 \textrm{ and } x > a$$
+For $0 \leq x \leq a$, we have $V(x) = 0$ and the Schr\"odinger equation reduces to 
+    $$\psi''(x) + k^2 \psi(x) = 0 \textrm{, where } k = \sqrt{\frac{2mE}{\hbar^2}} \textrm{ and } E > 0$$
 
 Classic simple harmonic oscillator, $\psi(x) = A \sin(kx) + B \cos(kx)$ \\
 
