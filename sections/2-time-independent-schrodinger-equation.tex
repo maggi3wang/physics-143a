@@ -69,7 +69,8 @@ Properties of solutions for TI potentials: \\
         where $\delta^3(\vec{r'} - \vec{r})$ is the Dirac-delta function in 3D defined by $$\int d^3 \vec{r'} \psi(\vec{r'}, t) \delta^3(\vec{r'} - \vec{r}) = \psi(\vec{r}, t)$$
 \end{itemize}
 
-\textbf{Euler's formula}: $e^{i \theta} = \cos \theta + i \sin \theta$
+\textbf{Euler's formula}: $e^{i \theta} = \cos \theta + i \sin \theta$ \\
+\textbf{sin and cos}: $\cos(\theta) = \frac{1}{2}(e^{i \theta} + e^{-i \theta})$, $\sin(\theta) = \frac{1}{2}(e^{i \theta} - e^{-i \theta})$ \\
 
 \textbf{Delta function}: Given $f(x)$, $\delta(x - x')$ is defined as $f(x') = \int f(x) \delta(x - x') dx$ \\
 $\int \delta(x - x') dx = 1$, note this is not the area \\
@@ -86,26 +87,27 @@ Once we find the wavefunction $\psi_E(x)$ of energy $E$, its time dependence fol
     $$\psi_E(x, t) = \psi_E(x) e^{-\frac{i}{\hbar} E t}$$
 
 \textbf{Boundary conditions} \\
-1. When the potential $V(x)$ has a finite jump at $x = a$, both $\psi(x)$ and $\psi'(x)$ are continuous across $x = a$.
+1. When the potential $V(x)$ has a finite jump at $x = a$, both $\psi(x)$ and $\psi'(x)$ are continuous across $x = a$. \\
 2. When the potential $V(x)$ has an infinite jump at $x = a$, $\psi(x)$ is continuous but $\psi'(x)$ is discontinuous across $x = a$.
 
 Futhermore, the wavefunction must vanish at $x = \pm \infty$ for a normalizable wavefunction.
 
 \subsection{\underline{2.2 The Infinite Square Well}}
-Suppose
     $$V(x) = \begin{cases} 0, \textrm{if } 0 \leq x \leq a \\ \infty, \textrm{otherwise} \end{cases}$$
 
     $$\psi(x) = 0 \textrm{ for } x < 0 \textrm{ and } x > a$$
-For $0 \leq x \leq a$, we have $V(x) = 0$ and the Schr\"odinger equation reduces to 
+For $0 \leq x \leq a$, $V(x) = 0$ and the Schr\"odinger equation reduces to 
     $$\psi''(x) + k^2 \psi(x) = 0 \textrm{, where } k = \sqrt{\frac{2mE}{\hbar^2}} \textrm{ and } E > 0$$
 
-Classic simple harmonic oscillator, $\psi(x) = A \sin(kx) + B \cos(kx)$ \\
+Classic \textbf{simple harmonic oscillator}: $\psi(x) = A \sin(kx) + B \cos(kx)$ \\
 
-Boundary conditions \\
+\textbf{Boundary conditions}: \\
+Continuity of $\psi(x)$ at $x = 0$ sets $\psi(0) = B = 0 \rightarrow \psi(x) = A \sin(kx)$ \\
+at $x = a$ sets $\psi(a) = A \sin(ka) = 0$
 
-$$E_n = \frac{\hbar^2 k_n^2}{2m} - \frac{n^2 \pi^2 \hbar^2}{2ma^2}$$
+Therefore, $$k_n = \frac{n \pi}{a}, n = 1, 2, ...$$
 
-$$\psi_n(x) = \sqrt{\frac{2}{a}} \sin(\frac{n \pi}{a} x)$$
+$$\psi_n(x) = \sqrt{\frac{2}{a}} \sin(\frac{n \pi}{a} x) \qquad E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{n^2 \pi^2 \hbar^2}{2ma^2}$$
 
 $\psi_1$ is the ground state, others are excited states. \\
 
@@ -134,26 +136,61 @@ The expectation value of the energy is
 Conservation of energy in QM
 
 \subsection{\underline{2.3 The Harmonic Oscillator}}
-Hooke's law: $F = -kx = m \frac{d^2 x}{d t^2}$ \\
-Solution is $x(t) = A \sin(\omega t) + B \cos(\omega t)$, where $\omega = \sqrt{\frac{k}{m}}$, $V(x) = \frac{1}{2} k x^2$. \\
+Hooke's law (mass $m$ w/ spring constant $k$): $F = -kx = m \frac{d^2 x}{d t^2}$ \\
+Solution is $x(t) = A \sin(\omega t) + B \cos(\omega t)$, where $\omega = \sqrt{\frac{k}{m}}$ \\
+Potential energy: $V(x) = \frac{1}{2} k x^2 = \frac{1}{2} m \omega^2 x^2$ \\
 
-Taylor series: $V(x) = V(x_0) + V'(x_0) (x - x_0) + \frac{1}{2} V''(x_0)(x- x_0)^2 + \cdots$ \\
+Expanding $V(x)$ in a \textbf{Taylor series} about the min: $V(x) = V(x_0) + V'(x_0) (x - x_0) + \frac{1}{2} V''(x_0)(x- x_0)^2 + \cdots$ \\
+Simple harmonic oscillaton, $V(x) \cong \frac{1}{2} V''(x_0) (x - x_0)^2, k = V''(x_0)$
 
-The Schr\"{o}diner Equation for the harmonic oscillator: $-\frac{\hbar^2}{2m} \dv[2]{\psi}{x} + \frac{1}{2} m \omega^2 x^2 \psi = E \psi$ \\
-Introduce $\xi \equiv \sqrt{\frac{m \omega}{\hbar}} x$, so we have $\dv[2]{\psi}{\xi} = (\xi^2 - K) \psi$, where $K \equiv \frac{2E}{\hbar \omega}$. \\
+The Schr\"{o}diner Equation for the harmonic oscillator: $$-\frac{\hbar^2}{2m} \dv[2]{\psi}{x} + \frac{1}{2} m \omega^2 x^2 \psi = E \psi$$ \\
 
+Boundary conditions: $\psi(-\infty) = 0, \qquad \psi(+\infty) = 0$
+
+\medskip
+
+\textit{\underline{1. Simplify notation with change of variables}} \\
+Introduce $\xi \equiv \sqrt{\frac{m \omega}{\hbar}} x$. \\
+SE becomes $\dv[2]{\psi}{\xi} = (\xi^2 - K) \psi$, where $K \equiv \frac{2E}{\hbar \omega}$. \\
+
+\textit{\underline{2. Asymptotic behavior}} \\
+
+Working in the large $\xi^2 >> K$ region, \\
+\textbf{Hermite eqn}: $H''(\xi) - 2 \xi H'(\xi) + (K - 1) H(\xi) = 0$ \\
+
+\textbf{Hermite polynomials}: $H_0 = 1$, $H_1 = 2 \xi$, $H_2 = 4 \xi^2 - 2$, $H_3 = 8 \xi^3 - 12 \xi$, $H_4 = 16 \xi^4 - 48 \xi^2 + 12$, $H_5 = 32 \xi^5 - 160 \xi^3 + 120 \xi$ \\
+
+\textit{\underline{3. Method of power series}} \\
 The recursion formula: $a_{j+2} = \frac{(2j + 1 - K)}{(j + 1)(j + 2)} a_j$ \\
-The complete solution is $h(\xi) = h_{\text{even}}(\xi) + h_{\text{odd}}(\xi)$ \\
-
-$K = 2n + 1$, so $E_n = (n + \frac{1}{2}) \hbar \omega$ \\
-
 Recursion formula for allowed $K$: $a_{j+2} = \frac{-2(n - j)}{(j+1)(j+2)} a_j$ \\
 
-Hermite polynomials: $H_0 = 1$, $H_1 = 2 \xi$, $H_2 = 4 \xi^2 - 2$, $H_3 = 8 \xi^3 - 12 \xi$, $H_4 = 16 \xi^4 - 48 \xi^2 + 12$, $H_5 = 32 \xi^5 - 160 \xi^3 + 120 \xi$ \\
+$$h(\xi) = a_0 + a_1 \xi + a_2 \xi^2 + \cdots = \sum_{j=0}^{\infty} a_j \xi^j$$
+The complete solution is $h(\xi) = h_{\text{even}}(\xi) + h_{\text{odd}}(\xi)$ \\
+
+\textit{\underline{4. Infinite series produces a diverging function}} \\
+For large $n$, we have $a_{n+2} \approx \frac{2}{n} a_n$ % $\frac{a_{n+2}}{a_n} \rightarrow \frac{2}{n}$
+
+\textit{\underline{5. Truncate series}} \\
+$K = 2n + 1$, so $E_n = (n + \frac{1}{2}) \hbar \omega$ \\
 
 The normalized stationary states: $\psi_n(x) = (\frac{m \omega}{\pi \hbar})^{1/4} \frac{1}{\sqrt{2^n n!}} H_n(\xi) e^{-\xi^2 / 2}$ \\
 
-Rodrigues formula: $H_n(\xi) = (-1)^n e^(\xi^2) (\dv{}{\xi})^n e^{-\xi^2}$
+Rodrigues formula: $H_n(\xi) = (-1)^n e^{\xi^2} (\dv{}{\xi})^n e^{-\xi^2}$
+
+These wavefunctions form a complete orthonormal set for square-integrable wavefunctions of the harmonic oscillator.\\
+
+\vspace{0em}
+\begin{Figure}
+    \raggedright
+    \includegraphics[width=0.4\columnwidth]{figures/harmonic_oscillator1.png}
+\end{Figure}
+
+\vspace{-11em}
+\begin{Figure}
+    \raggedleft
+    \includegraphics[width=0.4\columnwidth]{figures/harmonic_oscillator2.png}
+\end{Figure}
+\vspace{-1em}
 
 \subsection{\underline{2.4 The Free Particle}}
 $$\pdv[2]{\xi}{x} = -k^2 \xi, k = \frac{\sqrt{2mE}}{\hbar}$$
@@ -165,12 +202,112 @@ Plancherel's theorem: $$f(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} F(
 
 $F(k)$ is the Fourier transform of $f(x)$; $f(x)$ is the inverse Fourier transform of $F(k)$ \\
 
-Phase velocity: speed of individual ripples; grouop velocity: speed of the envelope \\
+Phase velocity: speed of individual ripples; group velocity: speed of the envelope \\
 
 Dispersion relation: the formula for $\omega$ as a function of $k$
 
 \subsection{\underline{2.5 The Delta-Function Potential}}
 
 \subsection{\underline{2.6 The Finite Square Well}}
+$V(x) = \begin{cases} -V_{0}, \textrm{for } -a < x < a \\ 0, \textrm{for } |x| > a \end{cases},$ 
 
+\vspace{-5em}
+\begin{Figure}
+    \raggedleft
+    \includegraphics[width=0.3\columnwidth]{figures/finite_square_well.png}
+\end{Figure}
+\vspace{-2em}
+
+where $V_0$ is a positive constant.
+
+Both bound states ($E < 0$) and scattering states ($E > 0$). \\
+
+\textit{\underline{Bound states}}: \\
+Potential is piecewise and discontinuous, can split into regions. \\
+
+\textbf{\textit{REGION I}}
+$$-\frac{\hbar}{2m} \dv[2]{\psi}{x} = E \psi, \textrm{ or } \psi''_{I}(x) - \kappa^2 \psi_{I}(x) = 0, \qquad \kappa \equiv \sqrt{-\frac{2mE}{\hbar}}$$
+where $E < 0$ for a bound state. \\
+General sol: $\psi_{I}(x) = Ae^{-\kappa x} + B e^{\kappa x}$. \\
+$x = -\infty \rightarrow \psi(x) = 0$, so $A = 0$, and we have $\psi_{I}(x) = Be^{\kappa x}$
+
+\smallskip
+
+\textbf{\textit{REGION II}} \\
+$$-\frac{\hbar^2}{2m} \dv[2]{\psi}{x} - V_0 \psi = E \psi, \textrm{ or } \psi'' = -l^2 \psi, \qquad l \equiv \sqrt{\frac{2m (E + V_0)}{\hbar}}$$
+
+General sol: $\psi(x) = C \sin(lx) + D \cos(lx)$, for $-a < x < a$
+
+\smallskip
+
+\textbf{\textit{REGION III}} \\
+SE and general sol same as region I, but $x = \infty \rightarrow \psi(x) = 0$, so $G=0$ and $\psi_{III}(x) = Fe^{-\kappa x}$
+
+\medskip
+\hrule height 0.3pt \thinspace
+
+\textbf{Even bound states} \\
+$\psi(-x) = \psi(x)$, $\psi_{II}(x) = D \cos(lx)$ \\
+Bc the potential has only a finite discontinuity at $x = \pm a$, both $\psi$ and $\psi'$ must be continuous at $x = \pm a$.
+
+$x = a$, $\psi_{II}(a) = \psi_{III}(a)$ imposes $D \cos(la) = F e^{-\kappa a}$ \\
+
+$x = a$, $\psi'_{II}(a) = \psi'_{III}(a)'$ imposes $-lD \sin(la) = -\kappa F e^{-\kappa a}$ \\
+
+Continuity of $\psi(x)$ and $\psi'(x)$ at $x = -a$ does not add anything new. \\
+
+Dividing the above two, we get $\kappa = l \tan(la)$ \\
+This is a formula for the allowed energies, since $\kappa$ and $l$ are both functions of $E$. Let $z \equiv la$, and $z_0 \equiv \frac{a}{\hbar} \sqrt{2m V_0}$. $\kappa^2 + l^2 = 2m V_0 / \hbar^2$, so $\kappa a = \sqrt{{z_0}^2 - z^2}$. \\
+
+Transcendental eq for $z$ (and hence $E$) as a function of $z_0$ (which is a measure of size of well): $\tan z = \sqrt{(\frac{z_0}{z})^2 - 1}$
+
+\vspace{0em}
+\begin{Figure}
+    \raggedright
+    \includegraphics[width=0.6\columnwidth]{figures/even_finite_square_well.png}
+\end{Figure}
+\vspace{0em}
+
+\textbf{Odd bound states} \\
+$\psi_{II}(x) = C \sin(lx)$ \\
+
+$x = -a, \psi_{II}(-a) = \psi_{I}(-a)$ imposes $C \sin(la) = B e^{-\kappa a}$ \\
+$x = -a, \psi'_{II}(-a) = \psi'_{I}(-a)$ imposes $l C \cos(la) = -\kappa B e^{-\kappa a}$ \\
+
+Dividing the above two, $l \cot(la) = -\kappa$. \\
+Rewriting this in terms of $z$ and $z_0$, $$\cot(z) = - \sqrt{(\frac{z_0}{z})^2 - 1}$$
+
+Potential $V_{01}$ does not support an odd bound state, since there is no intersection pt, $V_{02}$ produces only one bound state, and $V_{03}$ produces two bound states. Finite well potential supports at least one even state, the ground state, and it may not support any of the excited states.
+
+\vspace{0em}
+\begin{Figure}
+    \raggedright
+    \includegraphics[width=0.6\columnwidth]{figures/odd_finite_square_well.png}
+\end{Figure}
+\vspace{0em}
+
+
+\medskip
+\hrule height 0.3pt \thinspace
+
+\textbf{Wide and deep well} \\
+$z_n \approx \frac{n \pi}{2}, n = 1, 2, 3, ...$. Using the def of $z$ and solving for $E$, $E_n = -V_0 + \frac{\hbar^2 \pi^2 n^2}{2m(2a)^2}, n = 1, 2, 3, ...$
+
+Thus, the energy levels of the infinite square well of width $2a$ are reproduced for $E_n - (-V_0) = E_n + V_0$, which is the energy above the bottom of the well. As $V_0 \rightarrow \infty$, finite sq well goes to infinite sq well.
+
+\vspace{0em}
+\begin{Figure}
+    \raggedright
+    \includegraphics[width=0.6\columnwidth]{figures/wide_deep_finite_square_well.png}
+\end{Figure}
+\vspace{0em}
+
+\textbf{Shallow and narrow well} \\
+Any shallow or narrow well supports at least one bound state. But we need at least $z_0 = \sqrt{\frac{2mV_0 a^2}{\hbar^2} \geq \frac{\pi}{2}}$ to support any odd state.
+
+\subsection{\underline{Gaussian integrals}}
+$$\int_{-\infty}^{\infty} e^{-ax^2} dx = \sqrt{\frac{\pi}{a}} \textrm{ and } \int_{0}^{\infty} e^{-ax^2} dx = \frac{1}{2} \sqrt{\frac{\pi}{a}}$$
+$$\int_{-\infty}^{\infty} x^{2n+1} e^{-ax^2} dx = 0 \textrm { for } n = 0, 1, 2, ...$$
+$$\int_{-\infty}^{\infty} x^{2n} e^{-ax^2} dx = (-1)^n \dv[n]{}{a} \sqrt{\frac{\pi}{a}} \textrm{ for } n = 0, 1, 2, ...$$
+$$\int_{-\infty}^{\infty} e^{-ax^2 + bx} dx = \sqrt{\frac{\pi}{a}} e^{\frac{b^2}{4a}}  \qquad  \int_{-\infty}^{\infty} x^n e^{-ax^2 + bx} dx = \dv[n]{}{b} \sqrt{\frac{\pi}{a}} e^{\frac{b^2}{4a}}$$
 
