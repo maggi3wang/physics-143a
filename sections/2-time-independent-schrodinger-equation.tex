@@ -16,11 +16,6 @@ TD of the wavefunction that corresponds to the constant $E$ is easily written on
 Properties of solutions for TI potentials: \\
 
 \begin{itemize}[noitemsep,wide=0pt, leftmargin=\dimexpr\labelwidth + 2\labelsep\relax]
-%\setlength{\itemindent}{-1.5em}
-%\setlength{\parskip}{-1pt}
-%\setlength{\parsep}{0pt}   
-%\addtolength{\itemindent}{-2em}
-
     \item \textbf{The constant $E$ must be real.}
     
     \item \textbf{Stationary wavefunction.} \\
@@ -105,7 +100,7 @@ Classic \textbf{simple harmonic oscillator}: $\psi(x) = A \sin(kx) + B \cos(kx)$
 Continuity of $\psi(x)$ at $x = 0$ sets $\psi(0) = B = 0 \rightarrow \psi(x) = A \sin(kx)$ \\
 at $x = a$ sets $\psi(a) = A \sin(ka) = 0$
 
-Therefore, $$k_n = \frac{n \pi}{a}, n = 1, 2, ...$$
+$$k_n = \frac{n \pi}{a}, n = 1, 2, ...$$
 
 $$\psi_n(x) = \sqrt{\frac{2}{a}} \sin(\frac{n \pi}{a} x) \qquad E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{n^2 \pi^2 \hbar^2}{2ma^2}$$
 
@@ -160,37 +155,51 @@ Working in the large $\xi^2 >> K$ region, \\
 
 \textbf{Hermite polynomials}: $H_0 = 1$, $H_1 = 2 \xi$, $H_2 = 4 \xi^2 - 2$, $H_3 = 8 \xi^3 - 12 \xi$, $H_4 = 16 \xi^4 - 48 \xi^2 + 12$, $H_5 = 32 \xi^5 - 160 \xi^3 + 120 \xi$ \\
 
-\textit{\underline{3. Method of power series}} \\
-The recursion formula: $a_{j+2} = \frac{(2j + 1 - K)}{(j + 1)(j + 2)} a_j$ \\
-Recursion formula for allowed $K$: $a_{j+2} = \frac{-2(n - j)}{(j+1)(j+2)} a_j$ \\
+\textit{\underline{3. Method of power series}}
 
-$$h(\xi) = a_0 + a_1 \xi + a_2 \xi^2 + \cdots = \sum_{j=0}^{\infty} a_j \xi^j$$
-The complete solution is $h(\xi) = h_{\text{even}}(\xi) + h_{\text{odd}}(\xi)$ \\
+\begin{vwcol}[widths={0.7,0.3},sep=.1cm,rule=0pt,indent=0em]
+
+The recursion formula: $a_{j+2} = \frac{(2j + 1 - K)}{(j + 1)(j + 2)} a_j$ \\
+Recursion formula for allowed $K$: \\ $a_{j+2} = \frac{-2(n - j)}{(j+1)(j+2)} a_j$ \\
+
+$h(\xi) = a_0 + a_1 \xi + a_2 \xi^2 + \cdots = \sum_{j=0}^{\infty} a_j \xi^j$ \\
+$h(\xi) = h_{\text{even}}(\xi) + h_{\text{odd}}(\xi)$ \\
+
+\columnbreak
+
+\vspace{-1em}
+\begin{Figure}
+    \raggedright
+    \includegraphics[width=0.3\columnwidth]{figures/harmonic_oscillator1.png}
+\end{Figure}
+\vspace{-1em}
+
+\end{vwcol}
 
 \textit{\underline{4. Infinite series produces a diverging function}} \\
-For large $n$, we have $a_{n+2} \approx \frac{2}{n} a_n$ % $\frac{a_{n+2}}{a_n} \rightarrow \frac{2}{n}$
 
-\textit{\underline{5. Truncate series}} \\
+For large $n$, we have $a_{n+2} \approx \frac{2}{n} a_n$ 
+
+\textit{\underline{5. Truncate series}}
+
+\begin{vwcol}[widths={0.8,0.2},sep=0cm,rule=0pt,indent=0em]
+
 $K = 2n + 1$, so $E_n = (n + \frac{1}{2}) \hbar \omega$ \\
-
-The normalized stationary states: $\psi_n(x) = (\frac{m \omega}{\pi \hbar})^{1/4} \frac{1}{\sqrt{2^n n!}} H_n(\xi) e^{-\xi^2 / 2}$ \\
+The normalized stationary states: \\
+$\psi_n(x) = (\frac{m \omega}{\pi \hbar})^{1/4} \frac{1}{\sqrt{2^n n!}} H_n(\xi) e^{-\xi^2 / 2}$ \\
 
 Rodrigues formula: $H_n(\xi) = (-1)^n e^{\xi^2} (\dv{}{\xi})^n e^{-\xi^2}$
 
-These wavefunctions form a complete orthonormal set for square-integrable wavefunctions of the harmonic oscillator.\\
+\columnbreak
 
-\vspace{0em}
+\vspace{-1em}
 \begin{Figure}
     \raggedright
-    \includegraphics[width=0.4\columnwidth]{figures/harmonic_oscillator1.png}
+    \includegraphics[width=0.2\columnwidth]{figures/harmonic_oscillator2.png}
 \end{Figure}
+\vspace{0em}
 
-\vspace{-11em}
-\begin{Figure}
-    \raggedleft
-    \includegraphics[width=0.4\columnwidth]{figures/harmonic_oscillator2.png}
-\end{Figure}
-\vspace{-1em}
+\end{vwcol}
 
 \subsection{\underline{2.4 The Free Particle}}
 $$\pdv[2]{\xi}{x} = -k^2 \xi, k = \frac{\sqrt{2mE}}{\hbar}$$
@@ -207,6 +216,25 @@ Phase velocity: speed of individual ripples; group velocity: speed of the envelo
 Dispersion relation: the formula for $\omega$ as a function of $k$
 
 \subsection{\underline{2.5 The Delta-Function Potential}}
+
+\textbf{Dirac delta function} is an infinitely high, infinitesimally narrow spike at the origin, whose area is 1:
+
+    $$\delta(x) = \begin{cases} 0, \textrm{if } x \neq 0 \\ \infty, \textrm{if } x = 0 \end{cases}$$
+
+$f(x) \delta(x - a) = f(a) \delta(x - a)$ bc the product is 0 anyway except at $a$. \\
+
+In particular, $\int_{-\infty}^{\infty} f(x) \delta(x-a) dx = f(a)$. $a - \epsilon$ to $a + \epsilon$ would do, for any $\epsilon > 0$.
+
+Consider $V(x) = -\alpha \delta(x)$, where $\alpha$ is some positive constant. \\
+
+$$-\frac{\hbar^2}{2m} \dv[2]{\psi}{x} - \alpha \delta(x) \psi = E \psi$$
+
+\textit{Bound states (E < 0)}: \\
+
+\textit{Scattering states (E > 0)}: \\
+
+%For $x < 0$ the SE reads $$\dv[2]{\psi}{x} = -\frac{2mE}{\hbar^2} \psi = -k^2 \psi$$
+
 
 \subsection{\underline{2.6 The Finite Square Well}}
 $V(x) = \begin{cases} -V_{0}, \textrm{for } -a < x < a \\ 0, \textrm{for } |x| > a \end{cases},$ 
@@ -261,13 +289,6 @@ This is a formula for the allowed energies, since $\kappa$ and $l$ are both func
 
 Transcendental eq for $z$ (and hence $E$) as a function of $z_0$ (which is a measure of size of well): $\tan z = \sqrt{(\frac{z_0}{z})^2 - 1}$
 
-\vspace{0em}
-\begin{Figure}
-    \raggedright
-    \includegraphics[width=0.6\columnwidth]{figures/even_finite_square_well.png}
-\end{Figure}
-\vspace{0em}
-
 \textbf{Odd bound states} \\
 $\psi_{II}(x) = C \sin(lx)$ \\
 
@@ -277,33 +298,48 @@ $x = -a, \psi'_{II}(-a) = \psi'_{I}(-a)$ imposes $l C \cos(la) = -\kappa B e^{-\
 Dividing the above two, $l \cot(la) = -\kappa$. \\
 Rewriting this in terms of $z$ and $z_0$, $$\cot(z) = - \sqrt{(\frac{z_0}{z})^2 - 1}$$
 
-Potential $V_{01}$ does not support an odd bound state, since there is no intersection pt, $V_{02}$ produces only one bound state, and $V_{03}$ produces two bound states. Finite well potential supports at least one even state, the ground state, and it may not support any of the excited states.
+$V_{1}$ does not support an odd bound state, since there is no intersection pt, $V_{2}$ produces only one bound state, and $V_{3}$ produces two bound states. Finite well potential supports at least one even state, the ground state, and it may not support any of the excited states.
 
 \vspace{0em}
 \begin{Figure}
     \raggedright
-    \includegraphics[width=0.6\columnwidth]{figures/odd_finite_square_well.png}
+    \includegraphics[width=0.5\columnwidth]{figures/even_finite_square_well.png}
 \end{Figure}
-\vspace{0em}
+\vspace{-1em}
 
+\vspace{-9em}
+\begin{Figure}
+    \raggedleft
+    \includegraphics[width=0.5\columnwidth]{figures/odd_finite_square_well.png}
+\end{Figure}
+\vspace{-1em}
 
 \medskip
 \hrule height 0.3pt \thinspace
 
 \textbf{Wide and deep well} \\
-$z_n \approx \frac{n \pi}{2}, n = 1, 2, 3, ...$. Using the def of $z$ and solving for $E$, $E_n = -V_0 + \frac{\hbar^2 \pi^2 n^2}{2m(2a)^2}, n = 1, 2, 3, ...$
+
+\begin{vwcol}[widths={0.6,0.4},sep=.1cm,rule=0pt,indent=0em] 
+$z_n \approx \frac{n \pi}{2}, n = 1, 2, 3, ...$. \\
+
+Using the def of $z$ and solving for $E$, 
+$E_n = -V_0 + \frac{\hbar^2 \pi^2 n^2}{2m(2a)^2}, n = 1, 2, ...$
 
 Thus, the energy levels of the infinite square well of width $2a$ are reproduced for $E_n - (-V_0) = E_n + V_0$, which is the energy above the bottom of the well. As $V_0 \rightarrow \infty$, finite sq well goes to infinite sq well.
 
-\vspace{0em}
+\columnbreak
+
+\vspace{-1em}
 \begin{Figure}
-    \raggedright
-    \includegraphics[width=0.6\columnwidth]{figures/wide_deep_finite_square_well.png}
+ \raggedright
+ \includegraphics[width=0.4\columnwidth]{figures/wide_deep_finite_square_well.png}
 \end{Figure}
-\vspace{0em}
+\vspace{-1em}
+
+\end{vwcol}
 
 \textbf{Shallow and narrow well} \\
-Any shallow or narrow well supports at least one bound state. But we need at least $z_0 = \sqrt{\frac{2mV_0 a^2}{\hbar^2} \geq \frac{\pi}{2}}$ to support any odd state.
+Any shallow or narrow well supports at least one bound state. But we need at least $z_0 = \sqrt{\frac{2mV_0 a^2}{\hbar^2}} \geq \frac{\pi}{2}$ to support any odd state.
 
 \subsection{\underline{Gaussian integrals}}
 $$\int_{-\infty}^{\infty} e^{-ax^2} dx = \sqrt{\frac{\pi}{a}} \textrm{ and } \int_{0}^{\infty} e^{-ax^2} dx = \frac{1}{2} \sqrt{\frac{\pi}{a}}$$
