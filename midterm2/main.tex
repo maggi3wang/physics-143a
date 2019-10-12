@@ -1,0 +1,128 @@
+\documentclass[8pt,landscape]{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{soul}
+\usepackage{multicol}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage[landscape]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{latexsym, marvosym}
+\usepackage{pifont}
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[bottom]{footmisc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{physics}
+ \usepackage{esint}
+\setlist[description]{leftmargin=0pt}
+\usepackage{xfrac}
+\usepackage[pdftex,
+            pdfauthor={Maggie Wang},
+            pdftitle={143a Cheat Sheet},
+            pdfsubject={Cheat sheet for Physics 143a},
+            pdfkeywords={cheatsheet} {pdf} {cheat} {sheet}
+            ]{hyperref}
+\usepackage{relsize}
+\usepackage{graphicx,wrapfig,lipsum}
+\usepackage{rotating}
+\usepackage{vwcol}  
+
+% FONT
+\renewcommand{\familydefault}{\sfdefault}
+
+ \newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+    \def\independenT#1#2{\mathrel{\setbox0\hbox{$#1#2$}%
+    \copy0\kern-\wd0\mkern4mu\box0}} 
+            
+\newcommand{\noin}{\noindent}    
+
+\geometry{top=.19in,left=.2in,right=.2in,bottom=.5in}
+
+% Turn on the style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% Clear the header and footer
+\fancyhead{}
+\fancyfoot{}
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{\thepage}
+
+\setcounter{secnumdepth}{0}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+% -----------------------------------------------------------------------
+
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\subsubsection}{2pt}{\parskip}{-\parskip}
+
+\titleformat{\section}
+{\color{blue}\normalfont\scriptsize\bfseries}
+{\color{blue}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{Mulberry}\normalfont\scriptsize\bfseries}
+{\color{Mulberry}\thesection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{BlueViolet}\normalfont\scriptsize\bfseries}
+{\color{BlueViolet}\thesection}{1em}{}
+
+
+% https://tex.stackexchange.com/questions/352956/how-to-highlight-text-with-an-arbitrary-color
+\newcommand{\hlc}[2][yellow]{{%
+    \colorlet{foo}{#1}%
+    \sethlcolor{foo}\hl{#2}}%
+}
+
+\definecolor{yel}{rgb}{1,1,0.8}
+\definecolor{orng}{rgb}{1,0.9,0.7}
+\definecolor{grn}{rgb}{0.7,0.99,0.7}
+
+\begin{document}
+
+\raggedright
+\footnotesize
+\begin{multicols*}{3}
+
+% multicols parameters
+% These lengths are set only within the two main columns
+%\setlength{\columnseprule}{0.25pt}
+\setlength{\premulticols}{1pt}
+\setlength{\postmulticols}{1pt}
+\setlength{\multicolsep}{1pt}
+\setlength{\columnsep}{2pt}
+
+\setlength\abovedisplayskip{0pt}
+\setlength\belowdisplayskip{0pt}
+
+% \renewcommand{\vec}[1]{\mathbf{#1}}
+\let\oldhat\hat
+\renewcommand{\hat}[1]{\oldhat{\mathbf{#1}}}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TITLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% BEGIN CHEATSHEET
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sections/3-formalism.tex}
+
+\end{multicols*}
+\end{document}
