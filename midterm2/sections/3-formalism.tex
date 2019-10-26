@@ -1,13 +1,128 @@
-\section{3. Formalism} \hrule height 0.3pt \thinspace
+\section{3. Principles of QM} \hrule height 0.3pt \thinspace
 
-\subsection{\underline{3.1 Hilbert Space}}
+\subsection{\underline{Axiomatic principles}}
 
-\subsection{\underline{3.2 Observables}}
+\textbf{State vector axiom:} State vector at $t$ is ket $\psi(t)$, or $|\psi \rangle$, bra state.
 
-\subsection{\underline{3.3 Eigenfunctions of a Hermitian Operator}}
+\textbf{Probability axiom:} Given a system in state $|\psi \rangle$, a measurement will find it in state $|\phi \rangle$ with probability amplitude $\langle \phi | \psi \rangle$. 
 
-\subsection{\underline{3.4 Generalized Statistical Interpretation}}
+\textbf{Hermitian operator axiom:} Physical observable is represented by a linear and Hermitian operator.
 
-\subsection{\underline{3.5 The Uncertainty Principle}}
+\textbf{Measurement axiom:} Measurement of a physical observable results in eigenvalue of observable. Observable $\widehat{A}$, we have $\widehat{A} | a \rangle = a | a \rangle$, where $a$ is eigenvalue and $|a \rangle$ is eigenvector. Measurement of the physical quantity represented by $\widehat{A}$ collapses the state $|\psi \rangle$ before measurement into an eigenstate $|a \rangle$ of $\widehat{A}$.
 
-\subsection{\underline{3.6 Dirac Notation}}
+\textbf{Time evolution axiom:} $i \hbar \pdv{}{t} | \psi(t) \rangle = \widehat{H} |\psi(t) \rangle$, w/o consider $x$ or $p$.
+
+\subsection{\underline{Vector space}}
+State vector is neither in position nor momentum space. \\
+Basis vectors:
+$|0 \rangle = \begin{bmatrix}
+    1 \\
+    0 \\
+    \vdots \\
+    0
+    \end{bmatrix}$,
+$|1 \rangle = \begin{bmatrix}
+    1 \\
+    0 \\
+    \vdots \\
+    0
+    \end{bmatrix}$,
+$|n \rangle = \begin{bmatrix}
+    0 \\
+    0 \\
+    \vdots \\
+    1
+\end{bmatrix}$ (in $n$th pos).
+
+    \textbf{Linearity}: Because the SE is linear, given two states $|\psi_1(t) \rangle$ and $|\psi_2(t) \rangle$, $|\psi(t) \rangle = c_1 |\psi_1(t) \rangle + c_2|\psi_2(t)\rangle$ is also a sol. ($c$'s are complex).
+
+\textbf{Properties of a vector space}
+% This is pretty self-explanatory
+
+\textbf{Dual vector space}
+$c|\psi \rangle$ is mapped to $c* \langle \psi |$. Given a vector, $|\psi \rangle = \begin{bmatrix} \vdots \\ \alpha \\ \vdots \end{bmatrix}$, the dual vector is $\langle \psi | = \begin{bmatrix} \cdots & \alpha* & \cdots \end{bmatrix}$.
+
+Dual basis vectors are $\langle 0 | = \begin{bmatrix} 1 & 0 & \cdots \end{bmatrix}$, $\cdots$, $\langle n| \begin{bmatrix} 0 & \cdots 1 \end{bmatrix}$.
+
+\textbf{Inner product}: $\langle \phi | \psi \rangle = c$, where $c$ is complex.
+
+$\langle \phi | \psi \rangle = \langle \psi | \phi \rangle^*$ $\rightarrow$ $\langle \psi | \psi \rangle$ is real, positive, and finite for a normalizable ket vector. Can choose $\langle \psi | \psi \rangle = 1$. $\langle \psi_m | \psi_n \rangle = \delta_{mn}$
+
+\subsection{\underline{Operators}}
+A matrix operator $\widehat{A}$ acting on a state vector $|\psi \rangle$ transforms it into another state vector $|\phi \rangle$, $\widehat{A} |\psi \rangle = | \phi \rangle$. It is linear.
+
+\textbf{Properties of operators}
+% Also pretty self-explanatory.
+
+\textbf{Hermitian conjugate (Hermitian adjoint) operator in the dual space} \\
+Hermitian adjoint operator $\widehat{A}^{\dag}$ acts on the dual vector $\langle \psi |$ from the right as $\langle \psi | \widehat{A} ^{\dag} \rangle$, where $\widehat{A}^{\dag} = (\widehat{A})^{T*}$.
+$$(\widehat{A} | \psi \rangle)^{\dag} = |\psi \rangle^{\dag} \widehat{A}^{\dag} = \langle \psi | \widehat{A}^{\dag} \qquad \langle \psi | = | \psi \rangle^{\dag} \qquad \langle \psi | ^{\dag} = | \psi \rangle$$
+$$(\widehat{A}\widehat{B})^{\dag} = (\widehat{A} \widehat{B})^{T*} = (\widehat{B}^T \widehat{A}^T)^* = \widehat{B}^{T*} \widehat{A}^{T*} = \widehat{B}^{\dag} \widehat{A}^{\dag}, \quad (c\widehat{A})^{\dag} = c^* \widehat{A}^{\dag}$$
+
+\textbf{Outer product operators}
+$$| \psi \rangle \langle \phi | \qquad [|\psi \rangle \langle \phi |] \chi \rangle  = | \psi \rangle \langle \phi | \chi \rangle$$
+
+\textbf{Matrix elements of operators}
+$$\langle \phi | \widehat{A} | \psi \rangle \textrm{ (complex num)}$$
+
+Hermitian equiv to complex conj $\langle \phi | \widehat{A} | \psi \rangle^{\dag} = \langle \psi | \widehat{A}^{\dag} | \phi \rangle = \langle \phi | \widehat{A} | \psi \rangle ^*$
+
+\textbf{Hermitian operators}: $\widehat{A}^{\dag} = \widehat{A}$, so given $\widehat{A} | \phi \rangle$ in the vector space, we have $\langle \psi | \widehat{A}^{\dag} = \langle \phi | \widehat{A}$ in the dual vector space.
+
+\textbf{Matrix elements of a Hermitian operator}
+$$\langle \phi | \widehat{A} | \psi \rangle^{\dag} = \langle \phi | \widehat{A} | \psi \rangle^* = \langle \psi | \widehat{A}^{\dag} | \phi \rangle = \langle \psi | \widehat{A} | \phi \rangle$$
+
+Hermitian operator, real expectation vals: $\langle \psi | \widehat{A} | \phi \rangle ^* = \langle \psi | \widehat{A} | \phi \rangle \equiv \langle \widehat{A} \rangle$
+
+Same result whether $\widehat{A}$ acts to right or left: $\langle \phi | \widehat{A} | \psi \rangle = \langle \phi | \widehat{A}^{\dag} | \psi \rangle$
+
+\textbf{Eigenvalues and eigenvector of Hermitian operators}
+$$\widehat{A} |a_n \rangle = a_n | a_n \rangle \textrm{, where } a_n \textrm{ is real}$$
+
+With normalized eigenvectors, $\langle a_m | a_n \rangle = \delta_{mn}$. Use Gram-Schmidt if system has degenerate eigenvectors.
+
+\textbf{Completeness of eigenvector of a Hermitian operator}
+The set of $|a_n \rangle$ is complete if $\sum_n |\langle a_n | \psi \rangle|^2 = 1$.
+
+$\sum_n |a_n \rangle \langle a_n | = 1$ (identity operator)
+
+\textbf{Continuous spectra of a Hermitian operator}
+
+\textbf{Gram-Schmidth orthogonalization procedure}
+
+\subsection{\underline{Position and momentum representation}}
+
+\textbf{Operators and wavefunction in position representation}
+
+\textbf{Operators and wavefunction in momentum representation}
+
+\subsection{\underline{Commuting operators}}
+
+
+\subsection{\underline{Non-commuting operators and the general uncertainty principle}}
+
+\subsection{\underline{Time evolution of expectation value of an operator and Ehrenfest's theorem}}
+
+\subsection{\underline{The simple harmonic oscillator}}
+
+\textbf{Raising and lowering operators}
+
+\textbf{Normalized number state vectors}
+
+\textbf{Wavefunctions in position representation}
+
+\textbf{Classical simple harmonic oscillator}
+
+\textbf{The quantum simple harmonic oscillator and coherent state}
+
+%\subsection{\underline{3.1 Hilbert Space}}
+
+%\subsection{\underline{3.2 Observables}}
+
+%\subsection{\underline{3.3 Eigenfunctions of a Hermitian Operator}}
+
+%\subsection{\underline{3.4 Generalized Statistical Interpretation}}
+
+%\subsection{\underline{3.5 The Uncertainty Principle}}
+
+%\subsection{\underline{3.6 Dirac Notation}}
