@@ -122,19 +122,17 @@ $\langle x | \widehat{p} | x' \rangle = -i \hbar \pdv{}{x} \delta(x - x') = -i \
 
 $\widehat{p} = -i \hbar \pdv{}{x}$ is Hermitian, $\pdv{}{x}$ is not.
 
-$$\langle x | \widehat{p} | p \rangle = p \langle x | p \rangle = -i \hbar \pdv{}{x} \langle x | p \rangle$$
-
-The solution is $\langle x | p \rangle = \frac{1}{\sqrt{2 \pi \hbar}} e^{\frac{i}{\hbar} px}$. 
+$\langle x | \widehat{p} | p \rangle = p \langle x | p \rangle = -i \hbar \pdv{}{x} \langle x | p \rangle$. The solution is $\langle x | p \rangle = \frac{1}{\sqrt{2 \pi \hbar}} e^{\frac{i}{\hbar} px}$. 
 
 In 3D, $\langle \vec{r} | \vec{p} \rangle = \frac{1}{(2 \pi \hbar)^{3/2}} e^{\frac{i}{\hbar} \vec{p} \vec{r}}$.
 
-We can write the normalized wavefunction of definite position in momentum space, $\langle p | x \rangle = \langle x | p \rangle^*$.
-
-$\widehat{\vec{r}}$ is Hermitian and $\langle \phi | \widehat{\vec{r}}^{\dag} | \psi \rangle = \langle \phi | \widehat{\vec{r}} | \psi \rangle$.
+We can write the normalized wavefunction of definite position in momentum space, $\langle p | x \rangle = \langle x | p \rangle^*$. So, $\langle p | x \rangle = \frac{1}{\sqrt{2 \pi \hbar}} e^{-\frac{i}{\hbar} px}$ (particle moving to the left, or with momentum $-p$, in the momentum space).
 
 \textbf{Operators and wavefunction in position representation}
 
 Position and momentum operators in pos space: $\widehat{\vec{r}} = \vec{r}$, $\widehat{\vec{p}} = -i \hbar \vec{\grad}$.
+
+$\widehat{\vec{r}}$ is Hermitian and $\langle \phi | \widehat{\vec{r}}^{\dag} | \psi \rangle = \langle \phi | \widehat{\vec{r}} | \psi \rangle$.
 
 $\widehat{O}(\widehat{\vec{r}}, \widehat{\vec{p}}) = \widehat{O} (\vec{r}, -i \hbar \vec{\grad})$
 
@@ -148,19 +146,69 @@ $\langle \vec{r} | \widehat{O} | \psi(t) \rangle = \widehat{O} (\vec{r}, -i \hba
 
 \textbf{Operators and wavefunction in momentum representation}
 
-\subsection{\underline{Commuting operators}}
+$\widehat{\vec{r}} = i \hbar \vec{\grad}_{\vec{p}}$, or in 1D, $\widehat{x} = i \hbar \pdv{}{p}$, $\widehat{\vec{p}} = \vec{p}$, where $\vec{p}^* = \vec{p}$.
 
+$\widehat{\vec{O}} (\widehat{\vec{r}}, \widehat{\vec{p}}) = \widehat{O} (i \hbar \vec{\grad}_{\vec{p}}, \vec{p})$
+
+$\langle \widehat{O} \rangle = \langle \psi(t) | \widehat{O} | \psi(t) \rangle$ $\rightarrow$ $\langle \widehat{O} \rangle = \int d^2 \vec{p} \langle \psi(t) | \vec{p} \rangle \langle \vec{p} | \widehat{O} | \psi(t) \rangle$.
+
+$\psi(\vec{p}, t) = \langle \vec{p} | \psi(t) \rangle, \qquad \psi(\vec{p}, t)^* = \langle \vec{p} \psi(t) \rangle^* = \langle \psi(t) | \vec{p} \rangle$
+
+$\langle \vec{p} | \widehat{O} | \psi(t) \rangle = \widehat{O} (i \hbar \vec{\grad}_{\vec{p}}, \vec{p}), \langle \vec{O} \rangle = \int d^3 \vec{p} \psi(\vec{p}, t)^* \widehat{O}(i \hbar \vec{\grad}_{\vec{p}}, \vec{p}) \psi(\vec{p}, t)$.
+
+\smallskip \hrule height 0.3pt
+
+$i \hbar \pdv{}{t} | \psi(t) \rangle = \widehat{H} | \psi(t) \rangle$, where $\widehat{H} = \frac{\widehat{\vec{p}}^2}{2m} + V(\widehat{\vec{r}}, t)$ becomes $i \hbar \pdv{\psi(\vec{r}, t)}{t} = - \frac{\hbar^2}{2m} \vec{\grad^2} \psi(\vec{r}, t) + V(\vec{r}, t) \psi(\vec{r}, t)$
+
+\smallskip \hrule height 0.3pt
+
+\subsection{\underline{Commuting operators}}
+If $[\widehat{A}, \widehat{B}] = 0$ and the states are nondegenerate, $|\psi \rangle$ is a simultaneous eigenstate of $\widehat{A}$ and $\widehat{B}$.
+
+$|\psi \rangle = |ab \rangle$, and $\widehat{A} | ab \rangle = a | ab \rangle$, $\widehat{B} | ab \rangle = b | ab \rangle$
 
 \subsection{\underline{Non-commuting operators and the general uncertainty principle}}
 
+$(\Delta A)^2 (\Delta B)^2 \geq (\frac{1}{2i} \langle [ \widehat{A}, \widehat{B} ] \rangle)^2$
+
+Cannot construct simulatneous eigenstates (which correspond to definite eigenvalues) of non-commuting observables.
+
 \subsection{\underline{Time evolution of expectation value of an operator and Ehrenfest's theorem}}
+
+Ehrenfest's theorem: how observable $\widehat{O}$'s expectation value in state $|\psi(t) \rangle$ evolves in time, $\dv{}{t} \langle \widehat{O} \rangle = \langle \pdv{\widehat{O}}{t} \rangle + \frac{i}{\hbar} \langle [ \widehat{H}, \widehat{O} ] \rangle$
+
+For $\widehat{O} = \widehat{\vec{p}}$ and a Hamiltonian that is TI, $\dv{}{t} \langle \widehat{\vec{p}} \rangle = - \langle \vec{\grad} V(\widehat{\vec{r}}) \rangle$, which is just Newton's Second Law! $\rightarrow$ QM contains all of classical mech.
 
 \subsection{\underline{The simple harmonic oscillator}}
 
+$\widehat{H} = \frac{\vec{p}^2}{2m} + \frac{1}{2} m \omega^2 \widehat{x}^2$
+
 \textbf{Raising and lowering operators}
 
-\textbf{Normalized number state vectors}
+Lowering op: $\widehat{a} = \sqrt{\frac{m \omega}{2 \hbar}} (\widehat{x} + \frac{i}{m \omega} \widehat{p})$, Raising op: $\widehat{a}^{\dag} = \sqrt{\frac{m \omega}{2 \hbar}} (\widehat{x} - \frac{i}{m \omega} \widehat{p})$.
 
+$[\widehat{a}, \widehat{a}^{\dag}] = 1$ $\qquad$ $\widehat{x} = \sqrt{\frac{\hbar}{2 m \omega}} (\widehat{a}^{\dag} + \widehat{a})$, $\widehat{p} = i \sqrt{\frac{m \omega \hbar}{2}} (\widehat{a}^{\dag} - \widehat{a})$
+
+$\widehat{H} = (\widehat{N} + \frac{1}{2}) \hbar \omega$, where $\widehat{N} = \widehat{a}^{\dag} \widehat{a}$. Now $\widehat{N}$ is Hermitian, and $\widehat{N} | n \rangle = n | n \rangle$
+
+$[\widehat{N}, \widehat{a}] = -\widehat{a}$, $[\widehat{N}, \widehat{a}^{\dag}] = \widehat{a}^{\dag}$
+
+$\widehat{N} (\widehat{a} | n \rangle) = (n-1)(\widehat{a} | n \rangle)$, $\widehat{N} (\widehat{a}^{\dag} | n \rangle) = (n + 1)(\widehat{a}^{\dag} | n \rangle)$ 
+
+\textbf{Normalized number state vectors}
+Energy levels are not degenerate, so
+$|n - 1 \rangle = c_n \widehat{a} | n \rangle \rightarrow c_n = \frac{1}{\sqrt{n}} \rightarrow \widehat{a} | n \rangle = \sqrt{n} | n - 1 \rangle$.
+
+$|n + 1 \rangle = d_n \widehat{a}^{\dag} | n \rangle \rightarrow d_n = \frac{1}{\sqrt{n+1}} \rightarrow \widehat{a}^{\dag} | n \rangle = \sqrt{n+1} | n + 1 \rangle$
+
+Ground state: $|0 \rangle$, excited state: $|n \rangle = \frac{(\widehat{a}^{\dag})^n}{\sqrt{n!}} | 0 \rangle$, $n=0,1,2,...$
+
+\tiny
+$\langle n' | \widehat{x} | n \rangle = \sqrt{\frac{\hbar}{2m\omega}} \langle n' | (\widehat{a}^{\dag} + \widehat{a}) | n \rangle = \sqrt{\frac{\hbar}{2 m \omega}} (\sqrt{n+1} \delta_{n', n+1} + \sqrt{n} \delta_{n', n-1})$
+
+$\langle n' | \widehat{p} | n \rangle = i \sqrt{\frac{m \omega \hbar}{2}} \langle n' | (\widehat{a}^{\dag} - \widehat{a}) | n \rangle = i \sqrt{\frac{m \omega \hbar}{2}} (\sqrt{n+1} \delta_{n', n+1} - \sqrt{n} \delta_{n', n-1})$
+
+\scriptsize
 \textbf{Wavefunctions in position representation}
 
 \textbf{Classical simple harmonic oscillator}
