@@ -1,3 +1,5 @@
+\scriptsize
+
 \section{3. Principles of QM} \hrule height 0.3pt \thinspace
 
 \subsection{\underline{Axiomatic principles}}
@@ -18,19 +20,19 @@ Basis vectors:
 $|0 \rangle = \begin{bmatrix}
     1 \\
     0 \\
-    \vdots \\
+    : \\
     0
     \end{bmatrix}$,
 $|1 \rangle = \begin{bmatrix}
-    1 \\
     0 \\
-    \vdots \\
+    1 \\
+    : \\
     0
     \end{bmatrix}$,
 $|n \rangle = \begin{bmatrix}
     0 \\
     0 \\
-    \vdots \\
+    : \\
     1
 \end{bmatrix}$ (in $n$th pos).
 
@@ -40,9 +42,9 @@ $|n \rangle = \begin{bmatrix}
 % This is pretty self-explanatory
 
 \textbf{Dual vector space}
-$c|\psi \rangle$ is mapped to $c* \langle \psi |$. Given a vector, $|\psi \rangle = \begin{bmatrix} \vdots \\ \alpha \\ \vdots \end{bmatrix}$, the dual vector is $\langle \psi | = \begin{bmatrix} \cdots & \alpha* & \cdots \end{bmatrix}$.
+$c|\psi \rangle$ is mapped to $c* \langle \psi |$. Given a vector, $|\psi \rangle = \begin{bmatrix} : \\ \alpha \\ : \end{bmatrix}$, the dual vector is $\langle \psi | = \begin{bmatrix} \cdots & \alpha^* & \cdots \end{bmatrix}$.
 
-Dual basis vectors are $\langle 0 | = \begin{bmatrix} 1 & 0 & \cdots \end{bmatrix}$, $\cdots$, $\langle n| \begin{bmatrix} 0 & \cdots 1 \end{bmatrix}$.
+Dual basis vectors are $\langle 0 | = \begin{bmatrix} 1 & 0 & \cdots \end{bmatrix}$, $\cdots$, $\langle n| \begin{bmatrix} 0 & \cdots & 1 \end{bmatrix}$.
 
 \textbf{Inner product}: $\langle \phi | \psi \rangle = c$, where $c$ is complex.
 
@@ -59,8 +61,7 @@ Hermitian adjoint operator $\widehat{A}^{\dag}$ acts on the dual vector $\langle
 $$(\widehat{A} | \psi \rangle)^{\dag} = |\psi \rangle^{\dag} \widehat{A}^{\dag} = \langle \psi | \widehat{A}^{\dag} \qquad \langle \psi | = | \psi \rangle^{\dag} \qquad \langle \psi | ^{\dag} = | \psi \rangle$$
 $$(\widehat{A}\widehat{B})^{\dag} = (\widehat{A} \widehat{B})^{T*} = (\widehat{B}^T \widehat{A}^T)^* = \widehat{B}^{T*} \widehat{A}^{T*} = \widehat{B}^{\dag} \widehat{A}^{\dag}, \quad (c\widehat{A})^{\dag} = c^* \widehat{A}^{\dag}$$
 
-\textbf{Outer product operators}
-$$| \psi \rangle \langle \phi | \qquad [|\psi \rangle \langle \phi |] \chi \rangle  = | \psi \rangle \langle \phi | \chi \rangle$$
+\textbf{Outer product operators}: $| \psi \rangle \langle \phi | \qquad [|\psi \rangle \langle \phi |] \chi \rangle  = | \psi \rangle \langle \phi | \chi \rangle$
 
 \textbf{Matrix elements of operators}
 $$\langle \phi | \widehat{A} | \psi \rangle \textrm{ (complex num)}$$
@@ -76,23 +77,74 @@ Hermitian operator, real expectation vals: $\langle \psi | \widehat{A} | \phi \r
 
 Same result whether $\widehat{A}$ acts to right or left: $\langle \phi | \widehat{A} | \psi \rangle = \langle \phi | \widehat{A}^{\dag} | \psi \rangle$
 
-\textbf{Eigenvalues and eigenvector of Hermitian operators}
-$$\widehat{A} |a_n \rangle = a_n | a_n \rangle \textrm{, where } a_n \textrm{ is real}$$
+\textbf{Eigenvals and eigenvecs of Hermitian operators}: $\widehat{A} |a_n \rangle = a_n | a_n \rangle$
 
-With normalized eigenvectors, $\langle a_m | a_n \rangle = \delta_{mn}$. Use Gram-Schmidt if system has degenerate eigenvectors.
+Normalized eigvecs $\langle a_m | a_n \rangle = \delta_{mn}$. Gram-Schmidt, degenerate evec.
 
 \textbf{Completeness of eigenvector of a Hermitian operator}
-The set of $|a_n \rangle$ is complete if $\sum_n |\langle a_n | \psi \rangle|^2 = 1$.
-
+Set $|a_n \rangle$ is complete if $\sum_n |\langle a_n | \psi \rangle|^2 = 1$.
 $\sum_n |a_n \rangle \langle a_n | = 1$ (identity operator)
 
 \textbf{Continuous spectra of a Hermitian operator}
 
-\textbf{Gram-Schmidth orthogonalization procedure}
+Hermitian operator $\widehat{A}$, $\widehat{A} | a \rangle = a | a \rangle$, where $a$ is continuous. 
+
+$\int da' \langle a' | \widehat{A} | a \rangle = a \int da' \langle a' | a \rangle = \int da' a' \langle a' | a \rangle \rightarrow \langle a' | a \rangle = \delta (a' - a)$
+
+Continuous condition: $\int da | a \rangle \langle a | = 1$
+
+\textbf{Gram-Schmidt orthogonalization procedure}
+
+Eigval (like energy level) is $n$-fold degenerate: $n$ states w same eigval.
+
+Orthogonal eigenstates $\rightarrow$ no degeneracy.
+
+1. Normalize each state and define $\alpha_i = \frac{\alpha_i}{\sqrt{\langle a_i | a_i \rangle}}$. 2. $|\alpha'_1 \rangle = | \alpha_1 \rangle$.
+
+3. $|\alpha'_2 \rangle = \frac{|\alpha_2 \rangle - |\alpha_1 \rangle \langle \alpha_1 | \alpha_2 \rangle}{\sqrt{\langle \alpha_2 | \alpha_2 \rangle - \langle \alpha_1 | \alpha_2 \rangle \langle \alpha_2 | \alpha_1 \rangle}} = \frac{|\alpha_2 \rangle - |\alpha_1 \rangle \langle \alpha_1 | \alpha_2 \rangle}{\sqrt{1 - \langle \alpha_1 | \alpha_2 \rangle \langle \alpha_2 | \alpha_1 \rangle}}$
+
+4. Subtract components of $|\alpha_3 \rangle$ along $|\alpha_1 \rangle$ and $|\alpha_2 \rangle$, $|\alpha_3 \rangle - |\alpha_1 \rangle \langle \alpha_1 | \alpha_3 \rangle - | \alpha_2 \rangle \langle \alpha_2 | \alpha_3 \rangle$, normalize and promote to $|\alpha'_3 \rangle$.
+...
 
 \subsection{\underline{Position and momentum representation}}
 
+$\widehat{\vec{r}} | \vec{r} \rangle = \vec{r} | \vec{r} \rangle \quad \langle \vec{r'} | \vec{r} \rangle = \delta^3 (\vec{r'} - \vec{r}), \int d^3 \vec{r} |\vec{r} \rangle \langle \vec{r} | = 1, \langle \vec{r'} | \hat{\vec{r}} | \vec{r} \rangle = \vec{r} \delta^3(\vec{r'} - \vec{r})$
+
+$\widehat{\vec{p}} | \vec{p} \rangle = \vec{p} | \vec{p} \rangle \quad \langle \vec{p'} | \vec{p} \rangle = \delta^3(\vec{p'} - \vec{p}), \int d^3 \vec{p} | \vec{p} \rangle \langle \vec{p} | = 1$
+
+State vector $| \psi(t) \rangle$ in position space (scalar): $\langle \vec{r} | \psi(x, t) \rangle \equiv \psi(\vec{r}, t)$
+
+$\langle \psi | \widehat{\vec{p}} | \psi \rangle = \dv{}{t} \langle \psi | \widehat{\vec{r}} | \psi \rangle m$
+
+Representation of momentum operator in position space: $\widehat{\vec{p}} = -i \hbar \vec{\grad}$.
+
+$\langle x | \widehat{p} | x' \rangle = -i \hbar \pdv{}{x} \delta(x - x') = -i \hbar \pdv{}{x} \langle x | x' \rangle$.
+
+$\widehat{p} = -i \hbar \pdv{}{x}$ is Hermitian, $\pdv{}{x}$ is not.
+
+$$\langle x | \widehat{p} | p \rangle = p \langle x | p \rangle = -i \hbar \pdv{}{x} \langle x | p \rangle$$
+
+The solution is $\langle x | p \rangle = \frac{1}{\sqrt{2 \pi \hbar}} e^{\frac{i}{\hbar} px}$. 
+
+In 3D, $\langle \vec{r} | \vec{p} \rangle = \frac{1}{(2 \pi \hbar)^{3/2}} e^{\frac{i}{\hbar} \vec{p} \vec{r}}$.
+
+We can write the normalized wavefunction of definite position in momentum space, $\langle p | x \rangle = \langle x | p \rangle^*$.
+
+$\widehat{\vec{r}}$ is Hermitian and $\langle \phi | \widehat{\vec{r}}^{\dag} | \psi \rangle = \langle \phi | \widehat{\vec{r}} | \psi \rangle$.
+
 \textbf{Operators and wavefunction in position representation}
+
+Position and momentum operators in pos space: $\widehat{\vec{r}} = \vec{r}$, $\widehat{\vec{p}} = -i \hbar \vec{\grad}$.
+
+$\widehat{O}(\widehat{\vec{r}}, \widehat{\vec{p}}) = \widehat{O} (\vec{r}, -i \hbar \vec{\grad})$
+
+The expectation val of the observable should be indep of representation. In state $\psi(t)$, $\langle \widehat{O} \rangle = \langle \psi(t) | \widehat{O} | \psi(t) \rangle$.
+
+Insert $\int d^2 \vec{r} | \vec{r} \rangle \langle \vec{r} | = 1$ to get $\langle \widehat{O} \rangle = \int d^2 \vec{r} \langle \psi(t) | \vec{r} \rangle \langle \vec{r} | \widehat{O} | \psi(t) \rangle$
+
+$\psi(\vec{r}, t) = \langle \vec{r} | \psi(t) \rangle, \qquad \psi(\vec{r}, t)^* = \langle \vec{r} | \psi(t) \rangle^* = \langle \psi(t) | \vec{r} \rangle$,
+
+$\langle \vec{r} | \widehat{O} | \psi(t) \rangle = \widehat{O} (\vec{r}, -i \hbar \vec{\grad}) \psi(\vec{r}, t), \langle \vec{O} \rangle = \int d^3 \vec{r} \psi(\vec{r}, t)^* \vec{O}(\vec{r}, -i \hbar \vec{\grad}) \psi(\vec{r}, t)$
 
 \textbf{Operators and wavefunction in momentum representation}
 
