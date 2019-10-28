@@ -211,9 +211,29 @@ $\langle n' | \widehat{p} | n \rangle = i \sqrt{\frac{m \omega \hbar}{2}} \langl
 \scriptsize
 \textbf{Wavefunctions in position representation}
 
+$E_n = (n + \frac{1}{2}) \hbar \omega, n = 0, 1, 2, ...$
+
+The stationary wavefunctions of definite energy: $\psi_n(x) = \langle x | n \rangle$
+
+$\langle x' | \widehat{a}^{\dag} | x'' \rangle = \delta(x' - x'') \frac{1}{\sqrt{2} \sigma} (x'' - \sigma^2 \pdv{}{x''})$, where $\sigma \equiv \sqrt{\frac{\hbar}{m \omega}}$
+
+$\xi = \frac{x}{\sigma}, \qquad \langle x | n \rangle = \frac{1}{\sqrt{\sqrt{\pi} n! 2^n \sigma}} (\xi - \pdv{}{\xi})^n e^{-\frac{1}{2} \xi^2}$
+
+$\langle x | 0 \rangle = (\frac{m \omega}{\pi \hbar})^{1/4} e^{-\frac{m \omega}{2 \hbar} x^2}, \qquad \langle x | 1 \rangle = \sqrt{2} (\frac{m^3 \omega^3}{\pi \hbar^3})^{1/4} x e^{-\frac{m \omega}{2 \hbar} x^2}$
+
 \textbf{Classical simple harmonic oscillator}
+Hamiltonian of a simple harmonic is $H = \frac{p^2}{2m} + \frac{1}{2} m \omega^2 x^2. \qquad$ 
+$\dot{x} = \pdv{H}{p} = \frac{p}{m}, \qquad \dot{p} = -\pdv{H}{x} = - m \omega^2 x$
+
+Define $\sqrt{\hbar \omega} \alpha = \sqrt{\frac{m \omega^2}{2}} x + \frac{i}{\sqrt{2m}} p$, so $x = \sqrt{\frac{2 \hbar}{m \omega}} \alpha_R$ and $p = \sqrt{2 m \hbar \omega} \alpha_I$
+
+Rewrite Hamiltonian, $H = \hbar \omega | \alpha |^2, \qquad \dot{\alpha} = -i \omega \alpha$. The sol is $\alpha = \alpha_0 e^{-i \omega t}$.
 
 \textbf{The quantum simple harmonic oscillator and coherent state}
+
+Coherent state, superpos of stat states $|n \rangle$: $| \alpha \rangle = e^{-\frac{1}{2} |\alpha|^2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} | n \rangle$
+
+$P(n) = |\langle n | \alpha \rangle|^2 = |\alpha_n|^2 = \frac{\langle n \rangle^n e^{-\langle n \rangle}}{n!}$, where $\langle n \rangle = \langle \alpha | a^{\dag} a | \alpha \rangle = | \alpha |^2$.
 
 %\subsection{\underline{3.1 Hilbert Space}}
 
