@@ -2,13 +2,13 @@
 
 \subsection{\underline{Three-dimensional infinite square well}}
 
-$-\frac{\hbar^2}{2m}(\pdv[2]{}{x} + \pdv[2]{}{y} + \pdv[2]{}{z}) \phi(x, y, z) = E \psi(x, y, z)$ for $0 \leq x \leq l_x, ...$
+$-\frac{\hbar^2}{2m}(\pdv[2]{}{x} + \pdv[2]{}{y} + \pdv[2]{}{z}) \psi(x, y, z) = E \psi(x, y, z)$ for $0 \leq x \leq l_x, ...$
 
 while $\psi(x, y, z) = 0$ outside.
 
-$\psi(x, y, z) = \psi_1(x) \psi_2(y) \psi_3(z)$
+Separation of vars: $\psi(x, y, z) = \psi_1(x) \psi_2(y) \psi_3(z)$
 
-The SE then becomes $-\frac{\hbar^2}{2m} \dv[2]{}{x} \psi_1(x) = E_1 \psi_1(x), ...$, where $E = E_1 + E_2 + E_3$.
+$\rightarrow$ SE becomes $-\frac{\hbar^2}{2m} \dv[2]{}{x} \psi_1(x) = E_1 \psi_1(x), ...$, where $E = E_1 + E_2 + E_3$.
 
 $\psi_{n_x n_y n_z}(x, y, z) = \sqrt{\frac{8}{l_x l_y l_z}} \sin(\frac{n_x \pi}{l_x} x) \sin(\frac{n_y \pi}{l_y} z) \sin(\frac{n_z \pi}{l_z} z)$
 
@@ -18,7 +18,165 @@ Wave vector: $\vec{k} = (k_x, k_y, k_z) = (\frac{n_x \pi}{l_x}, \frac{n_y \pi}{l
 
 \subsection{\underline{The Schr\"odinger equation in spherical coordinates}}
 
-\subsection{\underline{Orbital angular momentum}}
+$i \hbar \pdv{\psi(\vec{r}, t)}{t} = -\frac{\hbar^2}{2m} \vec{\grad}^2 \psi(\vec{r}, t) + V(\vec{r})\psi(\vec{r}, t)$, where $\vec{r} = (r, \theta, \phi)$, $\psi(\vec{r}, t) = \psi(r, \theta, \phi, t)$ and $\vec{\grad}^2 = \frac{1}{r^2} \pdv{}{r}(r^2 \pdv{}{r}) + \frac{1}{r^2 \sin \theta} \pdv{}{\theta} (\sin \theta \pdv{}{\theta}) + \frac{1}{r^2 \sin^2 \theta} \pdv[2]{}{\phi}$ is Laplacian operator.
+
+For a TI and central potential, potential depends only on $r$, $V(\vec{r}) = V(r)$.
+
+$\frac{1}{R(r)} [\dv{}{r} (r^2 \dv{R(r)}{r}) - \frac{2mr^2}{\hbar^2} (V(r) - E)] = -\frac{1}{Y(\theta, \phi)} [\frac{1}{\sin\theta} \dv{}{\theta} (\sin \theta \dv{Y(\theta, \phi)}{\theta}) + \frac{1}{\sin^2 \theta} \dv[2]{Y(\theta, \phi)}{\phi}]$
+
+Each side must be constant and equal.
+$\frac{1}{\sin\theta} \dv{}{\theta} (\sin \theta \dv{Y(\theta, \phi)}{\theta}) + \frac{1}{\sin^2 \theta} \dv[2]{Y(\theta, \phi)}{\phi} = -l(l+1)Y(\theta, \phi)$
+$\dv{}{r}(r^2 \dv{R(r)}{r}) - \frac{2mr^2}{\hbar^2}(V(r) - E) = l(l+1) R(r)$
+
+\subsubsection{Orbital angular momentum}
+
+$[\widehat{L}_i, \widehat{L}_j] = i \hbar \epsilon_{ijk} \widehat{L}_k$, with $i =1, 2, 3$ representing the $x$, $y$, and $z$ components, and the epsilon tensor is $\epsilon_{123} = \epsilon_{231} = \epsilon_{312} = 1$, which is -1 for odd perms of indicies, and vanishes when repeated.
+
+$\widehat{\vec{L}}^2 = \widehat{\vec{L}}_x^2 + \widehat{\vec{L}}_y^2 + \widehat{\vec{L}}_z^2$, $[\widehat{\vec{L}^2}, \widehat{L}_i]=0$
+
+In pos rep, $\widehat{\vec{L}} = \widehat{\vec{r}} \times \widehat{\vec{p}} = -i \hbar \vec{r} \times \vec{\grad}$
+
+In sph coords, $\widehat{\vec{L}} = -i \hbar r \widehat{r} \times (\pdv{}{r} \widehat{r} + \frac{1}{r} \pdv{}{\theta} \widehat{\theta} + \frac{1}{r \sin\theta} \pdv{}{\phi} \widehat{\phi} = -i \hbar (\widehat{\phi} \pdv{}{\theta} - \widehat{\theta} \frac{1}{\sin \theta} \pdv{}{\phi})$
+
+Components along cartesian unit vectors:
+
+$\widehat{r} = \sin \theta \cos \psi \widehat{x} + \sin \theta \sin \phi \widehat{y} + \cos \theta \widehat{z}$
+
+$\widehat{\theta} = \cos{\theta} \cos{\phi} \widehat{x} + \cos{\theta} \sin{\phi} \widehat{y} - \sin{\theta} \widehat{z}$
+
+$\widehat{\phi} = - \sin \phi \widehat{x} - \cos \phi \widehat{y}$
+
+$\widehat{L}_x = i \hbar (\sin \theta \pdv{}{\theta} + \cot \theta \cos \phi \pdv{}{\phi})$
+$\widehat{L}_y = i \hbar(-\cos \phi \pdv{}{\theta} + \cot \theta \sin \phi \pdv{}{\phi})$
+$\widehat{L}_z = -i \hbar \pdv{}{\phi}$
+$\widehat{\vec{L}}^2 = -\hbar^2 [\frac{1}{\sin \theta} \pdv{}{\theta} (\sin \theta \pdv{}{\theta}) + \frac{1}{\sin^2 \theta} \pdv[2]{}{\phi}]$
+
+$\widehat{\vec{L}} Y(\theta, \phi) = l (l+1) \hbar^2 Y(\theta, \phi)$
+
+$-\frac{\hbar^2}{2m} \frac{1}{r^2} \dv{}{r} (r^2 \dv{R(r)}{r}) - V_{\textrm{eff}}(r) R(r) = ER(r)$, $V_{\textrm{eff}}(r) = V(r) + \frac{l(l+1) \hbar^2}{2mr^2}$
+
+\subsubsection{Spherical harmonics}
+
+Find the sols to the angular eqn. Use sep of vars $Y(\theta, \phi) = \Theta(\theta) \Phi(\phi)$.
+
+$\frac{1}{\Theta} [\sin\theta \dv{}{\theta} (\sin \theta \dv{\Theta}{\theta}) + l(l+1) \sin^2 \theta = - \frac{1}{\Theta} \dv[2]{\Phi}{\phi} = constant = m^2$
+
+$\Psi(\psi) = e^{im\psi}$
+
+$\Psi(\psi)$ is periodic in $\psi$ w period $2 \pi$ gives the constraint $m = 0, \pm 1, \pm 2, \cdots$
+
+The eq for $\Theta(\theta)$ can be written in terms of $x \equiv \cos \theta$
+
+$(1 - x^2) \dv[2]{P(x)}{x} - 2x \dv{P(x)}{x} + (l(l+1) - \frac{m^2}{1-x^2}) P(x) = 0$
+
+Associated Legendre functions: $P_l^{m_l}(x) = (1-x^2)^{|m_l|/2} (\dv{}{x})^{|m_l|} P_l(x)$,
+where $P_l(x)$ is the $l^{th}$ Legendre polynomial given by the Rodrigues formula $P_l(x) = \frac{1}{2^l l!} (\dv{}{x})^l (x^2 - 1)^l$, with $l$ taking values $l=0, 1, 2, ...$
+
+and for each $l$, $m_l$ takes $2l + 1$ values $m_l = -l, -l+1, ..., l-1, l$.
+
+Spherical harmonics, normalized angular wave functions: $Y_l^m (\theta, \phi) = \epsilon \sqrt{\frac{(2l+1)}{4 \pi} \frac{(l-|m|)!}{(l+|m|)!}} e^{im \phi} P_l^m (\cos \theta)$, where $\epsilon = (-1)^m$ for $m \geq 0$ and $\epsilon = 1$ for $m \leq 0$. 
+
+The Legendre polynomials are normalized s.t. they satisfy the ortho relation $\int_{-1}{1} P_{l'} P_l(x) dx = \int_0^{\pi} P_{l'}(\theta) P_l(\theta) \sin \theta d \theta = \frac{2}{2 l + 1} \delta_{l' l}$
+
+First few associated Legendre functions:
+
+$P_0^0(x) = 1, P_1^1(x) = \sqrt{1 - x^2}, P_1^0(x) = x, P_2^2(x) = 3(1-x^2), P_2^1(x) = 3x \sqrt{1 - x^2}, P_2^0 = \frac{1}{2} (3x^2 - 1)$
+
+$P_0^0(\theta) = 1, P_1^1(\theta) = \sin \theta, P_1^1(\theta) = \cos \theta, P_2^2 (\theta) = 3 \sin^2 \theta, P_2^1(\theta) = 3 \cos \theta \sin \theta, P_2^0(\theta) = \frac{1}{2} (3 \cos^2 \theta - 1)$
+
+with $P_l^{-m_l}(x) = P_l^{m_l}(x)$
+
+$\int_{-1}^{1} P_{l'}^{m'_l} (x) P_{l}^{m_l} (x) dx = \int_0^{\pi} P_{l'}^{m'_l}(\theta) P_l^{m_l} (\theta) \sin \theta d \theta = \frac{(l+m_l)!}{(2l+1)(l-m_l)!} \delta_{l'l} \delta_{m'_l, m_l}$
+
+First few spherical harmonics: $Y_0^0(\theta, \phi) = \frac{1}{\sqrt{4\pi}}, Y_1^{\pm 1}(\theta, \phi) = \mp \sqrt{\frac{3}{8 \pi}} \sin \theta e^{\pm i \phi}, Y_1^0(\theta, \phi) = \sqrt{\frac{3}{4\pi}} \cos \theta$
+
+The spherical harmonics satisfy the orthogonality relation $\int_0^{2 \pi} d\phi \int_0^{\pi} d\theta \sin \theta Y_{l'}^{m'_l *} (\theta, \phi) Y_l^{m_l} (\theta, \phi) = \delta_{l'l} \delta_{m'_l m_l}$
+
+$\widehat{\vec{L}}^2 | l m_l \rangle = l(l+1) \hbar^2 |l m_l \rangle$, $\widehat{\vec{L}}_z | l m_l \rangle = m \hbar |l m_l \rangle$
+
+The spherical harmonics are the wavefunctions in pos rep, $Y_l^{m_l}(\theta, \phi) = \langle \vec{r} | l m_l \rangle$
+
+\subsubsection{Parity of the spherical harmonics}
+Cartesian coords: $\widehat{P} \psi(x, y, z) = \psi(-x, -y, -z)$
+
+Spherical coords: $\widehat{P} \psi(r, \theta, \phi) = \psi(r, \pi - \theta, \phi + \theta)$
+
+For the Legendre polynomials, $\widehat{P} P_l^{m_l} (\theta) = (-1)^{l - |m_l|} P_l^{m_l} (\theta) \rightarrow$ even for $l + |m_l|$ even and odd for $l + |m_l|$ odd.
+
+Azimuthal part of the wavefunction, $\widehat{P} e^{im_l \phi} = e^{i m_l (\phi + \pi)} = (-1)^{m_l} e^{i m_l \phi}$.
+
+The spherical harmonics are products of two, and 
+$$\widehat{P} Y_l^{m_l} (\theta, \phi) = Y_l^{m_l} (\pi - \theta, \phi + \pi) = (-1)^{l - |m_l| + m_l} Y_l^{m_l}(\theta, \phi) = (-1)^{l} Y_l^{m_l} (\theta, \phi)$$
+
+\subsection{\underline{The hydrogen atom}}
+Coulomb's law, $\widehat{V} = - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r}$
+
+Let $u(r) \equiv r R(r)$, Radial eq: $-\frac{\hbar^2}{2m} \dv[2]{u}{r} + [-\frac{e^2}{4 \pi \epsilon_0} \frac{1}{r} + \frac{\hbar^2}{2m} \frac{l (l+1)}{r^2}]u = Eu$
+
+\subsubsection{The radial wave function}
+
+$\kappa \equiv \frac{\sqrt{-2mE}}{\hbar}$
+
+$\frac{1}{\kappa^2} \dv[2]{u}{r} = [1 - \frac{me^2}{2 \pi \epsilon_0 \hbar^2 \kappa} \frac{1}{(\kappa r)} + \frac{l (l+1)}{(\kappa r)^2}] u$
+
+Introduce $\rho \equiv \kappa r$, $\rho_0 \equiv \frac{me^2}{2 \pi \epsilon \hbar^2 \kappa}$, $\dv[2]{u}{\rho} = [1 - \frac{\rho_0}{\rho} + \frac{l(l+1)}{\rho^2}]u$
+
+As $\rho \rightarrow \infty$, the constant term in the brackets dominates, so $\dv[2]{u}{\rho} = u$.
+
+General sol is $u(\rho) = Ae^{-\rho} + Be^{\rho}$, but $B=0$ $\rightarrow$ $u(\rho) \approx e^{-\rho}$ for large $\rho$.
+
+As $\rho \rightarrow 0$, centriugal term dominates, $\dv[2]{u}{\rho} = \frac{l(l+1)}{\rho^2} u$
+
+The general sol is $u(\rho) = C \rho^{l+1} + D \rho^{-l}$, but $\rho^{-l}$ blows up as $\rho \rightarrow 0$, so $D = 0$. Thus, $u(\rho) \approx C p^{l+1}$ for small $\rho$. 
+
+Peel off the asymptotic behavior, $u(\rho) = \rho^{l+1} e^{-\rho} v(\rho)$
+
+Radial eq in terms of $v(\rho)$, $\rho \dv[2]{v}{\rho} + 2(l + 1 - \rho) \dv{v}{\rho} + [\rho_0 - 2(l+1)]v = 0$
+
+Assume the solution, $v(p)$, can be expressed as a power series in $\rho$: $v(\rho) = \sum_{j=0}^{\infty} c_j \rho^j$.
+
+$c_{j+1} = \frac{2(j+l+1) - \rho_0}{(j+1)(j+2l+2)} c_j$
+
+For large $j$ (corresponding to large $\rho$), $c_{j+1} = \frac{2j}{j(j+1)}c_j = \frac{2}{j+1}c_j$
+
+If this were exact, $c_j = \frac{2^j}{j!} c_0$, $v(\rho) = c_0 \sum_{j=0}^{\infty} \frac{2^j}{j!} \rho^j = c_0 e^{2\rho}$, and hence $u(\rho) = c_0 \rho^{l+1} e^{\rho}$, which blows up at large $\rho$
+
+Must exist $c_{j_{\textrm{max}} + 1} = 0$, beyond which all coefficients vanish automatically.
+
+Define principle quantum number, $n \equiv j_{\textrm{max}} + l + 1$, $\rho_0 = 2n$
+
+$E = -\frac{\hbar^2 \kappa^2}{2m} = - \frac{me^3}{8 \pi^2 \epsilon_0^2 \hbar^2 \rho_0^2}$
+
+Bohr formula: $E_n = - [\frac{m}{2 \hbar^2} (\frac{e^2}{4\pi\epsilon}^2] \frac{1}{n^2} = \frac{E_1}{n^2} = \frac{-13.6 \textrm{ eV}}{n^2}$, $n=1, 2, 3, ...$
+
+$\kappa = (\frac{me^2}{4 \pi \epsilon_0 \hbar^2}) \frac{1}{n} = \frac{1}{an}$, Bohr radius: $a \equiv \frac{4 \pi \epsilon_0 \hbar^2}{me^2} = 0.529 \times 10^{-10} \textrm{m}$
+
+$\psi_{nlm}(r, \theta, \phi) = R_{nl}(r) Y_l^m(\theta, \phi)$
+
+$\psi_{100}(r, \theta, \phi) = \frac{1}{\sqrt{\pi a^3}} e^{-r/a}$
+
+For arbitrary $n$, $l = 0, 1, 2, ..., n-1$, so $d(n) = \sum_{l=0}^{n-1} (2l+1) = n^2$
+
+$v(\rho) = L_{n-l-1}^{2l+1} (2 \rho)$, where $L_{q-p}^p(x) \equiv (-1)^p (\dv{}{x})^p L_q (x)$ is an associated Laguerre polynomial. $L_q(x) \equiv e^x (\dv{}{x})^q (e^{-x} x^q)$ is the $q$th Laguerre polynomial.
+
+The normalized hydrogen wavefunctions are:
+
+$$\psi_{nlm} = \sqrt{(\frac{2}{na})^3 \frac{(n-l-1)!}{2n[(n+1)!]^3}} e^{-r/na} (\frac{2r}{na})^l [L_{n-l-1}^{2l+1} (2r/na) Y_l^m (\theta, \phi)$$
+
+Wavefunctions are mutually orthogonal.
+
+\subsubsection{Spectrum}
+
+Transitions: $E_{\gamma} = E_i - E_f = -13.6 eV(\frac{1}{n_i^2} - \frac{1}{n_f^2})$
+
+Planck formula, $E_{\gamma} = h \nu$, wavefunction is $\lambda = c / \nu$. 
+
+Rydberg formula: $\frac{1}{\lambda} = R(\frac{1}{n^2_f} - \frac{1}{n^2_i})$
+
+Rydberg constant: $R \equiv \frac{m}{4 \pi c \hbar^3} (\frac{e^2}{4 \pi \epsilon_0})^2 = 1.097 \times 10^7 \textrm{ m}^{-1}$
+
+\subsection{\underline{General angular momentum}}
+
 
 \textbf{Spherical harmonics}
 
