@@ -176,9 +176,83 @@ Rydberg formula: $\frac{1}{\lambda} = R(\frac{1}{n^2_f} - \frac{1}{n^2_i})$
 Rydberg constant: $R \equiv \frac{m}{4 \pi c \hbar^3} (\frac{e^2}{4 \pi \epsilon_0})^2 = 1.097 \times 10^7 \textrm{ m}^{-1}$
 
 \subsection{\underline{General angular momentum}}
+$\widehat{\vec{J}} = (\widehat{J}_x, \widehat{J}_y, \widehat{J}_z) = (\widehat{J}_1, \widehat{J}_2, \widehat{J}_3)$
+
+$\widehat{\vec{J}}^2 = \widehat{\vec{J}}^2_x + \widehat{\vec{J}}^2_y + \widehat{\vec{J}}^2_z$
+
+The commutation relations are $[\widehat{J}_i, \widehat{J}_j] = i \hbar \epsilon_{ijk} \widehat{J}_k$, $[\widehat{\vec{J}}^2, J_i] = 0$
+
+Take the commuting set to be $\widehat{\vec{J}}^2$ and $\widehat{J}_z$. Now suppose we trade $\widehat{J}_x$ and $\widehat{J}_y$ for $\widehat{J}_{\pm} = \widehat{J}_x \pm i \widehat{J}_y$
+
+The commutation relations become $[\widehat{J}_{+}, \widehat{J}_{-}] = 2 \hbar \widehat{J}_z$ and $[\widehat{J}_z, \widehat{J}_{\pm}] = \pm \hbar \widehat{J}_{\pm}$ and $[\widehat{\vec{J}}^2, \widehat{J}_{\pm}] = 0$
+
+Because $\widehat{\vec{J}}^2$ and $\widehat{J}_z$ commute, we can simulaneously diagonalize them. Let the simultaneous eigenstate be $|ab\rangle$ s.t. $\widehat{\vec{J}}^2 | ab \rangle  = a | ab \rangle$, $\widehat{\vec{J}}_z | ab \rangle = b | ab \rangle$
+
+$\widehat{\vec{J}}^2 ( \widehat{J}_{\pm} | ab \rangle) = a(\widehat{J}_{\pm} | ab \rangle$, so $\widehat{J}_{\pm} | ab \rangle$
+
+$\widehat{J}_z(\widehat{J}_\pm |ab\rangle) = (b \pm \hbar) (\widehat{J}_{\pm} | ab \rangle)$
+
+Thus, $\widehat{J}_{+}$ raises and $\widehat{J}_{-}$ lowers the eigenvalue $b$ of $\widehat{J}_z$. Therefore, assuming $|ab \rangle$ is normalized, $\widehat{J}_{\pm} | ab \rangle = c_{\pm} | ab \pm \hbar \rangle$, where $c_{\pm}$ are normalization constants.
+
+Define $j = \frac{n}{2}$, then $a = b_{\textrm{max}}^2 + \hbar b_{\textrm{max}} = j^2 \hbar^2 + \hbar^2 j = j(j+1) \hbar^2$
+
+$\widehat{J}_{\pm} | j m_j \rangle = \hbar \sqrt{(j \mp m_j)(j \pm m_j + 1)} | j m_j \pm 1 \rangle$
+
+The matrix elements of $\widehat{J}_{\pm}$ are $\langle j' m'_j | \widehat{J}_{\pm} | j m_j \rangle = \hbar \sqrt{(j \mp m_j) (j \pm m_j + 1)} \langle j' m'_j | j m_j \pm 1 \rangle = \hbar \sqrt{(j \mp m_j)(j \pm m_j + 1)} \delta_{j' j} \delta_{m'_j m_j \pm 1}$
+
+\subsection{\underline{Spin}}
+
+\subsubsection{Classical orbital and spinning motion}
+
+Infinitesimal classical angular momentum corresponsing to an infinite linear momentum $d \vec{p} = d m \vec{v}$ at position $\vec{r}$ from the axis of rotation is $d \vec{L} = \vec{r} \times d \vec{p}$
+
+The total angular momentum is $\vec{L} = \int \vec{r} \times d \vec{p} = \int \vec{r} \cross d m \vec{v}$
+
+Point particle of mass $m$ at radius $r$ spinning w constant angular velocity $\omega$ about the $z$-axis, $\vec{L} = I \omega \widehat{z} = m \omega r^2 \widehat{z}$
+
+Considering a particle of mass $m$ and charge $q$ rotating with angular velocity $\omega$ at radius $r$ about the $z$-axis, the angular momentum $\vec{L}$ and the momentum dipole momentum $\vec{\mu}$ are given by $\vec{L} = m \omega r^2 \widehat{z}$, $\vec{\mu} = \frac{q}{2} \omega r^2 \widehat{z}$, where we used $\mu = I \pi r^2$ with current $I = \frac{q}{2 \pi / \omega} = \frac{q \omega}{2 \pi}$. Thus, $\vec{\mu} = \frac{q}{2m} \vec{L}$
+
+\subsubsection{Spin} \hfill
+
+Basis vectors are $| \frac{1}{2}, \frac{1}{2} \rangle \equiv | 1 \rangle = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$, $| \frac{1}{2}, \frac{1}{2} \rangle \equiv | 1 \rangle = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$
+
+Construct the matrices for $\widehat{S}_x$, $\widehat{S}_y$, $\widehat{S}_z$, and $\widehat{\vec{S}}^2$. 
+
+The matrices $\widehat{S}_z$ and $\widehat{\vec{S}}^2$ are diagonal, since they are the ones that are simultaneously diagonalized. The matrix elements are $\langle s' m'_s | \widehat{\vec{S}}^2 | sm_s \rangle = s(s+1) \hbar^2 \delta_{s' s} \delta_{m'_s m_s}$, $\langle s' m'_s | \widehat{S}_z | sm_s \rangle = m_s \hbar \delta_{s' s} \delta_{m'_s m_s}$
+
+In matrix form, $\widehat{\vec{S}}^2 = \frac{3}{4} \hbar^2 \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}, \widehat{S}_z = \frac{\hbar}{2} \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$
+
+$\widehat{S}_{+} = \hbar \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$, $\widehat{S}_{-} = \frac{\hbar}{2} \begin{bmatrix} 1 & 0 \\ 0 -1 \end{bmatrix}$
+
+$\widehat{S}_x = \frac{1}{2}(\widehat{S}_{+} + \widehat{S}_{-})$ and $\widehat{S}_x = \frac{1}{2i}(\widehat{S}_{+} - \widehat{S}_{-})$, we have $\widehat{S}_x = \frac{\hbar}{2} \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, $\widehat{S}_y = \frac{\hbar}{2} \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}$
+
+Spin angular momentum: $\vec{S} = \frac{\vec{\sigma}}{2}$
+
+where the components of $\vec{\sigma}$ are called the Pauli matrices, and given by $\sigma_x = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, $\sigma_y = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}$, $\sigma_z = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$
+
+Observe that $[\widehat{S}_i, \widehat{S}_j] = i \hbar \epsilon_{ijk} \widehat{S}_k$ and $[\sigma_i, \sigma_j] = 2 i \epsilon_{ijk} \sigma_k$
+
+A general state of a spin-half system is given by a spinor, $|\chi \rangle = \alpha | \frac{1}{2}, \frac{1}{2} \rangle + \beta | \frac{1}{2}, \frac{1}{2} \rangle = \begin{bmatrix} \alpha \\ \beta \end{bmatrix}$, where $\alpha$ and $\beta$ are complex constants.
+
+% Electron, proton, neutron, quarks $\rightarrow$ half spin, pions $\rightarrow$ zero spin, photon $\rightarrow$ spin one.
+
+\subsubsection{Magnetic moment of the electron}
 
 
-\textbf{Spherical harmonics}
+\subsubsection{Electron in a magnetic field}
 
 
+\subsubsection{The Stern-Gerlach experiment}
+
+
+\subsection{\underline{Addition of angular momentum}}
+
+
+\subsubsection{Triplet and singlet states of a system of two spin-halves}
+
+
+\subsubsection{Addition of general angular momentum}
+
+
+\subsubsection{Clebsch-Gordon coefficients}
 
