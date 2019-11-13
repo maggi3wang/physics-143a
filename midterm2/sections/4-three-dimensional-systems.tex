@@ -108,6 +108,7 @@ Azimuthal part of the wavefunction, $\widehat{P} e^{im_l \phi} = e^{i m_l (\phi 
 The spherical harmonics are products of two, and 
 $$\widehat{P} Y_l^{m_l} (\theta, \phi) = Y_l^{m_l} (\pi - \theta, \phi + \pi) = (-1)^{l - |m_l| + m_l} Y_l^{m_l}(\theta, \phi) = (-1)^{l} Y_l^{m_l} (\theta, \phi)$$
 
+%\vspace{-0.25\baselineskip}
 \subsection{\underline{The hydrogen atom}}
 Coulomb's law, $\widehat{V} = - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r}$
 
@@ -115,47 +116,72 @@ Let $u(r) \equiv r R(r)$, Radial eq: $-\frac{\hbar^2}{2m} \dv[2]{u}{r} + [-\frac
 
 \subsubsection{The radial wave function}
 
-$\kappa \equiv \frac{\sqrt{-2mE}}{\hbar}$
+\hfill
 
+$\kappa \equiv \frac{\sqrt{-2mE}}{\hbar}$.
+Divide by $E$, 
 $\frac{1}{\kappa^2} \dv[2]{u}{r} = [1 - \frac{me^2}{2 \pi \epsilon_0 \hbar^2 \kappa} \frac{1}{(\kappa r)} + \frac{l (l+1)}{(\kappa r)^2}] u$
 
 Introduce $\rho \equiv \kappa r$, $\rho_0 \equiv \frac{me^2}{2 \pi \epsilon \hbar^2 \kappa}$, $\dv[2]{u}{\rho} = [1 - \frac{\rho_0}{\rho} + \frac{l(l+1)}{\rho^2}]u$
 
+\hrule height 0.1pt
+
 As $\rho \rightarrow \infty$, the constant term in the brackets dominates, so $\dv[2]{u}{\rho} = u$.
 
-General sol is $u(\rho) = Ae^{-\rho} + Be^{\rho}$, but $B=0$ $\rightarrow$ $u(\rho) \approx e^{-\rho}$ for large $\rho$.
+General sol is $u(\rho) = Ae^{-\rho} + Be^{\rho}$, but $B=0$ $\rightarrow$ $u(\rho) = A e^{-\rho}$ for large $\rho$.
+
+\hrule height 0.1pt
 
 As $\rho \rightarrow 0$, centriugal term dominates, $\dv[2]{u}{\rho} = \frac{l(l+1)}{\rho^2} u$
 
 The general sol is $u(\rho) = C \rho^{l+1} + D \rho^{-l}$, but $\rho^{-l}$ blows up as $\rho \rightarrow 0$, so $D = 0$. Thus, $u(\rho) \approx C p^{l+1}$ for small $\rho$. 
 
-Peel off the asymptotic behavior, $u(\rho) = \rho^{l+1} e^{-\rho} v(\rho)$
+\hrule height 0.1pt
+
+Peel off the asymptotic behavior, let $u(\rho) = \rho^{l+1} e^{-\rho} v(\rho)$
+
+$\dv{u}{\rho} = \rho^l e^{-\rho} [(l+1-\rho) v + \rho \dv{v}{\rho}]$
+
+$\dv[2]{u}{\rho} = \rho^l e^{-\rho} \{[-2l - 2 + \rho + \frac{l(l+1)}{\rho}]v + 2(l + 1 - \rho) \dv{v}{\rho} + \rho \dv[2]{v}{\rho} \}$
 
 Radial eq in terms of $v(\rho)$, $\rho \dv[2]{v}{\rho} + 2(l + 1 - \rho) \dv{v}{\rho} + [\rho_0 - 2(l+1)]v = 0$
 
-Assume the solution, $v(p)$, can be expressed as a power series in $\rho$: $v(\rho) = \sum_{j=0}^{\infty} c_j \rho^j$.
+\hrule height 0.1pt
+
+Assume $v(p)$ can be expressed as a power series in $\rho$: $v(\rho) = \sum_{j=0}^{\infty} c_j \rho^j$.
+
+$\dv{v}{\rho} = \sum_{j=0}^{\infty} j c_j \rho^{j-1} = \sum_{j=0}^{\infty} (j+1) c_{j+1} \rho^j$, $\dv[2]{v}{\rho} = \sum_{j=0}^{\infty} j(j+1) c_{j+1} \rho^{j-1}$
+
+$j(j+1)c_{j+1} + 2(l+1)(j+1)c_{j+1} - 2jc_j + [\rho_0 - 2(l+1)]c_j = 0$
 
 $c_{j+1} = \frac{2(j+l+1) - \rho_0}{(j+1)(j+2l+2)} c_j$
+
+\hrule height 0.1pt
 
 For large $j$ (corresponding to large $\rho$), $c_{j+1} = \frac{2j}{j(j+1)}c_j = \frac{2}{j+1}c_j$
 
 If this were exact, $c_j = \frac{2^j}{j!} c_0$, $v(\rho) = c_0 \sum_{j=0}^{\infty} \frac{2^j}{j!} \rho^j = c_0 e^{2\rho}$, and hence $u(\rho) = c_0 \rho^{l+1} e^{\rho}$, which blows up at large $\rho$
 
-Must exist $c_{j_{\textrm{max}} + 1} = 0$, beyond which all coefficients vanish automatically.
+\hrule height 0.1pt
 
-Define principle quantum number, $n \equiv j_{\textrm{max}} + l + 1$, $\rho_0 = 2n$
+$\exists c_{j_{\textrm{max}} + 1} = 0$, so $2(j_{max} + l + 1) - \rho_0 = 0$.
+
+Define principle quantum number, $n \equiv j_{\textrm{max}} + l + 1$, so $\rho_0 = 2n$
 
 $E = -\frac{\hbar^2 \kappa^2}{2m} = - \frac{me^3}{8 \pi^2 \epsilon_0^2 \hbar^2 \rho_0^2}$
 
-Bohr formula: $E_n = - [\frac{m}{2 \hbar^2} (\frac{e^2}{4\pi\epsilon}^2] \frac{1}{n^2} = \frac{E_1}{n^2} = \frac{-13.6 \textrm{ eV}}{n^2}$, $n=1, 2, 3, ...$
+Bohr formula: $E_n = - [\frac{m}{2 \hbar^2} (\frac{e^2}{4\pi\epsilon})^2] \frac{1}{n^2} = \frac{E_1}{n^2} = \frac{-13.6 \textrm{ eV}}{n^2}$, $n=1, 2, 3, ...$
 
 $\kappa = (\frac{me^2}{4 \pi \epsilon_0 \hbar^2}) \frac{1}{n} = \frac{1}{an}$, Bohr radius: $a \equiv \frac{4 \pi \epsilon_0 \hbar^2}{me^2} = 0.529 \times 10^{-10} \textrm{m}$
 
-$\psi_{nlm}(r, \theta, \phi) = R_{nl}(r) Y_l^m(\theta, \phi)$
-
+$\psi_{nlm}(r, \theta, \phi) = R_{nl}(r) Y_l^m(\theta, \phi)$, 
 $\psi_{100}(r, \theta, \phi) = \frac{1}{\sqrt{\pi a^3}} e^{-r/a}$
 
-For arbitrary $n$, $l = 0, 1, 2, ..., n-1$, so $d(n) = \sum_{l=0}^{n-1} (2l+1) = n^2$
+\hrule height 0.1pt
+
+For arbitrary $n$, $l = 0, 1, ..., n-1$, so $d(n) = 2 \sum_{l=0}^{n-1} (2l+1) = 2 n^2$
+
+\hrule height 0.07pt
 
 $v(\rho) = L_{n-l-1}^{2l+1} (2 \rho)$, where $L_{q-p}^p(x) \equiv (-1)^p (\dv{}{x})^p L_q (x)$ is an associated Laguerre polynomial. $L_q(x) \equiv e^x (\dv{}{x})^q (e^{-x} x^q)$ is the $q$th Laguerre polynomial.
 
