@@ -1,6 +1,4 @@
-
-
-\section{3. Principles of QM} \hrule height 0.3pt \thinspace
+\section{3. PRINCIPLES OF QM} \hrule height 0.3pt \thinspace
 
 \subsection{\underline{Axiomatic principles}}
 
@@ -15,28 +13,28 @@
 \subsubsection{Time evolution axiom:} $i \hbar \pdv{}{t} | \psi(t) \rangle = \widehat{H} |\psi(t) \rangle$, w/o consider $x$ or $p$.
 
 \subsection{\underline{Vector space}}
-State vector is neither in position nor momentum space. \\
-Basis vectors:
-$|0 \rangle = \begin{bmatrix}
-    1 \\
-    0 \\
-    : \\
-    0
-    \end{bmatrix}$,
-$|1 \rangle = \begin{bmatrix}
-    0 \\
-    1 \\
-    : \\
-    0
-    \end{bmatrix}$,
-$|n \rangle = \begin{bmatrix}
-    0 \\
-    0 \\
-    : \\
-    1
-\end{bmatrix}$ (in $n$th pos).
+State vector is neither in position nor momentum space. Basis vectors: $|0 \rangle, |1 \rangle, |n \rangle$
+%Basis vectors:
+%$|0 \rangle = \begin{bmatrix}
+%    1 \\
+%    0 \\
+%    : \\
+%    0
+%    \end{bmatrix}$,
+%$|1 \rangle = \begin{bmatrix}
+%    0 \\
+%    1 \\
+%    : \\
+%    0
+%    \end{bmatrix}$,
+%$|n \rangle = \begin{bmatrix}
+%    0 \\
+%    0 \\
+%    : \\
+%    1
+%\end{bmatrix}$ (in $n$th pos).
 
-    \subsubsection{Linearity}: Because the SE is linear, given two states $|\psi_1(t) \rangle$ and $|\psi_2(t) \rangle$, $|\psi(t) \rangle = c_1 |\psi_1(t) \rangle + c_2|\psi_2(t)\rangle$ is also a sol. ($c$'s are complex).
+\subsubsection{Linearity}: Because the SE is linear, given two states $|\psi_1(t) \rangle$ and $|\psi_2(t) \rangle$, $|\psi(t) \rangle = c_1 |\psi_1(t) \rangle + c_2|\psi_2(t)\rangle$ is also a sol. ($c$'s are complex).
 
 \subsubsection{Properties of a vector space}
 % This is pretty self-explanatory
@@ -190,8 +188,7 @@ Lowering op: $\widehat{a} = \sqrt{\frac{m \omega}{2 \hbar}} (\widehat{x} + \frac
 
 $[\widehat{a}, \widehat{a}^{\dag}] = 1$ $\qquad$ $\widehat{x} = \sqrt{\frac{\hbar}{2 m \omega}} (\widehat{a}^{\dag} + \widehat{a})$, $\widehat{p} = i \sqrt{\frac{m \omega \hbar}{2}} (\widehat{a}^{\dag} - \widehat{a})$
 
-$\widehat{H} = (\widehat{N} + \frac{1}{2}) \hbar \omega$, where $\widehat{N} = \widehat{a}^{\dag} \widehat{a}$. Now $\widehat{N}$ is Hermitian, and $\widehat{N} | n \rangle = n | n \rangle$
-
+$\widehat{H} = (\widehat{N} + \frac{1}{2}) \hbar \omega$, where $\widehat{N} = \widehat{a}^{\dag} \widehat{a}$. Now $\widehat{N}$ is Hermitian, and $\widehat{N} | n \rangle = n | n \rangle$.
 $[\widehat{N}, \widehat{a}] = -\widehat{a}$, $[\widehat{N}, \widehat{a}^{\dag}] = \widehat{a}^{\dag}$
 
 $\widehat{N} (\widehat{a} | n \rangle) = (n-1)(\widehat{a} | n \rangle)$, $\widehat{N} (\widehat{a}^{\dag} | n \rangle) = (n + 1)(\widehat{a}^{\dag} | n \rangle)$ 

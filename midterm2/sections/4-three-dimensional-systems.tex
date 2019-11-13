@@ -1,4 +1,4 @@
-\section{4. Three-dimensional systems} \hrule height 0.3pt \thinspace
+\section{4. 3D SYSTEMS} \hrule height 0.3pt \thinspace
 
 \subsection{\underline{Three-dimensional infinite square well}}
 
@@ -18,95 +18,123 @@ Wave vector: $\vec{k} = (k_x, k_y, k_z) = (\frac{n_x \pi}{l_x}, \frac{n_y \pi}{l
 
 \subsection{\underline{The Schr\"odinger equation in spherical coordinates}}
 
-$i \hbar \pdv{\psi(\vec{r}, t)}{t} = -\frac{\hbar^2}{2m} \vec{\grad}^2 \psi(\vec{r}, t) + V(\vec{r})\psi(\vec{r}, t)$, where $\vec{r} = (r, \theta, \phi)$, $\psi(\vec{r}, t) = \psi(r, \theta, \phi, t)$ and $\vec{\grad}^2 = \frac{1}{r^2} \pdv{}{r}(r^2 \pdv{}{r}) + \frac{1}{r^2 \sin \theta} \pdv{}{\theta} (\sin \theta \pdv{}{\theta}) + \frac{1}{r^2 \sin^2 \theta} \pdv[2]{}{\phi}$ is Laplacian operator.
+$i \hbar \pdv{\psi(\vec{r}, t)}{t} = -\frac{\hbar^2}{2m} \vec{\grad}^2 \psi(\vec{r}, t) + V(\vec{r})\psi(\vec{r}, t)$, where $\vec{r} = (r, \theta, \phi)$, $\psi(\vec{r}, t) = \psi(r, \theta, \phi, t)$ and $\vec{\grad}^2 = \frac{1}{r^2} \pdv{}{r}(r^2 \pdv{}{r}) + \frac{1}{r^2 \sin \theta} \pdv{}{\theta} (\sin \theta \pdv{}{\theta}) + \frac{1}{r^2 \sin^2 \theta} \pdv[2]{}{\phi}$.
 
 For a TI and central potential, potential depends only on $r$, $V(\vec{r}) = V(r)$.
 
 $\frac{1}{R(r)} [\dv{}{r} (r^2 \dv{R(r)}{r}) - \frac{2mr^2}{\hbar^2} (V(r) - E)] = -\frac{1}{Y(\theta, \phi)} [\frac{1}{\sin\theta} \dv{}{\theta} (\sin \theta \dv{Y(\theta, \phi)}{\theta}) + \frac{1}{\sin^2 \theta} \dv[2]{Y(\theta, \phi)}{\phi}]$
 
-Each side must be constant and equal.
+Each side must be constant and equal (let it be $l(l+1)$).
 $\frac{1}{\sin\theta} \dv{}{\theta} (\sin \theta \dv{Y(\theta, \phi)}{\theta}) + \frac{1}{\sin^2 \theta} \dv[2]{Y(\theta, \phi)}{\phi} = -l(l+1)Y(\theta, \phi)$
 $\dv{}{r}(r^2 \dv{R(r)}{r}) - \frac{2mr^2}{\hbar^2}(V(r) - E) = l(l+1) R(r)$
 
-\subsubsection{Orbital angular momentum}
+\subsection{\underline{Orbital angular momentum}}
 
-$[\widehat{L}_i, \widehat{L}_j] = i \hbar \epsilon_{ijk} \widehat{L}_k$, with $i =1, 2, 3$ representing the $x$, $y$, and $z$ components, and the epsilon tensor is $\epsilon_{123} = \epsilon_{231} = \epsilon_{312} = 1$, which is -1 for odd perms of indicies, and vanishes when repeated.
+$\widehat{L}_x = \widehat{y} \widehat{p}_z - \widehat{z} \widehat{p}_y, \widehat{L}_y = \widehat{z} \widehat{p}_x - \widehat{x} \widehat{p}_z, \widehat{L}_z = \widehat{x} \widehat{p}_y - \widehat{y} \widehat{p}_x$
+
+$[\widehat{L}_i, \widehat{L}_j] = i \hbar \epsilon_{ijk} \widehat{L}_k$, with $i =1, 2, 3$ representing the $x$, $y$, and $z$ components, and $\epsilon_{123} = \epsilon_{231} = \epsilon_{312} = 1$, which is -1 for odd perms of indices, and vanishes when repeated.
 
 $\widehat{\vec{L}}^2 = \widehat{\vec{L}}_x^2 + \widehat{\vec{L}}_y^2 + \widehat{\vec{L}}_z^2$, $[\widehat{\vec{L}^2}, \widehat{L}_i]=0$
 
-In pos rep, $\widehat{\vec{L}} = \widehat{\vec{r}} \times \widehat{\vec{p}} = -i \hbar \vec{r} \times \vec{\grad}$
+\hrule height 0.1pt
 
-In sph coords, $\widehat{\vec{L}} = -i \hbar r \widehat{r} \times (\pdv{}{r} \widehat{r} + \frac{1}{r} \pdv{}{\theta} \widehat{\theta} + \frac{1}{r \sin\theta} \pdv{}{\phi} \widehat{\phi} = -i \hbar (\widehat{\phi} \pdv{}{\theta} - \widehat{\theta} \frac{1}{\sin \theta} \pdv{}{\phi})$
+In pos rep, $\widehat{\vec{L}} = \widehat{\vec{r}} \times \widehat{\vec{p}} = -i \hbar \vec{r} \times \vec{\grad}$. In sph coords, $\widehat{\vec{L}} = -i \hbar r \widehat{r} \times (\pdv{}{r} \widehat{r} + \frac{1}{r} \pdv{}{\theta} \widehat{\theta} + \frac{1}{r \sin\theta} \pdv{}{\phi} \widehat{\phi} = -i \hbar (\widehat{\phi} \pdv{}{\theta} - \widehat{\theta} \frac{1}{\sin \theta} \pdv{}{\phi})$
 
-Components along cartesian unit vectors:
+%Components along cartesian unit vectors:
+
+\hrule height 0.1pt
 
 $\widehat{r} = \sin \theta \cos \psi \widehat{x} + \sin \theta \sin \phi \widehat{y} + \cos \theta \widehat{z}$
 
-$\widehat{\theta} = \cos{\theta} \cos{\phi} \widehat{x} + \cos{\theta} \sin{\phi} \widehat{y} - \sin{\theta} \widehat{z}$
-
+$\widehat{\theta} = \cos{\theta} \cos{\phi} \widehat{x} + \cos{\theta} \sin{\phi} \widehat{y} - \sin{\theta} \widehat{z} \quad$ 
 $\widehat{\phi} = - \sin \phi \widehat{x} - \cos \phi \widehat{y}$
 
-$\widehat{L}_x = i \hbar (\sin \theta \pdv{}{\theta} + \cot \theta \cos \phi \pdv{}{\phi})$
+\hrule height 0.1pt
+
+$\widehat{L}_x = i \hbar (\sin \theta \pdv{}{\theta} + \cot \theta \cos \phi \pdv{}{\phi}) \quad$
 $\widehat{L}_y = i \hbar(-\cos \phi \pdv{}{\theta} + \cot \theta \sin \phi \pdv{}{\phi})$
-$\widehat{L}_z = -i \hbar \pdv{}{\phi}$
+
+$\widehat{L}_z = -i \hbar \pdv{}{\phi} \quad$
 $\widehat{\vec{L}}^2 = -\hbar^2 [\frac{1}{\sin \theta} \pdv{}{\theta} (\sin \theta \pdv{}{\theta}) + \frac{1}{\sin^2 \theta} \pdv[2]{}{\phi}]$
 
-$\widehat{\vec{L}} Y(\theta, \phi) = l (l+1) \hbar^2 Y(\theta, \phi)$
+$\widehat{\vec{L}}^2 Y(\theta, \phi) = l (l+1) \hbar^2 Y(\theta, \phi)$
 
-$-\frac{\hbar^2}{2m} \frac{1}{r^2} \dv{}{r} (r^2 \dv{R(r)}{r}) - V_{\textrm{eff}}(r) R(r) = ER(r)$, $V_{\textrm{eff}}(r) = V(r) + \frac{l(l+1) \hbar^2}{2mr^2}$
+\hrule height 0.1pt
+
+$-\frac{\hbar^2}{2m} \frac{1}{r^2} \dv{}{r} (r^2 \dv{R(r)}{r}) - V_{\textrm{eff}}(r) R(r) = ER(r)$, $V_{\textrm{eff}}(r) = V(r) + \frac{l(l+1) \hbar^2}{2mr^2}$, centrifugal
 
 \subsubsection{Spherical harmonics}
 
-Find the sols to the angular eqn. Use sep of vars $Y(\theta, \phi) = \Theta(\theta) \Phi(\phi)$.
+Find sols to angular eqn. Sep of vars $Y(\theta, \phi) = \Theta(\theta) \Phi(\phi)$.
 
-$\frac{1}{\Theta} [\sin\theta \dv{}{\theta} (\sin \theta \dv{\Theta}{\theta}) + l(l+1) \sin^2 \theta = - \frac{1}{\Theta} \dv[2]{\Phi}{\phi} = constant = m^2$
+$\frac{1}{\Theta} [\sin\theta \dv{}{\theta} (\sin \theta \dv{\Theta}{\theta}) + l(l+1) \sin^2 \theta = - \frac{1}{\Theta} \dv[2]{\Phi}{\phi} = \textrm{constant} = m^2$
 
-$\Psi(\psi) = e^{im\psi}$
+$\Phi(\phi) = e^{im\phi}$, periodic in $\phi$ w period $2 \pi$ gives constraint $m = 0, \pm 1, \pm 2, \cdots$
 
-$\Psi(\psi)$ is periodic in $\psi$ w period $2 \pi$ gives the constraint $m = 0, \pm 1, \pm 2, \cdots$
-
-The eq for $\Theta(\theta)$ can be written in terms of $x \equiv \cos \theta$
+$\Theta(\theta)$ can be written in terms of $x \equiv \cos \theta$ as
 
 $(1 - x^2) \dv[2]{P(x)}{x} - 2x \dv{P(x)}{x} + (l(l+1) - \frac{m^2}{1-x^2}) P(x) = 0$
+
+\hrule height 0.1pt
 
 Associated Legendre functions: $P_l^{m_l}(x) = (1-x^2)^{|m_l|/2} (\dv{}{x})^{|m_l|} P_l(x)$,
 where $P_l(x)$ is the $l^{th}$ Legendre polynomial given by the Rodrigues formula $P_l(x) = \frac{1}{2^l l!} (\dv{}{x})^l (x^2 - 1)^l$, with $l$ taking values $l=0, 1, 2, ...$
 
 and for each $l$, $m_l$ takes $2l + 1$ values $m_l = -l, -l+1, ..., l-1, l$.
 
+\hrule height 0.1pt
+
 Spherical harmonics, normalized angular wave functions: $Y_l^m (\theta, \phi) = \epsilon \sqrt{\frac{(2l+1)}{4 \pi} \frac{(l-|m|)!}{(l+|m|)!}} e^{im \phi} P_l^m (\cos \theta)$, where $\epsilon = (-1)^m$ for $m \geq 0$ and $\epsilon = 1$ for $m \leq 0$. 
 
-The Legendre polynomials are normalized s.t. they satisfy the ortho relation $\int_{-1}{1} P_{l'} P_l(x) dx = \int_0^{\pi} P_{l'}(\theta) P_l(\theta) \sin \theta d \theta = \frac{2}{2 l + 1} \delta_{l' l}$
+\hrule height 0.1pt
 
-First few associated Legendre functions:
+$\widehat{\vec{L}}^2 Y_l^{m_l} = l(l+1) \hbar^2 Y_l^{m_l}, \qquad \widehat{\vec{L}}_z Y_l^{m_l} = m \hbar Y_l^{m_l}$
 
-$P_0^0(x) = 1, P_1^1(x) = \sqrt{1 - x^2}, P_1^0(x) = x, P_2^2(x) = 3(1-x^2), P_2^1(x) = 3x \sqrt{1 - x^2}, P_2^0 = \frac{1}{2} (3x^2 - 1)$
+\hrule height 0.1pt
+
+The Legendre polynomials are normalized s.t. they satisfy the ortho relation $\int_{-1}^{1} P_{l'} P_l(x) dx = \int_0^{\pi} P_{l'}(\theta) P_l(\theta) \sin \theta d \theta = \frac{2}{2 l + 1} \delta_{l' l}$
+
+\hrule height 0.1pt 
+
+%First few associated Legendre functions: (CS)
+%$P_0^0(x) = 1, P_1^1(x) = \sqrt{1 - x^2}, P_1^0(x) = x, P_2^2(x) = 3(1-x^2), P_2^1(x) = 3x \sqrt{1 - x^2}, P_2^0 = \frac{1}{2} (3x^2 - 1)$
 
 $P_0^0(\theta) = 1, P_1^1(\theta) = \sin \theta, P_1^1(\theta) = \cos \theta, P_2^2 (\theta) = 3 \sin^2 \theta, P_2^1(\theta) = 3 \cos \theta \sin \theta, P_2^0(\theta) = \frac{1}{2} (3 \cos^2 \theta - 1)$
 
 with $P_l^{-m_l}(x) = P_l^{m_l}(x)$
 
-$\int_{-1}^{1} P_{l'}^{m'_l} (x) P_{l}^{m_l} (x) dx = \int_0^{\pi} P_{l'}^{m'_l}(\theta) P_l^{m_l} (\theta) \sin \theta d \theta = \frac{(l+m_l)!}{(2l+1)(l-m_l)!} \delta_{l'l} \delta_{m'_l, m_l}$
+\hrule height 0.1pt
 
-First few spherical harmonics: $Y_0^0(\theta, \phi) = \frac{1}{\sqrt{4\pi}}, Y_1^{\pm 1}(\theta, \phi) = \mp \sqrt{\frac{3}{8 \pi}} \sin \theta e^{\pm i \phi}, Y_1^0(\theta, \phi) = \sqrt{\frac{3}{4\pi}} \cos \theta$
+\tiny
+$\int_{-1}^{1} P_{l'}^{m'} (x) P_{l}^{m} (x) dx = \int_0^{\pi} P_{l'}^{m'}(\theta) P_l^{m} (\theta) \sin \theta d \theta = \frac{(l+m)!}{(2l+1)(l-m)!} \delta_{l'l} \delta_{m', m}$
+\scriptsize
 
-The spherical harmonics satisfy the orthogonality relation $\int_0^{2 \pi} d\phi \int_0^{\pi} d\theta \sin \theta Y_{l'}^{m'_l *} (\theta, \phi) Y_l^{m_l} (\theta, \phi) = \delta_{l'l} \delta_{m'_l m_l}$
+%First few spherical harmonics: $Y_0^0(\theta, \phi) = \frac{1}{\sqrt{4\pi}}, Y_1^{\pm 1}(\theta, \phi) = \mp \sqrt{\frac{3}{8 \pi}} \sin \theta e^{\pm i \phi}, Y_1^0(\theta, \phi) = \sqrt{\frac{3}{4\pi}} \cos \theta$
+
+Satisfy the orthogonality relation $\int_0^{2 \pi} d\phi \int_0^{\pi} d\theta \sin \theta Y_{l'}^{m'_l *} (\theta, \phi) Y_l^{m_l} (\theta, \phi) = \delta_{l'l} \delta_{m'_l m_l}$
+
+\hrule height 0.1pt
 
 $\widehat{\vec{L}}^2 | l m_l \rangle = l(l+1) \hbar^2 |l m_l \rangle$, $\widehat{\vec{L}}_z | l m_l \rangle = m \hbar |l m_l \rangle$
 
-The spherical harmonics are the wavefunctions in pos rep, $Y_l^{m_l}(\theta, \phi) = \langle \vec{r} | l m_l \rangle$
+Spherical harmonics are the wavefunctions in pos rep, $Y_l^{m_l}(\theta, \phi) = \langle \vec{r} | l m_l \rangle$
+
+\hrule height 0.1pt
 
 \subsubsection{Parity of the spherical harmonics}
-Cartesian coords: $\widehat{P} \psi(x, y, z) = \psi(-x, -y, -z)$
 
-Spherical coords: $\widehat{P} \psi(r, \theta, \phi) = \psi(r, \pi - \theta, \phi + \theta)$
+\hfill
 
-For the Legendre polynomials, $\widehat{P} P_l^{m_l} (\theta) = (-1)^{l - |m_l|} P_l^{m_l} (\theta) \rightarrow$ even for $l + |m_l|$ even and odd for $l + |m_l|$ odd.
+$\widehat{P} \psi(x, y, z) = \psi(-x, -y, -z), \qquad \widehat{P} \psi(r, \theta, \phi) = \psi(r, \pi - \theta, \phi + \theta)$
+
+For the Legendre polynomials, $\widehat{P} P_l^{m_l} (\theta) = (-1)^{l - |m_l|} P_l^{m_l} (\theta)$
+
+$\rightarrow$ even for $l + |m_l|$ even and odd for $l + |m_l|$ odd.
 
 Azimuthal part of the wavefunction, $\widehat{P} e^{im_l \phi} = e^{i m_l (\phi + \pi)} = (-1)^{m_l} e^{i m_l \phi}$.
 
 The spherical harmonics are products of two, and 
-$$\widehat{P} Y_l^{m_l} (\theta, \phi) = Y_l^{m_l} (\pi - \theta, \phi + \pi) = (-1)^{l - |m_l| + m_l} Y_l^{m_l}(\theta, \phi) = (-1)^{l} Y_l^{m_l} (\theta, \phi)$$
+$\widehat{P} Y_l^{m_l} (\theta, \phi) = Y_l^{m_l} (\pi - \theta, \phi + \pi) = (-1)^{l - |m_l| + m_l} Y_l^{m_l}(\theta, \phi) = (-1)^{l} Y_l^{m_l} (\theta, \phi)$
 
 %\vspace{-0.25\baselineskip}
 \subsection{\underline{The hydrogen atom}}
@@ -202,8 +230,7 @@ Rydberg formula: $\frac{1}{\lambda} = R(\frac{1}{n^2_f} - \frac{1}{n^2_i})$
 Rydberg constant: $R \equiv \frac{m}{4 \pi c \hbar^3} (\frac{e^2}{4 \pi \epsilon_0})^2 = 1.097 \times 10^7 \textrm{ m}^{-1}$
 
 \subsection{\underline{General angular momentum}}
-$\widehat{\vec{J}} = (\widehat{J}_x, \widehat{J}_y, \widehat{J}_z) = (\widehat{J}_1, \widehat{J}_2, \widehat{J}_3)$
-
+$\widehat{\vec{J}} = (\widehat{J}_x, \widehat{J}_y, \widehat{J}_z) = (\widehat{J}_1, \widehat{J}_2, \widehat{J}_3) \qquad$ 
 $\widehat{\vec{J}}^2 = \widehat{\vec{J}}^2_x + \widehat{\vec{J}}^2_y + \widehat{\vec{J}}^2_z$
 
 The commutation relations are $[\widehat{J}_i, \widehat{J}_j] = i \hbar \epsilon_{ijk} \widehat{J}_k$, $[\widehat{\vec{J}}^2, J_i] = 0$
@@ -214,8 +241,7 @@ The commutation relations become $[\widehat{J}_{+}, \widehat{J}_{-}] = 2 \hbar \
 
 Because $\widehat{\vec{J}}^2$ and $\widehat{J}_z$ commute, we can simulaneously diagonalize them. Let the simultaneous eigenstate be $|ab\rangle$ s.t. $\widehat{\vec{J}}^2 | ab \rangle  = a | ab \rangle$, $\widehat{\vec{J}}_z | ab \rangle = b | ab \rangle$
 
-$\widehat{\vec{J}}^2 ( \widehat{J}_{\pm} | ab \rangle) = a(\widehat{J}_{\pm} | ab \rangle$, so $\widehat{J}_{\pm} | ab \rangle$
-
+$\widehat{\vec{J}}^2 ( \widehat{J}_{\pm} | ab \rangle) = a(\widehat{J}_{\pm} | ab \rangle$, so $\widehat{J}_{\pm} | ab \rangle \qquad$
 $\widehat{J}_z(\widehat{J}_\pm |ab\rangle) = (b \pm \hbar) (\widehat{J}_{\pm} | ab \rangle)$
 
 Thus, $\widehat{J}_{+}$ raises and $\widehat{J}_{-}$ lowers the eigenvalue $b$ of $\widehat{J}_z$. Therefore, assuming $|ab \rangle$ is normalized, $\widehat{J}_{\pm} | ab \rangle = c_{\pm} | ab \pm \hbar \rangle$, where $c_{\pm}$ are normalization constants.
