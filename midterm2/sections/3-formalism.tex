@@ -126,6 +126,7 @@ $\langle x | \widehat{p} | p \rangle = p \langle x | p \rangle = -i \hbar \pdv{}
 In 3D, $\langle \vec{r} | \vec{p} \rangle = \frac{1}{(2 \pi \hbar)^{3/2}} e^{\frac{i}{\hbar} \vec{p} \vec{r}}$.
 
 We can write the normalized wavefunction of definite position in momentum space, $\langle p | x \rangle = \langle x | p \rangle^*$. So, $\langle p | x \rangle = \frac{1}{\sqrt{2 \pi \hbar}} e^{-\frac{i}{\hbar} px}$ (particle moving to the left, or with momentum $-p$, in the momentum space).
+$[x, p] = i \hbar$
 
 \subsubsection{Operators and wavefunction in position representation}
 
@@ -174,7 +175,8 @@ Cannot construct simulatneous eigenstates (which correspond to definite eigenval
 
 \subsection{\underline{Time evolution of expectation value of an operator and Ehrenfest's theorem}}
 
-Ehrenfest's theorem: how observable $\widehat{O}$'s expectation value in state $|\psi(t) \rangle$ evolves in time, $\dv{}{t} \langle \widehat{O} \rangle = \langle \pdv{\widehat{O}}{t} \rangle + \frac{i}{\hbar} \langle [ \widehat{H}, \widehat{O} ] \rangle$
+Ehrenfest's theorem: how observable $\widehat{O}$'s expectation value in state $|\psi(t) \rangle$ evolves in time, $\dv{}{t} \langle \widehat{O} \rangle = \langle \pdv{\widehat{O}}{t} \rangle + \frac{i}{\hbar} \langle [ \widehat{H}, \widehat{O} ] \rangle$.
+If operator has no explicit time dep, $\dv{}{t} \langle \widehat{O} \rangle = \frac{1}{i \hbar} \langle [ \widehat{O}, \widehat{H} ] \rangle$.
 
 For $\widehat{O} = \widehat{\vec{p}}$ and a Hamiltonian that is TI, $\dv{}{t} \langle \widehat{\vec{p}} \rangle = - \langle \vec{\grad} V(\widehat{\vec{r}}) \rangle$, which is just Newton's Second Law! $\rightarrow$ QM contains all of classical mech.
 

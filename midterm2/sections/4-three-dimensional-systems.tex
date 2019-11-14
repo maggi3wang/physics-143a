@@ -65,7 +65,7 @@ $-\frac{\hbar^2}{2m} \frac{1}{r^2} \dv{}{r} (r^2 \dv{R(r)}{r}) - V_{\textrm{eff}
 
 \subsubsection{Spherical harmonics}
 
-Find sols to angular eqn. Sep of vars $Y(\theta, \phi) = \Theta(\theta) \Phi(\phi)$.
+Find sols to angular eqn. Sep vars $Y(\theta, \phi) = \Theta(\theta) \Phi(\phi)$.
 
 $\frac{1}{\Theta} [\sin\theta \dv{}{\theta} (\sin \theta \dv{\Theta}{\theta}) + l(l+1) \sin^2 \theta = - \frac{1}{\Theta} \dv[2]{\Phi}{\phi} = \textrm{constant} = m^2$
 
@@ -99,8 +99,9 @@ The Legendre polynomials are normalized s.t. they satisfy the ortho relation $\i
 %First few associated Legendre functions: (CS)
 %$P_0^0(x) = 1, P_1^1(x) = \sqrt{1 - x^2}, P_1^0(x) = x, P_2^2(x) = 3(1-x^2), P_2^1(x) = 3x \sqrt{1 - x^2}, P_2^0 = \frac{1}{2} (3x^2 - 1)$
 
-$P_0^0(\theta) = 1, P_1^1(\theta) = \sin \theta, P_1^1(\theta) = \cos \theta, P_2^2 (\theta) = 3 \sin^2 \theta, P_2^1(\theta) = 3 \cos \theta \sin \theta, P_2^0(\theta) = \frac{1}{2} (3 \cos^2 \theta - 1)$
+%$P_0^0(\theta) = 1, P_1^1(\theta) = \sin \theta, P_1^1(\theta) = \cos \theta, P_2^2 (\theta) = 3 \sin^2 \theta, P_2^1(\theta) = 3 \cos \theta \sin \theta, P_2^0(\theta) = \frac{1}{2} (3 \cos^2 \theta - 1)$
 
+$P_0^0(\theta) = 1, P_1^1(\theta) = \sin \theta, P_1^1(\theta) = \cos \theta,$
 with $P_l^{-m_l}(x) = P_l^{m_l}(x)$
 
 \hrule height 0.1pt
@@ -116,6 +117,11 @@ Satisfy the orthogonality relation $\int_0^{2 \pi} d\phi \int_0^{\pi} d\theta \s
 \hrule height 0.1pt
 
 $\widehat{\vec{L}}^2 | l m_l \rangle = l(l+1) \hbar^2 |l m_l \rangle$, $\widehat{\vec{L}}_z | l m_l \rangle = m \hbar |l m_l \rangle$
+
+
+$\widehat{\vec{L}}_{+} = L_x + iL_y$, $\widehat{\vec{L}}_{-} L_x - i L_y$, $L_x = \frac{1}{2}(L_{-} + L_{+})$, $\langle L_x^2 \rangle = \frac{1}{2} \langle L^2 - L_z^2 \rangle$
+
+$L_{\pm} |lm \rangle = \hbar \sqrt{(l \mp m)(l \pm m + 1)} | l, m \pm 1 \rangle$
 
 Spherical harmonics are the wavefunctions in pos rep, $Y_l^{m_l}(\theta, \phi) = \langle \vec{r} | l m_l \rangle$
 
@@ -138,6 +144,7 @@ $\widehat{P} Y_l^{m_l} (\theta, \phi) = Y_l^{m_l} (\pi - \theta, \phi + \pi) = (
 
 %\vspace{-0.25\baselineskip}
 \subsection{\underline{The hydrogen atom}}
+
 Coulomb's law, $\widehat{V} = - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r}$
 
 Let $u(r) \equiv r R(r)$, Radial eq: $-\frac{\hbar^2}{2m} \dv[2]{u}{r} + [-\frac{e^2}{4 \pi \epsilon_0} \frac{1}{r} + \frac{\hbar^2}{2m} \frac{l (l+1)}{r^2}]u = Eu$
