@@ -36,11 +36,13 @@ State vector is neither in position nor momentum space. Basis vectors: $|0 \rang
 
 \subsubsection{Linearity}: Because the SE is linear, given two states $|\psi_1(t) \rangle$ and $|\psi_2(t) \rangle$, $|\psi(t) \rangle = c_1 |\psi_1(t) \rangle + c_2|\psi_2(t)\rangle$ is also a sol. ($c$'s are complex).
 
-\subsubsection{Properties of a vector space}
+% \subsubsection{Properties of a vector space}
 % This is pretty self-explanatory
 
 \subsubsection{Dual vector space}
-$c|\psi \rangle$ is mapped to $c* \langle \psi |$. Given a vector, $|\psi \rangle = \begin{bmatrix} : \\ \alpha \\ : \end{bmatrix}$, the dual vector is $\langle \psi | = \begin{bmatrix} \cdots & \alpha^* & \cdots \end{bmatrix}$.
+\tiny
+$c|\psi \rangle$ is mapped to $c^* \langle \psi |$. Given a vector, $|\psi \rangle = \begin{bmatrix} : \\ \alpha \\ : \end{bmatrix}$, the dual vector is $\langle \psi | = \begin{bmatrix} \cdots & \alpha^* & \cdots \end{bmatrix}$.
+\scriptsize
 
 Dual basis vectors are $\langle 0 | = \begin{bmatrix} 1 & 0 & \cdots \end{bmatrix}$, $\cdots$, $\langle n| \begin{bmatrix} 0 & \cdots & 1 \end{bmatrix}$.
 
@@ -51,7 +53,7 @@ $\langle \phi | \psi \rangle = \langle \psi | \phi \rangle^*$ $\rightarrow$ $\la
 \subsection{\underline{Operators}}
 A matrix operator $\widehat{A}$ acting on a state vector $|\psi \rangle$ transforms it into another state vector $|\phi \rangle$, $\widehat{A} |\psi \rangle = | \phi \rangle$. It is linear.
 
-\subsubsection{Properties of operators}
+% \subsubsection{Properties of operators}
 % Also pretty self-explanatory.
 
 \subsubsection{Hermitian conjugate (Hermitian adjoint) operator in the dual space} \hfill
@@ -63,14 +65,14 @@ $$(\widehat{A}\widehat{B})^{\dag} = (\widehat{A} \widehat{B})^{T*} = (\widehat{B
 \subsubsection{Outer product operators}: $| \psi \rangle \langle \phi | \qquad [|\psi \rangle \langle \phi |] \chi \rangle  = | \psi \rangle \langle \phi | \chi \rangle$
 
 \subsubsection{Matrix elements of operators}
-$$\langle \phi | \widehat{A} | \psi \rangle \textrm{ (complex num)}$$
+$\langle \phi | \widehat{A} | \psi \rangle \textrm{ (complex num)}$
 
 Hermitian equiv to complex conj $\langle \phi | \widehat{A} | \psi \rangle^{\dag} = \langle \psi | \widehat{A}^{\dag} | \phi \rangle = \langle \phi | \widehat{A} | \psi \rangle ^*$
 
 \subsubsection{Hermitian operators}: $\widehat{A}^{\dag} = \widehat{A}$, so given $\widehat{A} | \phi \rangle$ in the vector space, we have $\langle \psi | \widehat{A}^{\dag} = \langle \phi | \widehat{A}$ in the dual vector space.
 
 \subsubsection{Matrix elements of a Hermitian operator}
-$$\langle \phi | \widehat{A} | \psi \rangle^{\dag} = \langle \phi | \widehat{A} | \psi \rangle^* = \langle \psi | \widehat{A}^{\dag} | \phi \rangle = \langle \psi | \widehat{A} | \phi \rangle$$
+$\langle \phi | \widehat{A} | \psi \rangle^{\dag} = \langle \phi | \widehat{A} | \psi \rangle^* = \langle \psi | \widehat{A}^{\dag} | \phi \rangle = \langle \psi | \widehat{A} | \phi \rangle$
 
 Hermitian operator, real expectation vals: $\langle \psi | \widehat{A} | \phi \rangle ^* = \langle \psi | \widehat{A} | \phi \rangle \equiv \langle \widehat{A} \rangle$
 
@@ -234,6 +236,10 @@ Rewrite Hamiltonian, $H = \hbar \omega | \alpha |^2, \qquad \dot{\alpha} = -i \o
 Coherent state, superpos of stat states $|n \rangle$: $| \alpha \rangle = e^{-\frac{1}{2} |\alpha|^2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} | n \rangle$
 
 $P(n) = |\langle n | \alpha \rangle|^2 = |\alpha_n|^2 = \frac{\langle n \rangle^n e^{-\langle n \rangle}}{n!}$, where $\langle n \rangle = \langle \alpha | a^{\dag} a | \alpha \rangle = | \alpha |^2$.
+
+\tiny
+Linear superpos. of all quantum nums which represent the class oscill the most. Has shape of Gaussian of min uncertainty satisfying $\Delta x \Delta p \geq \frac{\hbar}{2}$ regardless of value of energy. Oscillates like a class oscill, w only diff being that the particle's loc is not represented by a point (or a delta func) but by a Gaussian func.
+\scriptsize
 
 %\subsection{\underline{3.1 Hilbert Space}}
 
