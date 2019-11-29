@@ -1,0 +1,463 @@
+\section{4. 3D SYSTEMS} \hrule height 0.3pt \thinspace
+
+\subsection{\underline{Three-dimensional infinite square well}}
+
+$-\frac{\hbar^2}{2m}(\pdv[2]{}{x} + \pdv[2]{}{y} + \pdv[2]{}{z}) \psi(x, y, z) = E \psi(x, y, z)$ for $0 \leq x \leq l_x, ...$
+
+while $\psi(x, y, z) = 0$ outside.
+
+Separation of vars: $\psi(x, y, z) = \psi_1(x) \psi_2(y) \psi_3(z)$
+
+$\rightarrow$ SE becomes $-\frac{\hbar^2}{2m} \dv[2]{}{x} \psi_1(x) = E_1 \psi_1(x), ...$, where $E = E_1 + E_2 + E_3$.
+
+$\psi_{n_x n_y n_z}(x, y, z) = \sqrt{\frac{8}{l_x l_y l_z}} \sin(\frac{n_x \pi}{l_x} x) \sin(\frac{n_y \pi}{l_y} z) \sin(\frac{n_z \pi}{l_z} z)$
+
+$E_{n_x n_y n_z} = \frac{\hbar^2 \pi^2}{2m} (\frac{n^2_x}{l^2_x} + \frac{n^2_y}{l^2_y} + \frac{n^2_z}{l^2_z})$, with $n_x, n_y, n_z = 1, 2, ...$.
+
+Wave vector: $\vec{k} = (k_x, k_y, k_z) = (\frac{n_x \pi}{l_x}, \frac{n_y \pi}{l_y}, \frac{n_z \pi}{l_z})$
+
+\subsection{\underline{The Schr\"odinger equation in spherical coordinates}}
+
+$i \hbar \pdv{\psi(\vec{r}, t)}{t} = -\frac{\hbar^2}{2m} \vec{\grad}^2 \psi(\vec{r}, t) + V(\vec{r})\psi(\vec{r}, t)$, where $\vec{r} = (r, \theta, \phi)$, $\psi(\vec{r}, t) = \psi(r, \theta, \phi, t)$ and $\vec{\grad}^2 = \frac{1}{r^2} \pdv{}{r}(r^2 \pdv{}{r}) + \frac{1}{r^2 \sin \theta} \pdv{}{\theta} (\sin \theta \pdv{}{\theta}) + \frac{1}{r^2 \sin^2 \theta} \pdv[2]{}{\phi}$.
+
+For a TI and central potential, potential depends only on $r$, $V(\vec{r}) = V(r)$.
+
+$\frac{1}{R(r)} [\dv{}{r} (r^2 \dv{R(r)}{r}) - \frac{2mr^2}{\hbar^2} (V(r) - E)] = -\frac{1}{Y(\theta, \phi)} [\frac{1}{\sin\theta} \dv{}{\theta} (\sin \theta \dv{Y(\theta, \phi)}{\theta}) + \frac{1}{\sin^2 \theta} \dv[2]{Y(\theta, \phi)}{\phi}]$
+
+Each side must be constant and equal (let it be $l(l+1)$).
+$\frac{1}{\sin\theta} \dv{}{\theta} (\sin \theta \dv{Y(\theta, \phi)}{\theta}) + \frac{1}{\sin^2 \theta} \dv[2]{Y(\theta, \phi)}{\phi} = -l(l+1)Y(\theta, \phi)$
+$\dv{}{r}(r^2 \dv{R(r)}{r}) - \frac{2mr^2}{\hbar^2}(V(r) - E) = l(l+1) R(r)$
+
+\subsection{\underline{Orbital angular momentum}}
+
+$\widehat{L}_x = \widehat{y} \widehat{p}_z - \widehat{z} \widehat{p}_y, \widehat{L}_y = \widehat{z} \widehat{p}_x - \widehat{x} \widehat{p}_z, \widehat{L}_z = \widehat{x} \widehat{p}_y - \widehat{y} \widehat{p}_x$
+
+$[\widehat{L}_i, \widehat{L}_j] = i \hbar \epsilon_{ijk} \widehat{L}_k$, with $i =1, 2, 3$ representing the $x$, $y$, and $z$ components, and $\epsilon_{123} = \epsilon_{231} = \epsilon_{312} = 1$, which is -1 for odd perms of indices, and vanishes when repeated.
+
+$\widehat{\vec{L}}^2 = \widehat{\vec{L}}_x^2 + \widehat{\vec{L}}_y^2 + \widehat{\vec{L}}_z^2$, $[\widehat{\vec{L}^2}, \widehat{L}_i]=0$
+
+\hrule height 0.1pt
+
+In pos rep, $\widehat{\vec{L}} = \widehat{\vec{r}} \times \widehat{\vec{p}} = -i \hbar \vec{r} \times \vec{\grad}$. In sph coords, $\widehat{\vec{L}} = -i \hbar r \widehat{r} \times (\pdv{}{r} \widehat{r} + \frac{1}{r} \pdv{}{\theta} \widehat{\theta} + \frac{1}{r \sin\theta} \pdv{}{\phi} \widehat{\phi} = -i \hbar (\widehat{\phi} \pdv{}{\theta} - \widehat{\theta} \frac{1}{\sin \theta} \pdv{}{\phi})$
+
+%Components along cartesian unit vectors:
+
+\hrule height 0.1pt
+
+$\widehat{r} = \sin \theta \cos \psi \widehat{x} + \sin \theta \sin \phi \widehat{y} + \cos \theta \widehat{z}$
+
+$\widehat{\theta} = \cos{\theta} \cos{\phi} \widehat{x} + \cos{\theta} \sin{\phi} \widehat{y} - \sin{\theta} \widehat{z} \quad$ 
+$\widehat{\phi} = - \sin \phi \widehat{x} - \cos \phi \widehat{y}$
+
+\hrule height 0.1pt
+
+$\widehat{L}_x = i \hbar (\sin \theta \pdv{}{\theta} + \cot \theta \cos \phi \pdv{}{\phi}) \quad$
+$\widehat{L}_y = i \hbar(-\cos \phi \pdv{}{\theta} + \cot \theta \sin \phi \pdv{}{\phi})$
+
+$\widehat{L}_z = -i \hbar \pdv{}{\phi} \quad$
+$\widehat{\vec{L}}^2 = -\hbar^2 [\frac{1}{\sin \theta} \pdv{}{\theta} (\sin \theta \pdv{}{\theta}) + \frac{1}{\sin^2 \theta} \pdv[2]{}{\phi}]$
+
+$\widehat{\vec{L}}^2 Y(\theta, \phi) = l (l+1) \hbar^2 Y(\theta, \phi)$
+
+\hrule height 0.1pt
+
+$-\frac{\hbar^2}{2m} \frac{1}{r^2} \dv{}{r} (r^2 \dv{R(r)}{r}) - V_{\textrm{eff}}(r) R(r) = ER(r)$, $V_{\textrm{eff}}(r) = V(r) + \frac{l(l+1) \hbar^2}{2mr^2}$, centrifugal
+
+\subsubsection{Spherical harmonics}
+
+Find sols to angular eqn. Sep vars $Y(\theta, \phi) = \Theta(\theta) \Phi(\phi)$.
+
+$\frac{1}{\Theta} [\sin\theta \dv{}{\theta} (\sin \theta \dv{\Theta}{\theta}) + l(l+1) \sin^2 \theta = - \frac{1}{\Theta} \dv[2]{\Phi}{\phi} = \textrm{constant} = m^2$
+
+$\Phi(\phi) = e^{im\phi}$, periodic in $\phi$ w period $2 \pi$ gives constraint $m = 0, \pm 1, \pm 2, \cdots$
+
+$\Theta(\theta)$ can be written in terms of $x \equiv \cos \theta$ as
+
+$(1 - x^2) \dv[2]{P(x)}{x} - 2x \dv{P(x)}{x} + (l(l+1) - \frac{m^2}{1-x^2}) P(x) = 0$
+
+\hrule height 0.1pt
+
+Associated Legendre functions: $P_l^{m_l}(x) = (1-x^2)^{|m_l|/2} (\dv{}{x})^{|m_l|} P_l(x)$,
+where $P_l(x)$ is the $l^{th}$ Legendre polynomial given by the Rodrigues formula $P_l(x) = \frac{1}{2^l l!} (\dv{}{x})^l (x^2 - 1)^l$, with $l$ taking values $l=0, 1, 2, ...$
+
+and for each $l$, $m_l$ takes $2l + 1$ values $m_l = -l, -l+1, ..., l-1, l$.
+
+\hrule height 0.1pt
+
+Spherical harmonics, normalized angular wave functions: $Y_l^m (\theta, \phi) = \epsilon \sqrt{\frac{(2l+1)}{4 \pi} \frac{(l-|m|)!}{(l+|m|)!}} e^{im \phi} P_l^m (\cos \theta)$, where $\epsilon = (-1)^m$ for $m \geq 0$ and $\epsilon = 1$ for $m \leq 0$. 
+
+\hrule height 0.1pt
+
+$\widehat{\vec{L}}^2 Y_l^{m_l} = l(l+1) \hbar^2 Y_l^{m_l}, \qquad \widehat{\vec{L}}_z Y_l^{m_l} = m \hbar Y_l^{m_l}$
+
+\hrule height 0.1pt
+
+The Legendre polynomials are normalized s.t. they satisfy the ortho relation $\int_{-1}^{1} P_{l'} P_l(x) dx = \int_0^{\pi} P_{l'}(\theta) P_l(\theta) \sin \theta d \theta = \frac{2}{2 l + 1} \delta_{l' l}$
+
+\hrule height 0.1pt 
+
+%First few associated Legendre functions: (CS)
+%$P_0^0(x) = 1, P_1^1(x) = \sqrt{1 - x^2}, P_1^0(x) = x, P_2^2(x) = 3(1-x^2), P_2^1(x) = 3x \sqrt{1 - x^2}, P_2^0 = \frac{1}{2} (3x^2 - 1)$
+
+%$P_0^0(\theta) = 1, P_1^1(\theta) = \sin \theta, P_1^1(\theta) = \cos \theta, P_2^2 (\theta) = 3 \sin^2 \theta, P_2^1(\theta) = 3 \cos \theta \sin \theta, P_2^0(\theta) = \frac{1}{2} (3 \cos^2 \theta - 1)$
+
+$P_0^0(\theta) = 1, P_1^1(\theta) = \sin \theta, P_1^1(\theta) = \cos \theta,$
+with $P_l^{-m_l}(x) = P_l^{m_l}(x)$
+
+\hrule height 0.1pt
+
+\tiny
+$\int_{-1}^{1} P_{l'}^{m'} (x) P_{l}^{m} (x) dx = \int_0^{\pi} P_{l'}^{m'}(\theta) P_l^{m} (\theta) \sin \theta d \theta = \frac{(l+m)!}{(2l+1)(l-m)!} \delta_{l'l} \delta_{m', m}$
+\scriptsize
+
+%First few spherical harmonics: $Y_0^0(\theta, \phi) = \frac{1}{\sqrt{4\pi}}, Y_1^{\pm 1}(\theta, \phi) = \mp \sqrt{\frac{3}{8 \pi}} \sin \theta e^{\pm i \phi}, Y_1^0(\theta, \phi) = \sqrt{\frac{3}{4\pi}} \cos \theta$
+
+Satisfy the orthogonality relation $\int_0^{2 \pi} d\phi \int_0^{\pi} d\theta \sin \theta Y_{l'}^{m'_l *} (\theta, \phi) Y_l^{m_l} (\theta, \phi) = \delta_{l'l} \delta_{m'_l m_l}$
+
+\hrule height 0.1pt
+
+$\widehat{\vec{L}}^2 | l m_l \rangle = l(l+1) \hbar^2 |l m_l \rangle$, $\widehat{\vec{L}}_z | l m_l \rangle = m \hbar |l m_l \rangle$
+
+
+$\widehat{\vec{L}}_{+} = L_x + iL_y$, $\widehat{\vec{L}}_{-} L_x - i L_y$, $L_x = \frac{1}{2}(L_{-} + L_{+})$, $\langle L_x^2 \rangle = \frac{1}{2} \langle L^2 - L_z^2 \rangle$
+
+$L_{\pm} |lm \rangle = \hbar \sqrt{(l \mp m)(l \pm m + 1)} | l, m \pm 1 \rangle$
+
+Spherical harmonics are the wavefunctions in pos rep, $Y_l^{m_l}(\theta, \phi) = \langle \vec{r} | l m_l \rangle$
+
+\hrule height 0.1pt
+
+\subsubsection{Parity of the spherical harmonics}
+
+\hfill
+
+$\widehat{P} \psi(x, y, z) = \psi(-x, -y, -z), \qquad \widehat{P} \psi(r, \theta, \phi) = \psi(r, \pi - \theta, \phi + \theta)$
+
+For the Legendre polynomials, $\widehat{P} P_l^{m_l} (\theta) = (-1)^{l - |m_l|} P_l^{m_l} (\theta)$
+
+$\rightarrow$ even for $l + |m_l|$ even and odd for $l + |m_l|$ odd.
+
+Azimuthal part of the wavefunction, $\widehat{P} e^{im_l \phi} = e^{i m_l (\phi + \pi)} = (-1)^{m_l} e^{i m_l \phi}$.
+
+The spherical harmonics are products of two, and 
+$\widehat{P} Y_l^{m_l} (\theta, \phi) = Y_l^{m_l} (\pi - \theta, \phi + \pi) = (-1)^{l - |m_l| + m_l} Y_l^{m_l}(\theta, \phi) = (-1)^{l} Y_l^{m_l} (\theta, \phi)$
+
+%\vspace{-0.25\baselineskip}
+\subsection{\underline{The hydrogen atom}}
+
+Coulomb's law, $\widehat{V} = - \frac{e^2}{4 \pi \epsilon_0} \frac{1}{r}$
+
+Let $u(r) \equiv r R(r)$, Radial eq: $-\frac{\hbar^2}{2m} \dv[2]{u}{r} + [-\frac{e^2}{4 \pi \epsilon_0} \frac{1}{r} + \frac{\hbar^2}{2m} \frac{l (l+1)}{r^2}]u = Eu$
+
+\subsubsection{The radial wave function}
+
+\hfill
+
+$\kappa \equiv \frac{\sqrt{-2mE}}{\hbar}$.
+Divide by $E$, 
+$\frac{1}{\kappa^2} \dv[2]{u}{r} = [1 - \frac{me^2}{2 \pi \epsilon_0 \hbar^2 \kappa} \frac{1}{(\kappa r)} + \frac{l (l+1)}{(\kappa r)^2}] u$
+
+Introduce $\rho \equiv \kappa r$, $\rho_0 \equiv \frac{me^2}{2 \pi \epsilon \hbar^2 \kappa}$, $\dv[2]{u}{\rho} = [1 - \frac{\rho_0}{\rho} + \frac{l(l+1)}{\rho^2}]u$
+
+\hrule height 0.1pt
+
+As $\rho \rightarrow \infty$, the constant term in the brackets dominates, so $\dv[2]{u}{\rho} = u$.
+
+General sol is $u(\rho) = Ae^{-\rho} + Be^{\rho}$, but $B=0$ $\rightarrow$ $u(\rho) = A e^{-\rho}$ for large $\rho$.
+
+\hrule height 0.1pt
+
+As $\rho \rightarrow 0$, centriugal term dominates, $\dv[2]{u}{\rho} = \frac{l(l+1)}{\rho^2} u$
+
+The general sol is $u(\rho) = C \rho^{l+1} + D \rho^{-l}$, but $\rho^{-l}$ blows up as $\rho \rightarrow 0$, so $D = 0$. Thus, $u(\rho) \approx C p^{l+1}$ for small $\rho$. 
+
+\hrule height 0.1pt
+
+Peel off the asymptotic behavior, let $u(\rho) = \rho^{l+1} e^{-\rho} v(\rho)$
+
+$\dv{u}{\rho} = \rho^l e^{-\rho} [(l+1-\rho) v + \rho \dv{v}{\rho}]$
+
+$\dv[2]{u}{\rho} = \rho^l e^{-\rho} \{[-2l - 2 + \rho + \frac{l(l+1)}{\rho}]v + 2(l + 1 - \rho) \dv{v}{\rho} + \rho \dv[2]{v}{\rho} \}$
+
+Radial eq in terms of $v(\rho)$, $\rho \dv[2]{v}{\rho} + 2(l + 1 - \rho) \dv{v}{\rho} + [\rho_0 - 2(l+1)]v = 0$
+
+\hrule height 0.1pt
+
+Assume $v(p)$ can be expressed as a power series in $\rho$: $v(\rho) = \sum_{j=0}^{\infty} c_j \rho^j$.
+
+$\dv{v}{\rho} = \sum_{j=0}^{\infty} j c_j \rho^{j-1} = \sum_{j=0}^{\infty} (j+1) c_{j+1} \rho^j$, $\dv[2]{v}{\rho} = \sum_{j=0}^{\infty} j(j+1) c_{j+1} \rho^{j-1}$
+
+$j(j+1)c_{j+1} + 2(l+1)(j+1)c_{j+1} - 2jc_j + [\rho_0 - 2(l+1)]c_j = 0$
+
+$c_{j+1} = \frac{2(j+l+1) - \rho_0}{(j+1)(j+2l+2)} c_j$
+
+\hrule height 0.1pt
+
+For large $j$ (corresponding to large $\rho$), $c_{j+1} = \frac{2j}{j(j+1)}c_j = \frac{2}{j+1}c_j$
+
+If this were exact, $c_j = \frac{2^j}{j!} c_0$, $v(\rho) = c_0 \sum_{j=0}^{\infty} \frac{2^j}{j!} \rho^j = c_0 e^{2\rho}$, and hence $u(\rho) = c_0 \rho^{l+1} e^{\rho}$, which blows up at large $\rho$
+
+\hrule height 0.1pt
+
+$\exists c_{j_{\textrm{max}} + 1} = 0$, so $2(j_{max} + l + 1) - \rho_0 = 0$.
+
+Define principle quantum number, $n \equiv j_{\textrm{max}} + l + 1$, so $\rho_0 = 2n$
+
+$E = -\frac{\hbar^2 \kappa^2}{2m} = - \frac{me^3}{8 \pi^2 \epsilon_0^2 \hbar^2 \rho_0^2}$
+
+Bohr formula: $E_n = - [\frac{m}{2 \hbar^2} (\frac{e^2}{4\pi\epsilon})^2] \frac{1}{n^2} = \frac{E_1}{n^2} = \frac{-13.6 \textrm{ eV}}{n^2}$, $n=1, 2, 3, ...$
+
+$\kappa = (\frac{me^2}{4 \pi \epsilon_0 \hbar^2}) \frac{1}{n} = \frac{1}{an}$, Bohr radius: $a \equiv \frac{4 \pi \epsilon_0 \hbar^2}{me^2} = 0.529 \times 10^{-10} \textrm{m}$
+
+$\psi_{nlm}(r, \theta, \phi) = R_{nl}(r) Y_l^m(\theta, \phi)$, 
+$\psi_{100}(r, \theta, \phi) = \frac{1}{\sqrt{\pi a^3}} e^{-r/a}$
+
+\hrule height 0.1pt
+
+For arbitrary $n$, $l = 0, 1, ..., n-1$, so $d(n) = 2 \sum_{l=0}^{n-1} (2l+1) = 2 n^2$
+
+\hrule height 0.07pt
+
+$v(\rho) = L_{n-l-1}^{2l+1} (2 \rho)$, where $L_{q-p}^p(x) \equiv (-1)^p (\dv{}{x})^p L_q (x)$ is an associated Laguerre polynomial. $L_q(x) \equiv e^x (\dv{}{x})^q (e^{-x} x^q)$ is the $q$th Lag. poly.
+
+\hrule height 0.07pt
+
+Normalized hydrogen wavefunctions:
+$$\psi_{nlm} = \sqrt{(\frac{2}{na})^3 \frac{(n-l-1)!}{2n[(n+1)!]^3}} e^{-r/na} (\frac{2r}{na})^l [L_{n-l-1}^{2l+1} (2r/na) Y_l^m (\theta, \phi)$$
+
+Wavefunctions are mutually orthogonal.
+$\int \psi*_{n'l'm'_l} \psi_{nlm_l} r^2 \sin \theta dr d\theta d \phi = \delta_{n'n} \delta_{l'l} \delta_{m'_l m_l}$
+
+\hrule height 0.1pt
+
+\subsubsection{Spectrum}
+
+Transitions: $E_{\gamma} = E_i - E_f = -13.6 eV(\frac{1}{n_i^2} - \frac{1}{n_f^2})$
+
+\vspace{-2pt}
+
+Planck formula, $E_{\gamma} = h \nu$, wavefunction is $\lambda = c / \nu$. 
+
+Rydberg: $\frac{1}{\lambda} = R(\frac{1}{n^2_f} - \frac{1}{n^2_i}), R \equiv \frac{m}{4 \pi c \hbar^3} (\frac{e^2}{4 \pi \epsilon_0})^2 = 1.097 \times 10^7 \textrm{ m}^{-1}$
+
+\hrule height 0.1pt
+
+\subsection{\underline{General angular momentum}}
+$\widehat{\vec{J}} = (\widehat{J}_x, \widehat{J}_y, \widehat{J}_z) = (\widehat{J}_1, \widehat{J}_2, \widehat{J}_3) \qquad$ 
+$\widehat{\vec{J}}^2 = \widehat{\vec{J}}^2_x + \widehat{\vec{J}}^2_y + \widehat{\vec{J}}^2_z$
+
+$[\widehat{J}_i, \widehat{J}_j] = i \hbar \epsilon_{ijk} \widehat{J}_k$, $[\widehat{\vec{J}}^2, J_i] = 0$
+
+\hrule height 0.1pt
+
+Take commuting set to be $\widehat{\vec{J}}^2$ and $\widehat{J}_z$. Trade $\widehat{J}_x$ and $\widehat{J}_y$ for $\widehat{J}_{\pm} = \widehat{J}_x \pm i \widehat{J}_y$
+
+Commutation relations: $[\widehat{J}_{+}, \widehat{J}_{-}] = 2 \hbar \widehat{J}_z$, $[\widehat{J}_z, \widehat{J}_{\pm}] = \pm \hbar \widehat{J}_{\pm}$, $[\widehat{\vec{J}}^2, \widehat{J}_{\pm}] = 0$
+
+$\widehat{\vec{J}}^2$ and $\widehat{J}_z$ commute $\rightarrow$ we can simulaneously diagonalize them. Let the simultaneous eigenstate be $|ab\rangle$ s.t. $\widehat{\vec{J}}^2 | ab \rangle  = a | ab \rangle$, $\widehat{\vec{J}}_z | ab \rangle = b | ab \rangle$
+
+$\widehat{\vec{J}}^2 ( \widehat{J}_{\pm} | ab \rangle) = a(\widehat{J}_{\pm} | ab \rangle \qquad$
+$\widehat{J}_z(\widehat{J}_\pm |ab\rangle) = (b \pm \hbar) (\widehat{J}_{\pm} | ab \rangle)$
+
+$\widehat{J}_{+}$ raises and $\widehat{J}_{-}$ lowers the eigenvalue $b$ of $\widehat{J}_z$. Assuming $|ab \rangle$ is normalized, $\widehat{J}_{\pm} | ab \rangle = c_{\pm} | ab \pm \hbar \rangle$, where $c_{\pm}$ are normalization constants.
+
+\hrule height 0.05pt
+
+$\widehat{J}_{\pm} \widehat{J}_{\mp} = \widehat{\vec{J}}^2 - \widehat{J}_z^2 \pm \hbar \widehat{J}_z$
+
+\hrule height 0.05pt
+
+$0 = \langle ab_{\textrm{max}} | \widehat{J}_{-} \widehat{J}_{+} | ab_{\textrm{max}} \rangle = a - b^2_{\textrm{max}} - \hbar b_{\textrm{max}}$, $0 = a - b^2_{\textrm{min}} + \hbar b_{\textrm{min}}$
+
+\tiny
+$b_{\textrm{max}} = \frac{-\hbar + \sqrt{\hbar^2 + 4a}}{2}, b_{\textrm{min}} = \frac{\hbar - \sqrt{\hbar^2 + 4a^2}}{2}$,
+$b_{\textrm{max}} = -b_{\textrm{min}} = j \hbar$, $j=0, \frac{1}{2}, 1, ...$
+\scriptsize
+
+$j \equiv \frac{n}{2}$, then $a = b_{\textrm{max}}^2 + \hbar b_{\textrm{max}} = j^2 \hbar^2 + \hbar^2 j = j(j+1) \hbar^2$
+
+\hrule height 0.05pt
+
+$\widehat{J}_{\pm} | j m_j \rangle = \hbar \sqrt{(j \mp m_j)(j \pm m_j + 1)} | j m_j \pm 1 \rangle$
+
+$\langle j' m'_j | \widehat{J}_{\pm} | j m_j \rangle = \hbar \sqrt{(j \mp m_j) (j \pm m_j + 1)} \langle j' m'_j | j m_j \pm 1 \rangle = \hbar \sqrt{(j \mp m_j)(j \pm m_j + 1)} \delta_{j' j} \delta_{m'_j m_j \pm 1}$
+
+\hrule height 0.05pt
+
+\subsection{\underline{Spin}}
+
+\subsubsection{Classical orbital and spinning motion}
+
+Infinitesimal classical angular momentum corresponding to an infinite linear momentum $d \vec{p} = d m \vec{v}$ at position $\vec{r}$ from the axis of rotation is $d \vec{L} = \vec{r} \times d \vec{p}$
+
+The total angular momentum is $\vec{L} = \int \vec{r} \times d \vec{p} = \int \vec{r} \cross d m \vec{v}$
+
+Point particle of mass $m$ at radius $r$ spinning w constant angular velocity $\omega$ about the $z$-axis, $\vec{L} = I \omega \widehat{z} = m \omega r^2 \widehat{z}$
+
+Considering a particle of mass $m$ and charge $q$ rotating with angular velocity $\omega$ at radius $r$ about the $z$-axis, the angular momentum $\vec{L}$ and the momentum dipole momentum $\vec{\mu}$ are given by $\vec{L} = m \omega r^2 \widehat{z}$, $\vec{\mu} = \frac{q}{2} \omega r^2 \widehat{z}$, where we used $\mu = I \pi r^2$ with current $I = \frac{q}{2 \pi / \omega} = \frac{q \omega}{2 \pi}$. Thus, $\vec{\mu} = \frac{q}{2m} \vec{L}$
+
+\subsubsection{Spin}
+
+Electron: $j = \frac{1}{2}$, $m_j = \pm \frac{1}{2}$. Spin-$\frac{1}{2}$: $s=\frac{1}{2}$, use $\widehat{\vec{J}} \rightarrow \widehat{\vec{S}}$.
+
+Basis vectors are $| \frac{1}{2}, \frac{1}{2} \rangle \equiv | 1 \rangle = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$, $| \frac{1}{2}, -\frac{1}{2} \rangle \equiv | 2 \rangle = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$
+
+% Construct the matrices for $\widehat{S}_x$, $\widehat{S}_y$, $\widehat{S}_z$, and $\widehat{\vec{S}}^2$. 
+
+\hrule height 0.05pt
+
+$\widehat{S}_z$ and $\widehat{\vec{S}}^2$ are diagonal, since simultaneously diagonalized. Matrix elements: $\langle s' m'_s | \widehat{\vec{S}}^2 | sm_s \rangle = s(s+1) \hbar^2 \delta_{s' s} \delta_{m'_s m_s}$, $\langle s' m'_s | \widehat{S}_z | sm_s \rangle = m_s \hbar \delta_{s' s} \delta_{m'_s m_s}$
+
+\hrule height 0.05pt
+
+\tiny
+$\widehat{\vec{S}}^2 = \frac{3}{4} \hbar^2 \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix},$
+$\widehat{S}_z = \frac{\hbar}{2} \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$.
+$\widehat{S}_{+} = \hbar \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$,
+$\widehat{S}_{-} = \frac{\hbar}{2} \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$,
+$\widehat{S}_x = \frac{1}{2}(\widehat{S}_{+} + \widehat{S}_{-})$,
+$\widehat{S}_y = \frac{1}{2i}(\widehat{S}_{+} - \widehat{S}_{-})$,
+$\widehat{S}_x = \frac{\hbar}{2} \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$,
+$\widehat{S}_y = \frac{\hbar}{2} \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}$
+\scriptsize
+
+\hrule height 0.05pt
+
+\tiny 
+Spin angular momentum: $\vec{S} = \frac{\hbar}{2} \vec{\sigma}$. 
+Pauli m: $\sigma_x = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$, $\sigma_y = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}$, $\sigma_z = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$
+\scriptsize
+
+\hrule height 0.05pt
+
+$[\widehat{S}_i, \widehat{S}_j] = i \hbar \epsilon_{ijk} \widehat{S}_k$ and $[\sigma_i, \sigma_j] = 2 i \epsilon_{ijk} \sigma_k$
+
+A general state of a spin-half system is given by a spinor, $|\chi \rangle = \alpha | \frac{1}{2}, \frac{1}{2} \rangle + \beta | \frac{1}{2}, \frac{1}{2} \rangle = \begin{bmatrix} \alpha \\ \beta \end{bmatrix}$, where $\alpha$ and $\beta$ are complex constants.
+
+$a_x = \sin \theta \cos \phi, a_y = \sin \theta \sin \phi, a_z = \cos \theta$
+
+% Electron, proton, neutron, quarks $\rightarrow$ half spin, pions $\rightarrow$ zero spin, photon $\rightarrow$ spin one.
+
+\hrule height 0.05pt
+
+\subsubsection{Magnetic moment of the electron}
+$\vec{\mu} = g \frac{q}{2m} \vec{S}$, gyromagentic factor (distribution of mass != charge).
+For the electron, $q=-e$, and $\vec{\mu} = -g \frac{e}{2m} \vec{S}$
+
+$\widehat{\vec{\mu}} = -g \frac{e}{2m} \widehat{\vec{S}} = -\frac{g}{2} \frac{e \hbar}{2m} \vec{\sigma} = - \frac{g}{2} \mu_B \vec{\sigma}$, where $\mu_B = \frac{e \hbar}{2m}$ is Bohr magneton.
+
+\hrule height 0.05pt
+
+\subsubsection{Electron in a magnetic field}
+
+Intrinsic spin angular momentum $\rightarrow$ intrinsic magnetic moment. Energy from spin \& external mag field: $\widehat{H} = \widehat{V} = -\widehat{\vec{\mu}} \cdot \vec{B}$
+
+For a magnetic field along the $z$-axis, $\vec{B} = B \widehat{z}$, and $\widehat{H} = -\widehat{\mu}_z B = -(-\frac{g}{2} \frac{e}{m} \vec{S}) \dot B \widehat{z} = \frac{g}{2} \frac{eB}{m} S_z = \omega_s S_z = \frac{g}{2} \frac{eB\hbar}{2m} \sigma_z$, where $\omega_s = \frac{g}{2} \frac{eB}{m} = \frac{g}{2} \omega_c$ is the spin precession (or Larmor) frequency and $w_c = \frac{e B}{m}$ is cyclotron frequency. $g \approx 2$ but $g \neq 2 \rightarrow \omega_s \neq \omega_c$.
+
+\hrule height 0.05pt
+
+Rewrite Hamiltonian as $\widehat{H} = \omega_s S_z$. In the bases in which $\widehat{\vec{S}}$ and $\widehat{S}_z$ are diagonalized, the eigenstates are given by 
+
+$\widehat{H} | \frac{1}{2}, \frac{1}{2} \rangle = \omega_s \widehat{S}_z | \frac{1}{2}, \frac{1}{2} \rangle = \frac{1}{2} \hbar \omega_s | \frac{1}{2}, \frac{1}{2} \rangle$, 
+
+$\widehat{H} | \frac{1}{2}, -\frac{1}{2} \rangle = \omega_s \widehat{S}_z | \frac{1}{2}, -\frac{1}{2} \rangle = - \frac{1}{2} \hbar \omega_s | \frac{1}{2}, -\frac{1}{2} \rangle$
+
+Interaction of electron spin w external magentic field $\rightarrow$ energies $\pm \frac{1}{2} \hbar \omega_s$. 
+
+Spin-up $| \frac{1}{2}, \frac{1}{2} \rangle$ \& spin-down state $|\frac{1}{2}, -\frac{1}{2} \rangle$, with a gap of $\hbar \omega_s$ btwn them.
+
+\hrule height 0.05pt
+
+%Possible energy eigenvals are $\pm \frac{1}{2} \hbar \omega_s$ regardless of dir of $\vec{B}$.
+
+Consider $\vec{B} = B_x \widehat{e}_x + B_y \widehat{e}_y + B_z \widehat{e}_z$. 
+
+$\widehat{H} = (\frac{g}{2} \frac{e}{m} \vec{S}) \cdot \vec{B} = \frac{g}{2} \frac{e \hbar}{2m} \begin{bmatrix} B_z & B_x - i B_y \\ B_x + i B_y & -B_z \end{bmatrix}$
+
+Eigenvals of matrix $\begin{vmatrix} B_z - \lambda & B_x - iB_y \\ B_x + iB_y & -B_z - \lambda \end{vmatrix} = 0$, which gives $\lambda = \pm B$, where $B = |\vec{B}|$. Therefore, eigenvals of $\widehat{H}$ are $\pm \frac{g}{2} \frac{e \hbar B}{2m} = \pm \frac{1}{2} \hbar \omega_s$.
+
+\hrule height 0.05pt
+
+\subsubsection{The Stern-Gerlach experiment} \hfill
+
+Force on electron w spin-up: $\vec{F}_1 = -\vec{\grad} V_1 = \frac{1}{2} \hbar \vec{\grad} \omega_s = \frac{g}{2} \frac{e \hbar}{2m} \pdv{B(z)}{z}$
+
+Force on electron w spin-down: $\vec{F}_2 = -\vec{\grad} V_2 = -\frac{1}{2} \hbar \vec{\grad} \omega_s = - \frac{g}{2} \frac{e \hbar}{2m} \pdv{B(z)}{z}$
+
+Electrons deflected up/down depending on whether spin-up/spin-down along $\vec{B}$.
+
+\hrule height 0.05pt
+
+\subsubsection{Spin precession}
+
+$| \chi(0) \rangle = \begin{bmatrix} a \\ b \end{bmatrix}$, $|a|^2 + |b|^2 = 1$ and $a = \cos \frac{\alpha}{2}$, $b = \sin \frac{\alpha}{2}$
+
+$|\chi (0) \rangle = \cos \frac{\alpha}{2} | \frac{1}{2} \frac{1}{2} \rangle + \sin \frac{\alpha}{2} | \frac{1}{2} -\frac{1}{2} \rangle = \begin{bmatrix} \cos \frac{\alpha}{2} \\ \sin \frac{\alpha}{2} \end{bmatrix}$, 
+\tiny
+$|\chi(t) \rangle = \begin{bmatrix} e^{-\frac{i}{2} \omega_s t} \cos \frac{\alpha}{2} \\ e^{\frac{i}{2} \omega_s t} \sin \frac{\alpha}{2} \end{bmatrix}$
+\scriptsize
+
+$\langle \widehat{S}_z \rangle = | e^{-\frac{i}{2} \omega_s t} \cos \frac{\alpha}{2}|^2 \frac{\hbar}{2} - |e^{-\frac{i}{2} \omega_s t} \sin \frac{\alpha}{2}^2 \frac{\hbar}{2} = (\cos^2 \frac{\alpha}{2} - \sin^2 \frac{\alpha}{2}) \frac{\hbar}{2}$
+
+$\langle \widehat{S}_x \rangle = \frac{\hbar}{2} \sin \alpha \cos \omega_s t, \quad \langle \widehat{S}_y \rangle \frac{\hbar}{2} \sin \alpha \sin \omega_s t, \langle \widehat{S}_z \rangle = \frac{\hbar}{2} \cos \alpha$
+
+Angle $\alpha \rangle \pi - \alpha$ for spin-down. Spin-up, $\widehat{S}_z$ eigenval is $\frac{\hbar}{2}$, $|\widehat{\vec{S}}^2|$ is $\frac{\sqrt{3} \hbar}{2}$.
+
+Space quantization: angular momentum along any fixed direction take only discrete $(2j+1)$ values.
+
+\hrule height 0.05pt
+
+\subsection{\underline{Addition of angular momentum}}
+
+$\widehat{\vec{J}}_1$, $|j_1, m_{j1} \rangle$. $\widehat{\vec{J}}_2$, $|j_2, m_{j2} \rangle$. $\widehat{\vec{J}} = \widehat{\vec{J}}_1 + \widehat{\vec{J}}_2$.
+$\widehat{\vec{J}}^2$ \& $\widehat{\vec{J}}_z$: sim diag set. $|j, m_j \rangle$
+
+\hrule height 0.05pt
+
+\subsubsection{Triplet and singlet states of a system of two spin-halves}
+
+$| j_1, m_{j1} \rangle \otimes | j_2, m_{j2} \rangle$
+
+%Four possible combos for two electrons: $| \frac{1}{2}, \frac{1}{2} \rangle \otimes | \frac{1}{2}, \frac{1}{2} \rangle$, $| \frac{1}{2}, \frac{1}{2} \rangle \otimes | \frac{1}{2}, -\frac{1}{2} \rangle$, $| \frac{1}{2}, -\frac{1}{2} \rangle \otimes | \frac{1}{2}, \frac{1}{2} \rangle$, $| \frac{1}{2}, -\frac{1}{2} \rangle \otimes | \frac{1}{2}, -\frac{1}{2} \rangle$
+
+The triplet states ($j=1$ multiplet):
+$|1, 1 \rangle = |\frac{1}{2}, \frac{1}{2} \rangle \otimes | \frac{1}{2}, \frac{1}{2} \rangle$, 
+$|1, 0 \rangle = \frac{1}{\sqrt{2}} (|\frac{1}{2}, \frac{1}{2} \rangle \otimes | \frac{1}{2}, -\frac{1}{2} \rangle + | \frac{1}{2}, -\frac{1}{2} \rangle \otimes | \frac{1}{2}, \frac{1}{2} \rangle)$,
+$|1, -1 \rangle = |\frac{1}{2}, -\frac{1}{2} \rangle \otimes |\frac{1}{2}, -\frac{1}{2} \rangle$
+
+Singlet state ($j=0$): $|0,0 \rangle = \frac{1}{\sqrt{2}} (|\frac{1}{2}, \frac{1}{2} \rangle \otimes |\frac{1}{2}, -\frac{1}{2} \rangle - | \frac{1}{2}, -\frac{1}{2} \rangle \otimes |\frac{1}{2}, \frac{1}{2} \rangle)$
+
+$s=1, 0$ out of $s_1$ and $s_2$ as $\frac{1}{2} \otimes \frac{1}{2} = 1 \oplus 0$
+
+%$j$ ranges from the largest value of $m_j$ to the smallest value of $m_j$ in steps on unity. 
+
+%$\widehat{\vec{J}}^2 = (\widehat{\vec{J}}_1 + \widehat{\vec{J}}_2)^2 = \widehat{\vec{J}}_1^2 + \widehat{\vec{J_2}}^2 + 2 \widehat{\vec{J}}_1 \cdot \widehat{\vec{J}} = \widehat{\vec{J}}_1^2 + \widehat{\vec{J}}_2^2 + 2 \widehat{\vec{J}}_{1z} \widehat{\vec{J}}_{2z} + 2 \widehat{\vec{J}}_{1x} \widehat{\vec{J}}_{2x} + 2 \widehat{\vec{J}}_{1y} \widehat{\vec{J}}_{2y} = \widehat{\vec{J}}_1^2 + \widehat{\vec{J}}_2^2 + 2 \widehat{\vec{J}}_{1z} \widehat{\vec{J}}_{2z} + \widehat{\vec{J}}_{1+} \widehat{\vec{J}}_{2-} + \widehat{J}_{1-} \widehat{J}_{2+} = \widehat{\vec{J}}^2_1 \otimes 1 + 1 \otimes \widehat{\vec{J}}_2^2 + 2 \widehat{\vec{J}}_{1z} \otimes \widehat{\vec{J}}_{2z} + \widehat{\vec{J}}_{1+} \otimes \widehat{\vec{J}}_{2-} + \widehat{\vec{J}}_{1-} \otimes \widehat{\vec{J}}_{2+}$
+
+\hrule height 0.05pt
+
+$\widehat{\vec{J}}^2 = \widehat{\vec{J}}^2_1 \otimes 1 + 1 \otimes \widehat{\vec{J}}_2^2 + 2 \widehat{\vec{J}}_{1z} \otimes \widehat{\vec{J}}_{2z} + \widehat{\vec{J}}_{1+} \otimes \widehat{\vec{J}}_{2-} + \widehat{\vec{J}}_{1-} \otimes \widehat{\vec{J}}_{2+}$
+
+Spin angular momentum, interchan. use $\widehat{\vec{S}}$ for $\widehat{\vec{J}}$, and $s$ and $m_s$ for $j$ and $m_j$.
+
+\hrule height 0.05pt
+
+\subsubsection{Addition of general angular momentum}
+
+$|j_1 + j_2, j_1 + j_2 \rangle = | j_1, m_{j1} \rangle \otimes |j_2, m_{j2} \rangle$
+
+$j = j_1 \otimes j_2 = j_1 + j_2 \oplus j_1 + j_2 - 1 \oplus j_1 + j_2 - 2 \oplus \cdots \oplus |j_1 - j_2|$
+
+\hrule height 0.05pt
+
+\subsubsection{Clebsch-Gordon coefficients}
+
+%$|j_1, m_{j1} \rangle \otimes | j_2, m_{j2} \rangle = |j_1, m_{j1}; j_2, m_{j2} \rangle$
+
+\hfill
+
+Complete states: $\sum_{m_{j1}, m_{j2}} |j_1, m_{j1}; j_2, m_{j2} \rangle \langle j_1, m_{j1}; j_2, m_{j2}| = 1$
+
+$|j, m_j \rangle = \sum_{m_j = m_{j1} + m_{j2}} \langle j_1, m_{j1}; j_2, m_{j2} | j, m_j \rangle | j_1, m_{j1}; j_2, m_{j2} \rangle$
+
+where $\langle j_1, m_{j1}; j_2, m_{j2}; j, m_j \rangle$ are Clebsch-Gordon coefficients.
+

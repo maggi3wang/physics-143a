@@ -1,0 +1,254 @@
+\section{3. PRINCIPLES OF QM} \hrule height 0.3pt \thinspace
+
+\subsection{\underline{Axiomatic principles}}
+
+\subsubsection{State vector axiom:} State vector at $t$ is ket $\psi(t)$, or $|\psi \rangle$.
+
+\subsubsection{Probability axiom:} Given a system in state $|\psi \rangle$, a measurement will find it in state $|\phi \rangle$ with probability amplitude $\langle \phi | \psi \rangle$. 
+
+\subsubsection{Hermitian operator axiom:} Physical observable is represented by a linear and Hermitian operator.
+
+\subsubsection{Measurement axiom:} Measurement of a physical observable results in eigenvalue of observable. Observable $\widehat{A}$, we have $\widehat{A} | a \rangle = a | a \rangle$, where $a$ is eigenvalue and $|a \rangle$ is eigenvector. Measurement of the physical quantity represented by $\widehat{A}$ collapses the state $|\psi \rangle$ before measurement into an eigenstate $|a \rangle$ of $\widehat{A}$.
+
+\subsubsection{Time evolution axiom:} $i \hbar \pdv{}{t} | \psi(t) \rangle = \widehat{H} |\psi(t) \rangle$, w/o consider $x$ or $p$.
+
+\subsection{\underline{Vector space}}
+State vector is neither in position nor momentum space. Basis vectors: $|0 \rangle, |1 \rangle, |n \rangle$
+%Basis vectors:
+%$|0 \rangle = \begin{bmatrix}
+%    1 \\
+%    0 \\
+%    : \\
+%    0
+%    \end{bmatrix}$,
+%$|1 \rangle = \begin{bmatrix}
+%    0 \\
+%    1 \\
+%    : \\
+%    0
+%    \end{bmatrix}$,
+%$|n \rangle = \begin{bmatrix}
+%    0 \\
+%    0 \\
+%    : \\
+%    1
+%\end{bmatrix}$ (in $n$th pos).
+
+\subsubsection{Linearity}: Because the SE is linear, given two states $|\psi_1(t) \rangle$ and $|\psi_2(t) \rangle$, $|\psi(t) \rangle = c_1 |\psi_1(t) \rangle + c_2|\psi_2(t)\rangle$ is also a sol. ($c$'s are complex).
+
+% \subsubsection{Properties of a vector space}
+% This is pretty self-explanatory
+
+\subsubsection{Dual vector space}
+\tiny
+$c|\psi \rangle$ is mapped to $c^* \langle \psi |$. Given a vector, $|\psi \rangle = \begin{bmatrix} : \\ \alpha \\ : \end{bmatrix}$, the dual vector is $\langle \psi | = \begin{bmatrix} \cdots & \alpha^* & \cdots \end{bmatrix}$.
+\scriptsize
+
+Dual basis vectors are $\langle 0 | = \begin{bmatrix} 1 & 0 & \cdots \end{bmatrix}$, $\cdots$, $\langle n| \begin{bmatrix} 0 & \cdots & 1 \end{bmatrix}$.
+
+\subsubsection{Inner product}: $\langle \phi | \psi \rangle = c$, where $c$ is complex.
+
+$\langle \phi | \psi \rangle = \langle \psi | \phi \rangle^*$ $\rightarrow$ $\langle \psi | \psi \rangle$ is real, positive, and finite for a normalizable ket vector. Can choose $\langle \psi | \psi \rangle = 1$. $\langle \psi_m | \psi_n \rangle = \delta_{mn}$
+
+\subsection{\underline{Operators}}
+A matrix operator $\widehat{A}$ acting on a state vector $|\psi \rangle$ transforms it into another state vector $|\phi \rangle$, $\widehat{A} |\psi \rangle = | \phi \rangle$. It is linear.
+
+% \subsubsection{Properties of operators}
+% Also pretty self-explanatory.
+
+\subsubsection{Hermitian conjugate (Hermitian adjoint) operator in the dual space} \hfill
+
+Hermitian adjoint operator $\widehat{A}^{\dag}$ acts on the dual vector $\langle \psi |$ from the right as $\langle \psi | \widehat{A} ^{\dag} \rangle$, where $\widehat{A}^{\dag} = (\widehat{A})^{T*}$.
+$$(\widehat{A} | \psi \rangle)^{\dag} = |\psi \rangle^{\dag} \widehat{A}^{\dag} = \langle \psi | \widehat{A}^{\dag} \qquad \langle \psi | = | \psi \rangle^{\dag} \qquad \langle \psi | ^{\dag} = | \psi \rangle$$
+$$(\widehat{A}\widehat{B})^{\dag} = (\widehat{A} \widehat{B})^{T*} = (\widehat{B}^T \widehat{A}^T)^* = \widehat{B}^{T*} \widehat{A}^{T*} = \widehat{B}^{\dag} \widehat{A}^{\dag}, \quad (c\widehat{A})^{\dag} = c^* \widehat{A}^{\dag}$$
+
+\subsubsection{Outer product operators}: $| \psi \rangle \langle \phi | \qquad [|\psi \rangle \langle \phi |] \chi \rangle  = | \psi \rangle \langle \phi | \chi \rangle$
+
+\subsubsection{Matrix elements of operators}
+$\langle \phi | \widehat{A} | \psi \rangle \textrm{ (complex num)}$
+
+Hermitian equiv to complex conj $\langle \phi | \widehat{A} | \psi \rangle^{\dag} = \langle \psi | \widehat{A}^{\dag} | \phi \rangle = \langle \phi | \widehat{A} | \psi \rangle ^*$
+
+\subsubsection{Hermitian operators}: $\widehat{A}^{\dag} = \widehat{A}$, so given $\widehat{A} | \phi \rangle$ in the vector space, we have $\langle \psi | \widehat{A}^{\dag} = \langle \phi | \widehat{A}$ in the dual vector space.
+
+\subsubsection{Matrix elements of a Hermitian operator}
+$\langle \phi | \widehat{A} | \psi \rangle^{\dag} = \langle \phi | \widehat{A} | \psi \rangle^* = \langle \psi | \widehat{A}^{\dag} | \phi \rangle = \langle \psi | \widehat{A} | \phi \rangle$
+
+Hermitian operator, real expectation vals: $\langle \psi | \widehat{A} | \phi \rangle ^* = \langle \psi | \widehat{A} | \phi \rangle \equiv \langle \widehat{A} \rangle$
+
+Same result whether $\widehat{A}$ acts to right or left: $\langle \phi | \widehat{A} | \psi \rangle = \langle \phi | \widehat{A}^{\dag} | \psi \rangle$
+
+\subsubsection{Eigenvals and eigenvecs of Hermitian operators}: $\widehat{A} |a_n \rangle = a_n | a_n \rangle$
+
+Normalized eigvecs $\langle a_m | a_n \rangle = \delta_{mn}$. Gram-Schmidt, degenerate evec.
+
+\subsubsection{Completeness of eigenvector of a Hermitian operator}
+Set $|a_n \rangle$ is complete if $\sum_n |\langle a_n | \psi \rangle|^2 = 1$.
+$\sum_n |a_n \rangle \langle a_n | = 1$ (identity operator)
+
+\subsubsection{Continuous spectra of a Hermitian operator}
+
+Hermitian operator $\widehat{A}$, $\widehat{A} | a \rangle = a | a \rangle$, where $a$ is continuous. 
+
+$\int da' \langle a' | \widehat{A} | a \rangle = a \int da' \langle a' | a \rangle = \int da' a' \langle a' | a \rangle \rightarrow \langle a' | a \rangle = \delta (a' - a)$
+
+Continuous condition: $\int da | a \rangle \langle a | = 1$
+
+\subsubsection{Gram-Schmidt orthogonalization procedure}
+
+Eigval (like energy level) is $n$-fold degenerate: $n$ states w same eigval.
+
+Orthogonal eigenstates $\rightarrow$ no degeneracy.
+
+1. Normalize each state and define $\alpha_i = \frac{\alpha_i}{\sqrt{\langle a_i | a_i \rangle}}$. 2. $|\alpha'_1 \rangle = | \alpha_1 \rangle$.
+
+3. $|\alpha'_2 \rangle = \frac{|\alpha_2 \rangle - |\alpha_1 \rangle \langle \alpha_1 | \alpha_2 \rangle}{\sqrt{\langle \alpha_2 | \alpha_2 \rangle - \langle \alpha_1 | \alpha_2 \rangle \langle \alpha_2 | \alpha_1 \rangle}} = \frac{|\alpha_2 \rangle - |\alpha_1 \rangle \langle \alpha_1 | \alpha_2 \rangle}{\sqrt{1 - \langle \alpha_1 | \alpha_2 \rangle \langle \alpha_2 | \alpha_1 \rangle}}$
+
+4. Subtract components of $|\alpha_3 \rangle$ along $|\alpha_1 \rangle$ and $|\alpha_2 \rangle$, $|\alpha_3 \rangle - |\alpha_1 \rangle \langle \alpha_1 | \alpha_3 \rangle - | \alpha_2 \rangle \langle \alpha_2 | \alpha_3 \rangle$, normalize and promote to $|\alpha'_3 \rangle$.
+...
+
+\subsection{\underline{Position and momentum representation}}
+
+$\widehat{\vec{r}} | \vec{r} \rangle = \vec{r} | \vec{r} \rangle \quad \langle \vec{r'} | \vec{r} \rangle = \delta^3 (\vec{r'} - \vec{r}), \int d^3 \vec{r} |\vec{r} \rangle \langle \vec{r} | = 1, \langle \vec{r'} | \hat{\vec{r}} | \vec{r} \rangle = \vec{r} \delta^3(\vec{r'} - \vec{r})$
+
+$\widehat{\vec{p}} | \vec{p} \rangle = \vec{p} | \vec{p} \rangle \quad \langle \vec{p'} | \vec{p} \rangle = \delta^3(\vec{p'} - \vec{p}), \int d^3 \vec{p} | \vec{p} \rangle \langle \vec{p} | = 1$
+
+State vector $| \psi(t) \rangle$ in position space (scalar): $\langle \vec{r} | \psi(x, t) \rangle \equiv \psi(\vec{r}, t)$
+
+$\langle \psi | \widehat{\vec{p}} | \psi \rangle = \dv{}{t} \langle \psi | \widehat{\vec{r}} | \psi \rangle m$
+
+Representation of momentum operator in position space: $\widehat{\vec{p}} = -i \hbar \vec{\grad}$.
+
+$\langle x | \widehat{p} | x' \rangle = -i \hbar \pdv{}{x} \delta(x - x') = -i \hbar \pdv{}{x} \langle x | x' \rangle$.
+
+$\widehat{p} = -i \hbar \pdv{}{x}$ is Hermitian, $\pdv{}{x}$ is not.
+
+$\langle x | \widehat{p} | p \rangle = p \langle x | p \rangle = -i \hbar \pdv{}{x} \langle x | p \rangle$. The solution is $\langle x | p \rangle = \frac{1}{\sqrt{2 \pi \hbar}} e^{\frac{i}{\hbar} px}$. 
+
+In 3D, $\langle \vec{r} | \vec{p} \rangle = \frac{1}{(2 \pi \hbar)^{3/2}} e^{\frac{i}{\hbar} \vec{p} \vec{r}}$.
+
+We can write the normalized wavefunction of definite position in momentum space, $\langle p | x \rangle = \langle x | p \rangle^*$. So, $\langle p | x \rangle = \frac{1}{\sqrt{2 \pi \hbar}} e^{-\frac{i}{\hbar} px}$ (particle moving to the left, or with momentum $-p$, in the momentum space).
+$[x, p] = i \hbar$
+
+\subsubsection{Operators and wavefunction in position representation}
+
+Position and momentum operators in pos space: $\widehat{\vec{r}} = \vec{r}$, $\widehat{\vec{p}} = -i \hbar \vec{\grad}$.
+
+$\widehat{\vec{r}}$ is Hermitian and $\langle \phi | \widehat{\vec{r}}^{\dag} | \psi \rangle = \langle \phi | \widehat{\vec{r}} | \psi \rangle$.
+
+$\widehat{O}(\widehat{\vec{r}}, \widehat{\vec{p}}) = \widehat{O} (\vec{r}, -i \hbar \vec{\grad})$
+
+The expectation val of the observable should be indep of representation. In state $\psi(t)$, $\langle \widehat{O} \rangle = \langle \psi(t) | \widehat{O} | \psi(t) \rangle$.
+
+Insert $\int d^2 \vec{r} | \vec{r} \rangle \langle \vec{r} | = 1$ to get $\langle \widehat{O} \rangle = \int d^2 \vec{r} \langle \psi(t) | \vec{r} \rangle \langle \vec{r} | \widehat{O} | \psi(t) \rangle$
+
+$\psi(\vec{r}, t) = \langle \vec{r} | \psi(t) \rangle, \qquad \psi(\vec{r}, t)^* = \langle \vec{r} | \psi(t) \rangle^* = \langle \psi(t) | \vec{r} \rangle$,
+
+$\langle \vec{r} | \widehat{O} | \psi(t) \rangle = \widehat{O} (\vec{r}, -i \hbar \vec{\grad}) \psi(\vec{r}, t), \langle \vec{O} \rangle = \int d^3 \vec{r} \psi(\vec{r}, t)^* \vec{O}(\vec{r}, -i \hbar \vec{\grad}) \psi(\vec{r}, t)$
+
+\subsubsection{Operators and wavefunction in momentum representation}
+
+$\widehat{\vec{r}} = i \hbar \vec{\grad}_{\vec{p}}$, or in 1D, $\widehat{x} = i \hbar \pdv{}{p}$, $\widehat{\vec{p}} = \vec{p}$, where $\vec{p}^* = \vec{p}$.
+
+$\widehat{\vec{O}} (\widehat{\vec{r}}, \widehat{\vec{p}}) = \widehat{O} (i \hbar \vec{\grad}_{\vec{p}}, \vec{p})$
+
+$\langle \widehat{O} \rangle = \langle \psi(t) | \widehat{O} | \psi(t) \rangle$ $\rightarrow$ $\langle \widehat{O} \rangle = \int d^2 \vec{p} \langle \psi(t) | \vec{p} \rangle \langle \vec{p} | \widehat{O} | \psi(t) \rangle$.
+
+$\psi(\vec{p}, t) = \langle \vec{p} | \psi(t) \rangle, \qquad \psi(\vec{p}, t)^* = \langle \vec{p} \psi(t) \rangle^* = \langle \psi(t) | \vec{p} \rangle$
+
+$\langle \vec{p} | \widehat{O} | \psi(t) \rangle = \widehat{O} (i \hbar \vec{\grad}_{\vec{p}}, \vec{p}), \langle \vec{O} \rangle = \int d^3 \vec{p} \psi(\vec{p}, t)^* \widehat{O}(i \hbar \vec{\grad}_{\vec{p}}, \vec{p}) \psi(\vec{p}, t)$.
+
+\smallskip \hrule height 0.3pt
+
+$i \hbar \pdv{}{t} | \psi(t) \rangle = \widehat{H} | \psi(t) \rangle$, where $\widehat{H} = \frac{\widehat{\vec{p}}^2}{2m} + V(\widehat{\vec{r}}, t)$ becomes $i \hbar \pdv{\psi(\vec{r}, t)}{t} = - \frac{\hbar^2}{2m} \vec{\grad^2} \psi(\vec{r}, t) + V(\vec{r}, t) \psi(\vec{r}, t)$
+
+\smallskip \hrule height 0.3pt
+
+\subsection{\underline{Commuting operators}}
+If $[\widehat{A}, \widehat{B}] = 0$ and the states are nondegenerate, $|\psi \rangle$ is a simultaneous eigenstate of $\widehat{A}$ and $\widehat{B}$.
+
+$|\psi \rangle = |ab \rangle$, and $\widehat{A} | ab \rangle = a | ab \rangle$, $\widehat{B} | ab \rangle = b | ab \rangle$
+
+\subsection{\underline{Non-commuting operators and the general uncertainty principle}}
+
+$(\Delta A)^2 (\Delta B)^2 \geq (\frac{1}{2i} \langle [ \widehat{A}, \widehat{B} ] \rangle)^2$
+
+Cannot construct simulatneous eigenstates (which correspond to definite eigenvalues) of non-commuting observables.
+
+\subsection{\underline{Time evolution of expectation value of an operator and Ehrenfest's theorem}}
+
+Ehrenfest's theorem: how observable $\widehat{O}$'s expectation value in state $|\psi(t) \rangle$ evolves in time, $\dv{}{t} \langle \widehat{O} \rangle = \langle \pdv{\widehat{O}}{t} \rangle + \frac{i}{\hbar} \langle [ \widehat{H}, \widehat{O} ] \rangle$.
+If operator has no explicit time dep, $\dv{}{t} \langle \widehat{O} \rangle = \frac{1}{i \hbar} \langle [ \widehat{O}, \widehat{H} ] \rangle$.
+
+For $\widehat{O} = \widehat{\vec{p}}$ and a Hamiltonian that is TI, $\dv{}{t} \langle \widehat{\vec{p}} \rangle = - \langle \vec{\grad} V(\widehat{\vec{r}}) \rangle$, which is just Newton's Second Law! $\rightarrow$ QM contains all of classical mech.
+
+\subsection{\underline{The simple harmonic oscillator}}
+
+$\widehat{H} = \frac{\widehat{p}^2}{2m} + \frac{1}{2} m \omega^2 \widehat{x}^2$
+
+\subsubsection{Raising and lowering operators}
+
+Lowering op: $\widehat{a} = \sqrt{\frac{m \omega}{2 \hbar}} (\widehat{x} + \frac{i}{m \omega} \widehat{p})$, Raising op: $\widehat{a}^{\dag} = \sqrt{\frac{m \omega}{2 \hbar}} (\widehat{x} - \frac{i}{m \omega} \widehat{p})$.
+
+$[\widehat{a}, \widehat{a}^{\dag}] = 1$ $\qquad$ $\widehat{x} = \sqrt{\frac{\hbar}{2 m \omega}} (\widehat{a}^{\dag} + \widehat{a})$, $\widehat{p} = i \sqrt{\frac{m \omega \hbar}{2}} (\widehat{a}^{\dag} - \widehat{a})$
+
+$\widehat{H} = (\widehat{N} + \frac{1}{2}) \hbar \omega$, where $\widehat{N} = \widehat{a}^{\dag} \widehat{a}$. Now $\widehat{N}$ is Hermitian, and $\widehat{N} | n \rangle = n | n \rangle$.
+$[\widehat{N}, \widehat{a}] = -\widehat{a}$, $[\widehat{N}, \widehat{a}^{\dag}] = \widehat{a}^{\dag}$
+
+$\widehat{N} (\widehat{a} | n \rangle) = (n-1)(\widehat{a} | n \rangle)$, $\widehat{N} (\widehat{a}^{\dag} | n \rangle) = (n + 1)(\widehat{a}^{\dag} | n \rangle)$ 
+
+\subsubsection{Normalized number state vectors}
+Energy levels are not degenerate, so
+$|n - 1 \rangle = c_n \widehat{a} | n \rangle \rightarrow c_n = \frac{1}{\sqrt{n}} \rightarrow \widehat{a} | n \rangle = \sqrt{n} | n - 1 \rangle$.
+
+$|n + 1 \rangle = d_n \widehat{a}^{\dag} | n \rangle \rightarrow d_n = \frac{1}{\sqrt{n+1}} \rightarrow \widehat{a}^{\dag} | n \rangle = \sqrt{n+1} | n + 1 \rangle$
+
+Ground state: $|0 \rangle$, excited state: $|n \rangle = \frac{(\widehat{a}^{\dag})^n}{\sqrt{n!}} | 0 \rangle$, $n=0,1,2,...$
+
+\tiny
+$\langle n' | \widehat{x} | n \rangle = \sqrt{\frac{\hbar}{2m\omega}} \langle n' | (\widehat{a}^{\dag} + \widehat{a}) | n \rangle = \sqrt{\frac{\hbar}{2 m \omega}} (\sqrt{n+1} \delta_{n', n+1} + \sqrt{n} \delta_{n', n-1})$
+
+$\langle n' | \widehat{p} | n \rangle = i \sqrt{\frac{m \omega \hbar}{2}} \langle n' | (\widehat{a}^{\dag} - \widehat{a}) | n \rangle = i \sqrt{\frac{m \omega \hbar}{2}} (\sqrt{n+1} \delta_{n', n+1} - \sqrt{n} \delta_{n', n-1})$
+
+\scriptsize
+\subsubsection{Wavefunctions in position representation}
+
+$E_n = (n + \frac{1}{2}) \hbar \omega, n = 0, 1, 2, ...$
+
+The stationary wavefunctions of definite energy: $\psi_n(x) = \langle x | n \rangle$
+
+$\langle x' | \widehat{a}^{\dag} | x'' \rangle = \delta(x' - x'') \frac{1}{\sqrt{2} \sigma} (x'' - \sigma^2 \pdv{}{x''})$, where $\sigma \equiv \sqrt{\frac{\hbar}{m \omega}}$
+
+$\xi = \frac{x}{\sigma}, \qquad \langle x | n \rangle = \frac{1}{\sqrt{\sqrt{\pi} n! 2^n \sigma}} (\xi - \pdv{}{\xi})^n e^{-\frac{1}{2} \xi^2}$
+
+$\langle x | 0 \rangle = (\frac{m \omega}{\pi \hbar})^{1/4} e^{-\frac{m \omega}{2 \hbar} x^2}, \qquad \langle x | 1 \rangle = \sqrt{2} (\frac{m^3 \omega^3}{\pi \hbar^3})^{1/4} x e^{-\frac{m \omega}{2 \hbar} x^2}$
+
+\subsubsection{Classical simple harmonic oscillator}
+Hamiltonian of a simple harmonic is $H = \frac{p^2}{2m} + \frac{1}{2} m \omega^2 x^2. \qquad$ 
+$\dot{x} = \pdv{H}{p} = \frac{p}{m}, \qquad \dot{p} = -\pdv{H}{x} = - m \omega^2 x$
+
+Define $\sqrt{\hbar \omega} \alpha = \sqrt{\frac{m \omega^2}{2}} x + \frac{i}{\sqrt{2m}} p$, so $x = \sqrt{\frac{2 \hbar}{m \omega}} \alpha_R$ and $p = \sqrt{2 m \hbar \omega} \alpha_I$
+
+Rewrite Hamiltonian, $H = \hbar \omega | \alpha |^2, \qquad \dot{\alpha} = -i \omega \alpha$. The sol is $\alpha = \alpha_0 e^{-i \omega t}$.
+
+\subsubsection{The quantum simple harmonic oscillator and coherent state}
+
+Coherent state, superpos of stat states $|n \rangle$: $| \alpha \rangle = e^{-\frac{1}{2} |\alpha|^2} \sum_{n=0}^{\infty} \frac{\alpha^n}{\sqrt{n!}} | n \rangle$
+
+$P(n) = |\langle n | \alpha \rangle|^2 = |\alpha_n|^2 = \frac{\langle n \rangle^n e^{-\langle n \rangle}}{n!}$, where $\langle n \rangle = \langle \alpha | a^{\dag} a | \alpha \rangle = | \alpha |^2$.
+
+\tiny
+Linear superpos. of all quantum nums which represent the class oscill the most. Has shape of Gaussian of min uncertainty satisfying $\Delta x \Delta p \geq \frac{\hbar}{2}$ regardless of value of energy. Oscillates like a class oscill, w only diff being that the particle's loc is not represented by a point (or a delta func) but by a Gaussian func.
+\scriptsize
+
+%\subsection{\underline{3.1 Hilbert Space}}
+
+%\subsection{\underline{3.2 Observables}}
+
+%\subsection{\underline{3.3 Eigenfunctions of a Hermitian Operator}}
+
+%\subsection{\underline{3.4 Generalized Statistical Interpretation}}
+
+%\subsection{\underline{3.5 The Uncertainty Principle}}
+
+%\subsection{\underline{3.6 Dirac Notation}}

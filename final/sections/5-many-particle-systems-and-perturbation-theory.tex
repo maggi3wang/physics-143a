@@ -1,0 +1,66 @@
+\section{5. MANY-PARTICLE SYSTEMS AND PERTURBATION THEORY} \hrule height 0.3pt \thinspace
+
+\subsection{\underline{5.1 Identical particles}}
+
+$\Psi(\vec{r}_1, \vec{r}_2, t)$, $H = -\frac{\hbar^2}{2m_1} \grad_1^2 - \frac{\hbar^2}{2m_2} \grad_2^2 + V(r_1, r_2, t)$
+
+$\widehat{H} = \widehat{H}(1, 2) = \widehat{H}(2, 1) = -\frac{\hbar^2}{2m_1} \grad_1^2 - \frac{\hbar^2}{2m_2} \grad_2^2 + \widehat{V}(q_1, q_2)$, where $q_i = \vec{r}_i, s_i$ with $\vec{r}_i$ is the spatial coordinate and $s_i$ denote spin coordinate.
+
+P of finding particle 1 in volume $d^3 r_1$, etc.: $\int | \psi(r_1, r_2, t)|^2 d^3 r_1 d^3 r_2 = 1$
+
+$\Psi(\vec{r}_1, \vec{r}_2, t) = \psi(r_1, r_2) e^{-iEt/\hbar}$, $-\frac{\hbar^2}{2m_1} \grad_1^2 \psi - \frac{\hbar}{2m_2} \grad_2^2 \psi + V \psi = E \psi$
+
+\hrule height 0.07pt
+
+Exchange operator $\widehat{P}_{\textrm{ex}}: 1 \leftrightarrow 2$, which exchanges the two particles.
+
+$\widehat{P}_{\textrm{ex}} \Psi(q_1, q_2) = \Psi(q_2, q_1)$ and $\widehat{P}^2_{\textrm{ex}} \Psi(q_1, q_2) = \Psi(q_1, q_2)$
+
+$\widehat{P}_{\textrm{ex}}$ has two eigenvalues $p_{\textrm{ex}} = \pm 1$
+
+$[\widehat{P}_{\textrm{ex}}, \widehat{H}] = 0$. Can construct simulataenous eigenstates of $\widehat{P}_{\textrm{ex}}$ and $\widehat{H}(1, 2)$:
+
+$\widehat{H} \Psi_{\pm}(q_1, q_2) = E \Psi_{\pm}(q_1, q_2)$, $\widehat{P}_\textrm{ex} \Psi_{\pm} (q_1, q_2) = \pm \Psi_{\pm}(q_1, q_2)$
+
+\hrule height 0.07pt
+
+Identical particles in QM come in two and only two classes:
+
+1. Bosons: $\Psi_{+}(q_2, q_1) = \widehat{P}_{\textrm{ex}} \Psi_{+}(q_1, q_2) = + \Psi_{+}(q_1, q_2)$, $s=0,1,2,...$
+
+2. Fermions: $\Psi_{-}(q_2, q_1) = \widehat{P}_{\textrm{ex}} \Psi_{-}(q_1, q_2) = - \Psi_{-}(q_1, q_2)$, $s=\frac{1}{2}, \frac{3}{2}, \frac{5}{2}$
+
+\subsection{\underline{5.2 Identical noninteracting particles}}
+
+$\widehat{H}(1, 2) = \frac{\widehat{\vec{p}}_1^2}{2m} + \frac{\widehat{\vec{p}}_2^2}{2m} + \widehat{V}(\widehat{q}_1) + \widehat{V}(\widehat{q}_2) = \widehat{H}(1) + \widehat{H}(2)$
+
+$\widehat{H}(1) \psi_a (q_1) = E_a \psi_a(q_1)$, $\widehat{H}(2) \psi_a (q_2) = E_a \psi_a (q_2)$
+
+Same set of eigenst, eigenval, and quantum nums: $\{\psi_a(q)\}, \{E_a\}, \{a \}$
+
+$\Psi_{-}(q_1, q_2) = \frac{1}{\sqrt{N!}} \det \dots =\frac{1}{\sqrt{2}} \det \begin{bmatrix} \psi_a(q_1) & \psi_b(q_1) \\ \psi_a(q_2) & \psi_b(q_2) \end{bmatrix}$, Slater det.
+
+Antisymmetrical, for fermions. Bosons: flip all minus signs into plus signs.
+
+Pauli exclusion principle: two identical fermions cannot have same quantum numbers (or cannot occupy the same state). Two bosons can occupy the same state.
+
+\subsubsection{Bosons tend to congregate and fermions tend to avoid each other}
+
+\subsubsection{$H_2$ molecule and covalent bond}
+
+\subsection{\underline{5.3 Perturbation theory}}
+
+\subsubsection{Time-independent perturbation theory}
+
+\subsubsection{Nondegenerate time-independent perturbation theory}
+
+\subsubsection{Degenerate time-independent perturbation theory}
+
+\subsection{\underline{5.4 Fine structure of hydrogen atom}}
+
+\subsubsection{Relativistic kinetic energy correction}
+
+\subsubsection{Spin-orbit correction}
+
+\subsubsection{Darwin correction}
+
