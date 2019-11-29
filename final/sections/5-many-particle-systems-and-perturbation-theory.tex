@@ -42,25 +42,141 @@ $\Psi_{-}(q_1, q_2) = \frac{1}{\sqrt{N!}} \det \dots =\frac{1}{\sqrt{2}} \det \b
 
 Antisymmetrical, for fermions. Bosons: flip all minus signs into plus signs.
 
-Pauli exclusion principle: two identical fermions cannot have same quantum numbers (or cannot occupy the same state). Two bosons can occupy the same state.
+Pauli exclusion principle: two identical fermions can't have same quantum nums (or can't occupy the same state). Two bosons can occupy the same state.
+
+\hrule height 0.07pt
 
 \subsubsection{Bosons tend to congregate and fermions tend to avoid each other}
 
+Particle in state $\psi_a(x)$ and another in state $\psi_b(x)$. These two states are orthogonal and normalized.
+
+If distinguishable, $\psi(x_1, x_2) = \psi_a(x_1) \psi_b(x_2)$
+
+If identical bosons, $\psi_{+} (x_1, x_2) = \frac{1}{\sqrt{2}} [\psi_a(x_1) \psi)b(x_2) + \psi_b(x_1) \psi_a(x_2)$
+
+If identical fermions, $\psi_{-}(x_1, x_2) = \frac{1}{\sqrt{2}} [\psi_a(x_1) \psi_b(x_2) - \psi_b(x_1) \psi_a(x_2)]$
+
+Separation of the two particles: $\langle (\Delta x)^2 \rangle = \langle (x_1 - x_2)^2 \rangle = \langle x_1^2 \rangle + \langle x_2^2 \rangle - 2 \langle x_1 x_2 \rangle$
+
+1. Distinguishable particles
+
+$\langle x_1^2 \rangle_{\textrm{dist}} = \int x_1^2 | \psi_a(x_1)|^2 dx_1 \int | \psi_b(x_2)|^2 dx_2 = \int x_1^2 | \psi_a (x_1)|^2 dx_1 = \langle x^2 \rangle_a$. Similarly, $\langle x_2^2 \rangle_{\textrm{dist}} = \langle x^2 \rangle_b$, $\langle x_1 x_2 \rangle_{\textrm{dist}} = \int x_1 | \psi_a(x_1)|^2 dx_1 \int x_2 | \psi_b (x_2)|^2 dx_2 = \langle x \rangle_a \langle x \rangle_b$
+
+$\langle (\Delta x)^2 \rangle_{\textrm{dist}} = \langle x^2 \rangle_a + \langle x^2 \rangle_b - 2 \langle x \rangle_a \langle x \rangle_b$
+
+2. Identical particles
+
+$|\Psi_{\pm}(x_1, x_2)|^2 = \frac{1}{2}(|\psi_a(x_1)|^2 |\psi_b(x_2)|^2 + |\psi_b(x_1)|^2 |\psi_a(x_2)|^2 \pm \psi^{*}_a(x_1) \psi_b(x_1) \psi_b^*(x_2) \psi_a(x_2) \pm \psi_b^*(x_1)\psi_a(x_1) \psi_a^*(x_2) \psi_b(x_2))$
+
+$\langle x_1^2 \rangle_{\pm} = \langle x_2^2 \rangle_{\pm} = \frac{1}{2} (\langle x^2 \rangle_a + \langle x^2 \rangle_b)$, $\langle x_1, x_2 \rangle = \langle x \rangle_a \langle x \rangle_b \pm |\langle x \rangle_{ab}|^2$
+
+$\langle (x_1 - x_2)^2 \rangle_{\pm} = \langle x^2 \rangle_a + \langle x^2 \rangle_b - 2 \langle x \rangle_a \langle x \rangle_b \mp 2|\langle x \rangle_{ab}|^2$, $\langle (\Delta x)^2 \rangle \pm = \langle (\Delta x)^2 \rangle_{\textrm{dist}} \mp 2 | \langle x \rangle_{ab}|^2$
+
+Id. bosons: spatially closer, id. fermions: apart, compared to distinguishable.
+
+Purely QM effect that follows from sym. or antisym. of the wavefunction.
+
+\hrule height 0.07pt
+
 \subsubsection{$H_2$ molecule and covalent bond}
+Two H atoms each in ground state and spatially far apart.
+
+$\Psi_{\textrm{tot}-}(q_1, q_2) = \Psi(\vec{r}_1, \vec{r}_2) \chi(1, 2)$, where $\Psi(\vec{r}_1, \vec{r}_2)$ is the spatial part of the wavefn and $\chi(1, 2)$ is the spin part.
+
+$\Psi_{\textrm{tot}-} = \Psi(\vec{r}_1, \vec{r}_2)_{+} \chi(1, 2)_{-}$, sym, produces a covalent bond.
+
+$\Psi_{\textrm{tot}-} = \Psi(\vec{r}_1, \vec{r}_2)_{-} \chi(1, 2)_{+}$, antisym, electrons avoid each other spatially.
+
+$\Psi_{\textrm{tot}-}(q_1, q_2) = \frac{1}{\sqrt{2}}(\psi_{100}(\vec{r}_1 - \vec{r}_0) \psi_{100}(\vec{r}_2 + \vec{r}_0) + \psi_{100}(\vec{r}_1 + \vec{r}_0) \psi_{100}(\vec{r}_2 - \vec{r}_0)) = \frac{1}{\sqrt{2}} (|\frac{1}{2} \frac{1}{2} (1) \rangle | \frac{1}{2} -\frac{1}{2} (2) \rangle - | \frac{1}{2} -\frac{1}{2}(1) \rangle | \frac{1}{2} \frac{1}{2} (2) \rangle)$
+
+\hrule height 0.07pt
+
+$d$-fold degen., energy level occupied by $N > 2d$ num of spin-half id fermions $\rightarrow$ color.
+
+\hrule height 0.07pt
 
 \subsection{\underline{5.3 Perturbation theory}}
 
+Time-dependent Hamiltonian $\widehat{H}_0$ with known wavefunctions $|\psi_a^{(0)}\rangle$ and energies $E_a^{(0)}$, $\widehat{H}_0 |\phi_a^{(0)} \rangle = E_a^{(0)} | \psi_a^{(0)} \rangle$
+
+SE w new Hamiltonian: $i \hbar \pdv{}{t} | \psi_n \rangle = (\widehat{H}_0 + \widehat{H}'(t) | \psi_n \rangle$. We call $\widehat{H}_0$ the unperturbed Hamiltonian and $\widehat{H}'(t)$ the perturbation, which could be time-dep.
+
+\hrule height 0.07pt
+
 \subsubsection{Time-independent perturbation theory}
+
+$\widehat{H}'(t) = \widehat{H}'$. $\widehat{H} = \widehat{H}_0 + \widehat{H}'$ is TI. $\widehat{H} |\psi_n \rangle = E_n | \psi_n \rangle$, $(E_n - E_a^{(0)}) \langle \psi_a^{(0)}) \langle \psi_a^{(0)} | \psi_n \rangle = \sum_b H'_{ab} \langle \psi_b^{(0)} | \psi_n \rangle$, $H'_{ab} = \langle \psi_a^{(0)} | \widehat{H}' | \psi_n^{(0)} \rangle$: matrix element of perturbation in the unpert. states.
+
+$(E_n^{(0)} - E_a^{(0)} + E_n^{(1)} + E_n^{(2)} + \dots) \langle \phi_a^{(0)} (|\psi_n^{(0)} \rangle + | \psi_n^{(1)}\rangle + | \psi_n^{(2)} \rangle + \dots) = \sum_b H'_{ab} \langle \phi_b^{(0)} (| \phi_n^{(0)} \rangle + | \psi_n^{(1)} \rangle + |\psi_n^{(2)} \rangle + \dots)$. SE in a diff form, all exact.
+
+Now suppose $\widehat{H}'$ is small compared to $\widehat{H}_0$. The additional terms should be small. Perturbation theory involves solving above by organizing the corrections s.t. $E_n^{(2)}$ is smaller than $E_n^{(1)}$, $|\psi_n^{(2)} \rangle$  is smaller than $|\psi_n^{(1)}\rangle$, and so on.
+
+\hrule height 0.07pt
 
 \subsubsection{Nondegenerate time-independent perturbation theory}
 
+Nondegenerate: any two unperturbed states $|\psi_a^{(0)}\rangle$ and $|\psi_b^{(0)} \rangle$ with $a \neq b$ have $E_a^{(0)} \neq E_b^{(0)}$
+
+\textbf{Zeroth order}
+
+$(E_n^{(0)} - E_a^{(0)}) \langle \psi_a^{(0)} | \psi_n^{(0)} \rangle = 0$.
+$E_n = E_n^{(0)}$, $|\psi_n \rangle = |\psi_n^{(0)} \rangle$, no corrections.
+
+\textbf{First order}
+
+$(E_n^{(0)} - E_a^{(0)}) \langle \psi_a^{(0)} | \psi_n^{(1)} \rangle + E_n^{(1)} \langle \psi_a^{(0)} | \psi_n^{(0)} \rangle = \sum_b H'_{ab} \langle \psi_b^{(0)} | \psi_n^{(0)} \rangle$
+
+$a = n$, $E_n^{(0)} - E_a^{(0)} = 0, \delta_{an} = 1$.
+$a \neq n$, $E_n^{(0)} - E_a^{(0)} \neq 0$, $\delta_{an} = 0$.
+
+$E_n = E_n^{(0)} + H'_{nm}$, $|\psi_n \rangle = | \psi_n^{(0)} - \sum_{m \neq n} \frac{H'_{mn}}{E^{(0)}_m - E^{(0)}_n} | \psi_m^{(0)} \rangle$
+
+$|\frac{H'_{mn}}{E_m^{(0)} - E_n^{(0)}}| << 1$, matrix elements of the perturbation btwn the unperturbed states must be much smaller than the diff btwn corresponding unpert. E's. 
+
+\textbf{Second order}:
+$E_n = E_n^{(0)} + H'_{nn} - \sum_{m \neq n} \frac{|H'_{mn}|^2}{E_m^{(0)} - E_n^{(0)}}$
+
+States of lower energy make pos contribution while states of higher energy make neg contribution.
+
 \subsubsection{Degenerate time-independent perturbation theory}
+
+Ex: unperturbed hydrogen atom where $|\psi^{(0)}_{nlm}\rangle$ w the same $n$ but diff $l$'s and $m$'s are degenerate.
+
+Consider an unperturbed energy level that is $d$-fold degenerate w $d$ states $|\psi_n^{(0)}\rangle, |\psi_{n'}^{(0)}\rangle, \dots$, having the same energy $E_n^{(0)} = E_{n'}^{(0)} = \dots$
+
+%$|\psi^{(0)} \rangle = \sum_{n'} c^{(0)}_{n'} | \psi_{n'}^{(0)} \rangle$
+
+$(E^{(0)} - E^{(0)}_a) \langle \psi^{(0)}_a | \psi^{(1)} \rangle + E^{(1)} \langle \psi_a^{(0)} | \psi^{(0)} \rangle = \sum_b H'_{ab} \langle \psi_b^{(0)} | \psi^{(0)} \rangle$
+
+Secular equation: $\det |H'_{nn'} - E^{(1)} \delta_{n n'}| = 0$
+
+$|\Psi_n^0 \rangle = \sum_{n'} c_{n'}^{(0)} | \psi_{n'}^{(0)} \rangle$
+
+If matrix elements of the pert. Hamiltonian are diagonal, $H'_{nn'} = E_n^{(1)} \delta_{n'n}$, then $\exists$ no cross terms that mix diff states $\rightarrow E_n^{(1)} = H'_{nn}$.
 
 \subsection{\underline{5.4 Fine structure of hydrogen atom}}
 
 \subsubsection{Relativistic kinetic energy correction}
 
+Relativistic energy of the electron: $E = mc^2 \sqrt{1 + \frac{\vec{p}^2}{m^2 c^2}}$
+
+$E = mc^2(1 + \frac{1}{2} \frac{\vec{p}^2}{m^2 c^2} - \frac{1}{2}\frac{1}{2}\frac{1}{2} (\frac{\vec{p}^2}{m^2 c^2})^2 + \dots) = mc^2 + \frac{\vec{p}^2}{2m} - \frac{\vec{p}^4}{8m^3c^4} + \dots$
+
+KE perturbation: $\widehat{H}_k = -\frac{\widehat{\vec{p}}^4}{8 m^3 c^4}$
+
 \subsubsection{Spin-orbit correction}
 
+$V(r) = -e \Phi(r)$, where $\Phi(r)$ is the corresponding electric potential.
+
+Supposing that the electron sees magnetic field $\vec{B}'$, it has additional energy $\widehat{H}_{\textrm{SO}} = - \widehat{\vec{\mu}} \cdot \widehat{\vec{B}}'$, where $\widehat{\vec{\mu}} = g \frac{-e}{2mc} \widehat{\vec{S}} = - \frac{e}{mc} \widehat{\vec{S}}$ is the magnetic moment and $g=2$ is the gyromagnetic ratio of the electron.
+
+Thomas precession: electron is rotating and accelerating around tne nucleus, and it is not an inertial frame. $\vec{B}'_{\perp} = \vec{B}'$, and $\vec{B}'_{\perp} = \vec{B} = \frac{1}{2} \frac{\vec{E} \cross \vec{v}}{c}$
+
+$\widehat{H}_{\textrm{SO}} = \frac{1}{2m^2c^2 r} \dv{\widehat{V}}{r} \widehat{\vec{L}} \cdot \widehat{\vec{S}}$. For hydrogenic atoms, $\widehat{V} = -\frac{Ze^2}{4 \pi \epsilon_0 r}$ and $\dv{\widehat{V}}{r} = \frac{Ze^2}{4 \pi \epsilon_0 r^2}$
+$\rightarrow \widehat{H}_{\textrm{SO}} = \frac{Ze^2}{8 \pi \epsilon_0 m^2 c^2 r^3} \widehat{\vec{L}} \cdot \widehat{\vec{S}}$
+
 \subsubsection{Darwin correction}
+
+For states with $l=0$, no orbital angular momentum, no spin-orbit interaction.
+$\widehat{H}_D = \frac{\hbar^2 Z e^2}{8 m^2 c^2 \epsilon_0} \delta^3 (\vec{r})$
 

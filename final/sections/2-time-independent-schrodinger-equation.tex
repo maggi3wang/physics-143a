@@ -209,8 +209,10 @@ $\Psi(x, t) = Ae^{ikx - i \frac{\hbar k^2}{2m} t} + Be^{-ikx - i \frac{\hbar k^2
 where $\omega = \frac{E}{\hbar} = \frac{\hbar k^2}{2m}$ is angular vel, $v_p = \frac{\omega}{k} = \frac{\hbar k }{2m} = \frac{p}{2m} = \frac{1}{2} v_{cl}$ is phase velocity. \\
 
 Not normalizable. General sol to the TISE: wave packet, 
-$$\Psi(x, t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \phi(k) e^{i (kx - \frac{\hbar k^2}{2m} t)} dk$$
-$$\phi(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{+\infty} \Psi(x, 0) e^{-ikx} dx$$
+\tiny
+$\Psi(x, t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \phi(k) e^{i (kx - \frac{\hbar k^2}{2m} t)} dk$,
+$\phi(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{+\infty} \Psi(x, 0) e^{-ikx} dx$
+\scriptsize
 
 $$f(x) = \frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} F(k) e^{ikx} dk \leftrightarrow F(k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(x) e^{-kx} dx$$
 
@@ -354,27 +356,27 @@ $V(x) =
 %Potential is piecewise and discontinuous, can split into regions. \\
 
 \textbf{\textit{REGION I}}
-$$-\frac{\hbar}{2m} \dv[2]{\psi}{x} = E \psi, \textrm{ or } \psi''_{I}(x) - \kappa^2 \psi_{I}(x) = 0, \qquad \kappa \equiv \sqrt{-\frac{2mE}{\hbar}}$$
-where $E < 0$ for a bound state. \\
+$-\frac{\hbar}{2m} \dv[2]{\psi}{x} = E \psi, \textrm{ or } \psi''_{I}(x) - \kappa^2 \psi_{I}(x) = 0, \quad \kappa \equiv \sqrt{-\frac{2mE}{\hbar}}$
+where $E < 0$ for a bound state. 
 General sol: $\psi_{I}(x) = Ae^{-\kappa x} + B e^{\kappa x}$. \\
 $x = -\infty \rightarrow \psi(x) = 0$, so $A = 0$, and we have $\psi_{I}(x) = Be^{\kappa x}$
 
 \smallskip
 
 \textbf{\textit{REGION II}}
-$$-\frac{\hbar^2}{2m} \dv[2]{\psi}{x} - V_0 \psi = E \psi, \textrm{ or } \psi'' = -l^2 \psi, \qquad l \equiv \sqrt{\frac{2m (E + V_0)}{\hbar}}$$
+$-\frac{\hbar^2}{2m} \dv[2]{\psi}{x} - V_0 \psi = E \psi, \textrm{ or } \psi'' = -l^2 \psi, \quad l \equiv \sqrt{\frac{2m (E + V_0)}{\hbar}}$
 
 General sol: $\psi(x) = C \sin(lx) + D \cos(lx)$, for $-a < x < a$
 
 \smallskip
 
-\textbf{\textit{REGION III}} \\
+\textbf{\textit{REGION III}} 
 $x = \infty \rightarrow \psi(x) = 0$, so $G=0$ and $\psi_{III}(x) = Fe^{-\kappa x}$
 
 \medskip
 \hrule height 0.3pt \thinspace
 
-\textbf{Even bound states} \\
+\textbf{Even bound states}:
 $\psi(-x) = \psi(x)$, $\psi_{II}(x) = D \cos(lx)$ \\
 Bc the potential has only a finite discontinuity at $x = \pm a$, both $\psi$ and $\psi'$ must be continuous at $x = \pm a$.
 
@@ -389,38 +391,36 @@ This is a formula for the allowed energies, since $\kappa$ and $l$ are both func
 
 Transcendental eq for $z$ (and hence $E$) as a function of $z_0$ (which is a measure of size of well): $\tan z = \sqrt{(\frac{z_0}{z})^2 - 1}$
 
-\textbf{Odd bound states} \\
-$\psi_{II}(x) = C \sin(lx)$ \\
+\textbf{Odd bound states}
+$\psi_{II}(x) = C \sin(lx)$
 
 $x = -a, \psi_{II}(-a) = \psi_{I}(-a)$ imposes $C \sin(la) = B e^{-\kappa a}$ \\
 $x = -a, \psi'_{II}(-a) = \psi'_{I}(-a)$ imposes $l C \cos(la) = -\kappa B e^{-\kappa a}$ \\
 
-Dividing the above two, $l \cot(la) = -\kappa$. \\
-Rewriting this in terms of $z$ and $z_0$, $\cot(z) = - \sqrt{(\frac{z_0}{z})^2 - 1}$
+Dividing, $l \cot(la) = -\kappa$. 
+In terms of $z$ and $z_0$, $\cot(z) = - \sqrt{(\frac{z_0}{z})^2 - 1}$
 
 $V_{1}$ does not support an odd bound state, since there is no intersection pt, $V_{2}$ produces only one bound state, and $V_{3}$ produces two bound states. Finite well potential supports at least one even state, the ground state, and it may not support any of the excited states.
 
-\vspace{0em}
-\begin{Figure}
-    \raggedright
-    \includegraphics[width=0.4\columnwidth]{figures/even_finite_square_well.png}
-\end{Figure}
-\vspace{-1em}
+% \vspace{0em}
+% \begin{Figure}
+%     \raggedright
+%     \includegraphics[width=0.4\columnwidth]{figures/even_finite_square_well.png}
+% \end{Figure}
+% \vspace{-1em}
 
-\vspace{-8em}
-\begin{Figure}
-    \raggedleft
-    \includegraphics[width=0.4\columnwidth]{figures/odd_finite_square_well.png}
-\end{Figure}
-\vspace{-1em}
+% \vspace{-8em}
+% \begin{Figure}
+%     \raggedleft
+%     \includegraphics[width=0.4\columnwidth]{figures/odd_finite_square_well.png}
+% \end{Figure}
+% \vspace{-1em}
 
-\medskip
+% \medskip
 \hrule height 0.3pt \thinspace
 
-\textbf{Wide and deep well} \\
-
-%\begin{vwcol}[widths={0.7,0.3},sep=.1cm,rule=0pt,indent=0em] 
-$z_n \approx \frac{n \pi}{2}, n = 1, 2, 3, ..., \qquad E_n = -V_0 + \frac{\hbar^2 \pi^2 n^2}{2m(2a)^2}, n = 1, 2, ...$
+\textbf{Wide and deep well}:
+$z_n \approx \frac{n \pi}{2}, n = 1, 2, 3, ..., \quad E_n = -V_0 + \frac{\hbar^2 \pi^2 n^2}{2m(2a)^2}, n = 1, 2, ...$
 
 Thus, the energy levels of the infinite square well of width $2a$ are reproduced for $E_n - (-V_0) = E_n + V_0$, which is the energy above the bottom of the well. As $V_0 \rightarrow \infty$, finite sq well goes to infinite sq well.
 
@@ -435,8 +435,8 @@ Thus, the energy levels of the infinite square well of width $2a$ are reproduced
 
 %\end{vwcol}
 
-\textbf{Shallow and narrow well} \\
-Need at least $z_0 = \sqrt{\frac{2mV_0 a^2}{\hbar^2}} \geq \frac{\pi}{2}$ to support any odd state.
+\textbf{Shallow and narrow well}
+Need $z_0 = \sqrt{\frac{2mV_0 a^2}{\hbar^2}} \geq \frac{\pi}{2}$ to support any odd state.
 
 %\subsection{\underline{Gaussian integrals}}
 %$$\int_{-\infty}^{\infty} e^{-ax^2} dx = \sqrt{\frac{\pi}{a}} \textrm{ and } \int_{0}^{\infty} e^{-ax^2} dx = \frac{1}{2} \sqrt{\frac{\pi}{a}}$$
