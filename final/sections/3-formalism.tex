@@ -1,4 +1,4 @@
-\section{3. PRINCIPLES OF QM} \hrule height 0.3pt \thinspace
+\section{3. PRINCIPLES OF QM} \hrule height 0.3pt 
 
 \subsection{\underline{Axiomatic principles}}
 
@@ -40,9 +40,11 @@ State vector is neither in position nor momentum space. Basis vectors: $|0 \rang
 % This is pretty self-explanatory
 
 \subsubsection{Dual vector space}
-\tiny
-$c|\psi \rangle$ is mapped to $c^* \langle \psi |$. Given a vector, $|\psi \rangle = \begin{bmatrix} : \\ \alpha \\ : \end{bmatrix}$, the dual vector is $\langle \psi | = \begin{bmatrix} \cdots & \alpha^* & \cdots \end{bmatrix}$.
-\scriptsize
+%\tiny
+$c|\psi \rangle$ is mapped to $c^* \langle \psi |$. 
+
+% Given a vector, $|\psi \rangle = \begin{bmatrix} : \\ \alpha \\ : \end{bmatrix}$, the dual vector is $\langle \psi | = \begin{bmatrix} \cdots & \alpha^* & \cdots \end{bmatrix}$.
+%\scriptsize
 
 Dual basis vectors are $\langle 0 | = \begin{bmatrix} 1 & 0 & \cdots \end{bmatrix}$, $\cdots$, $\langle n| \begin{bmatrix} 0 & \cdots & 1 \end{bmatrix}$.
 
@@ -97,7 +99,6 @@ Continuous condition: $\int da | a \rangle \langle a | = 1$
 \subsubsection{Gram-Schmidt orthogonalization procedure}
 
 Eigval (like energy level) is $n$-fold degenerate: $n$ states w same eigval.
-
 Orthogonal eigenstates $\rightarrow$ no degeneracy.
 
 1. Normalize each state and define $\alpha_i = \frac{\alpha_i}{\sqrt{\langle a_i | a_i \rangle}}$. 2. $|\alpha'_1 \rangle = | \alpha_1 \rangle$.
@@ -135,7 +136,6 @@ $[x, p] = i \hbar$
 Position and momentum operators in pos space: $\widehat{\vec{r}} = \vec{r}$, $\widehat{\vec{p}} = -i \hbar \vec{\grad}$.
 
 $\widehat{\vec{r}}$ is Hermitian and $\langle \phi | \widehat{\vec{r}}^{\dag} | \psi \rangle = \langle \phi | \widehat{\vec{r}} | \psi \rangle$.
-
 $\widehat{O}(\widehat{\vec{r}}, \widehat{\vec{p}}) = \widehat{O} (\vec{r}, -i \hbar \vec{\grad})$
 
 The expectation val of the observable should be indep of representation. In state $\psi(t)$, $\langle \widehat{O} \rangle = \langle \psi(t) | \widehat{O} | \psi(t) \rangle$.
@@ -149,8 +149,7 @@ $\langle \vec{r} | \widehat{O} | \psi(t) \rangle = \widehat{O} (\vec{r}, -i \hba
 \subsubsection{Operators and wavefunction in momentum representation}
 
 $\widehat{\vec{r}} = i \hbar \vec{\grad}_{\vec{p}}$, or in 1D, $\widehat{x} = i \hbar \pdv{}{p}$, $\widehat{\vec{p}} = \vec{p}$, where $\vec{p}^* = \vec{p}$.
-
-$\widehat{\vec{O}} (\widehat{\vec{r}}, \widehat{\vec{p}}) = \widehat{O} (i \hbar \vec{\grad}_{\vec{p}}, \vec{p})$
+$\widehat{\vec{O}} (\widehat{\vec{r}}, \widehat{\vec{p}}) = \widehat{O} (i \hbar \vec{\grad}_{\vec{p}}, \vec{p})$.
 
 $\langle \widehat{O} \rangle = \langle \psi(t) | \widehat{O} | \psi(t) \rangle$ $\rightarrow$ $\langle \widehat{O} \rangle = \int d^2 \vec{p} \langle \psi(t) | \vec{p} \rangle \langle \vec{p} | \widehat{O} | \psi(t) \rangle$.
 

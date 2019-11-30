@@ -1,10 +1,9 @@
 \section{2. Time-Independent Schr\"{o}dinger Equation} \hrule height 0.3pt \thinspace
 
 \subsection{\underline{2.1 Stationary States}}
-Suppose PE is independent of time, $V(\vec{r}, t) = V(\vec{r})$. \\
-Separation of variables: $\Psi(\vec{r}, t) = \psi(\vec{r}) \varphi(t)$ \\
-
-Eq of motion for $\varphi(t)$: $\varphi(t) = e^{-iEt/\hbar}$ \\
+Suppose PE is independent of time, $V(\vec{r}, t) = V(\vec{r})$.
+Sep of vars: $\Psi(\vec{r}, t) = \psi(\vec{r}) \varphi(t)$.
+Eq of motion for $\varphi(t)$: $\varphi(t) = e^{-iEt/\hbar}$
 
 Eq of motion for $\psi(\vec{r})$ is the TISE:
 $-\frac{\hbar^2 }{2m} \dv[2]{\psi(\vec{r})}{x} + V(\vec{r}) \psi(\vec{r}) = E \psi(\vec{r}) $
@@ -46,7 +45,10 @@ Properties of solutions for TI potentials:
     \item \textbf{Linearity.} \\
         The SE is linear. Given stationary states, a linear combo of these
             $$\psi(\vec{r}, t) = \sum_{n} c_n \psi_n(\vec{r}, t) = \sum_n c_n \psi_n(\vec{r}) e^{-\frac{i}{\hbar} E_n t}$$
-        where $c_n$ are complex constants, is a soln the TDSE 
+
+            \vspace{-5px}
+        
+            where $c_n$ are complex constants, is a soln the TDSE 
         $i \hbar \pdv{\psi(\vec{r}, t)}{t} = \widehat{H} \psi(\vec{r}, t)$
 
     \item \textbf{Time evolution.}
@@ -65,7 +67,7 @@ Properties of solutions for TI potentials:
 
 \vspace{-10pt}
 
-\textbf{Euler's formula}: $e^{i \theta} = \cos \theta + i \sin \theta$ \\
+%\textbf{Euler's formula}: $e^{i \theta} = \cos \theta + i \sin \theta$ \\
 \textbf{sin and cos}: $\cos(\theta) = \frac{1}{2}(e^{i \theta} + e^{-i \theta})$, $\sin(\theta) = \frac{1}{2}(e^{i \theta} - e^{-i \theta})$ \\
 
 %\textbf{Delta function}: Given $f(x)$, $\delta(x - x')$ is defined as $f(x') = \int f(x) \delta(x - x') dx$ \\
@@ -76,7 +78,7 @@ Properties of solutions for TI potentials:
 %    $\delta_{\alpha}(x) = \frac{\alpha}{\pi x^2} \sin^2 (\frac{x}{\alpha})$ \\
 
 \subsection{\underline{One-dimensional systems}}
-Wavefunction for a system containing a single particle of mass $m$ in 1D with TI potentials.
+Wavefn, mass $m$ with TI potentials.
     $- \frac{\hbar^2}{2m} \dv[2]{\psi(x)}{x} + V(x) \psi(x) = E \psi(x)$
 
 Time dependence: $\psi_E(x, t) = \psi_E(x) e^{-\frac{i}{\hbar} E t}$
@@ -106,10 +108,11 @@ For $0 \leq x \leq a$, $V(x) = 0$. The SE:
 Classic \textbf{simple harmonic oscillator}: $\psi(x) = A \sin(kx) + B \cos(kx)$ \\
 
 \textbf{Boundary conditions}: \\
-Continuity of $\psi(x)$ at $x = 0$ sets $\psi(0) = B = 0 \rightarrow \psi(x) = A \sin(kx)$ \\
+Continuity of $\psi(x)$ at $x = 0$ sets $\psi(0) = B = 0 \rightarrow \psi(x) = A \sin(kx)$
+
 at $x = a$ sets $\psi(a) = A \sin(ka) = 0$
 
-$$k_n = \frac{n \pi}{a}, n = 1,.. \quad \psi_n(x) = \sqrt{\frac{2}{a}} \sin(\frac{n \pi}{a} x) \quad E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{n^2 \pi^2 \hbar^2}{2ma^2}$$
+$k_n = \frac{n \pi}{a}, n = 1,.. \quad \psi_n(x) = \sqrt{\frac{2}{a}} \sin(\frac{n \pi}{a} x) \quad E_n = \frac{\hbar^2 k_n^2}{2m} = \frac{n^2 \pi^2 \hbar^2}{2ma^2}$
 
 %$\psi_1$ is the ground state, others are excited states. \\
 
@@ -125,7 +128,7 @@ They are complete, in the sense that any other function, $f(x)$, can be expresse
     $$f(x) = \sum_{n=1}^{\infty} c_n \psi_n(x) = \sqrt{\frac{2}{a}} \sum_{n=1}^{\infty} c_n \sin(\frac{n \pi}{a} x)$$
 
 Fourier's trick: $c_n = \int \psi_n(x)^* f(x) dx$
-$$c_m = \frac{2}{a} \int_0^a f(x) \sin(\frac{m \pi x}{a}) dx$$
+$c_m = \frac{2}{a} \int_0^a f(x) \sin(\frac{m \pi x}{a}) dx$
 
 $|c_n|^2$: probability that a measurement of the energy would yield the value $E_n$. \\
 
@@ -151,8 +154,7 @@ Boundary conditions: $\psi(-\infty) = 0, \qquad \psi(+\infty) = 0$
 Introduce $\xi \equiv \sqrt{\frac{m \omega}{\hbar}} x$.
 SE becomes $\dv[2]{\psi}{\xi} = (\xi^2 - K) \psi$, where $K \equiv \frac{2E}{\hbar \omega}$. \\
 
-\textit{\underline{2. Asymptotic behavior}} \\
-
+\textit{\underline{2. Asymptotic behavior}}.
 Working in the large $\xi^2 >> K$ region, \\
 \textbf{Hermite eqn}: $H''(\xi) - 2 \xi H'(\xi) + (K - 1) H(\xi) = 0$ \\
 
@@ -199,6 +201,8 @@ Rodrigues formula: $H_n(\xi) = (-1)^n e^{\xi^2} (\dv{}{\xi})^n e^{-\xi^2}$
 
 %\end{vwcol}
 
+\vspace{-0.5em}
+
 \subsection{\underline{2.4 The Free Particle}}
 $E > V(x)$ for all $x$, $V(x) = 0, -\infty < x < \infty$ \\
 
@@ -242,19 +246,18 @@ $V(x) = -\alpha \delta(x)$, where $\alpha$ is positive constant. $-\frac{\hbar^2
 
 \underline{$\textit{Bound states } (E < 0)$:} \\
 
-\textbf{REGION I}, $x < 0, V(x) = 0$ \\
+\textbf{REGION I}, $x < 0, V(x) = 0$, 
 $\dv[2]{\psi_{I}}{x} - \kappa^2 \psi_{I} = 0$, where $\kappa \equiv \frac{\sqrt{-2mE}}{\hbar}$. \\
 
-General sol: $\psi(x) = Ae^{-\kappa x} + Be^{\kappa x}$
-But $A = 0$, so $\psi(x) = Be^{-\kappa x}, (x < 0)$.
+General sol: $\psi(x) = Ae^{-\kappa x} + Be^{\kappa x}$.
+$A = 0$, so $\psi(x) = Be^{-\kappa x}, (x < 0)$.
 
 \textbf{REGION II}, $x > 0, V(x) = 0$
 $\psi(x) = Fe^{-\kappa x} + Ge^{\kappa x}$ \\
 But $G = 0$, so $\psi(x) = Fe^{-\kappa x}, (x > 0)$.
 
-The first boundary condition tells us that $F=B$, so
-
-$\psi(x) = \left\{ Be^{\kappa x}, (x \leq 0), \qquad Be^{-\kappa x}, (x \geq 0) \right\}$
+1st boundary cond: $F=B$.
+$\psi(x) = \left\{ Be^{\kappa x}, (x \leq 0), Be^{-\kappa x}, (x \geq 0) \right\}$
 
 %\begin{align*}
 %    \psi(x) = 
@@ -276,8 +279,7 @@ Taking the derivatives directly, $\psi'_{II}(0) - \psi'_{I}(0) = -\kappa F - \ka
 
 Only one $E$, so only one bound state.
 
-Normalizing: $1 = \int_{-\infty}^{0} B^2 e^{2 \kappa x} + \int_{0}^{\infty} B^2 e^{-2 \kappa x} = B^2 \frac{1}{2 \kappa} + B^2 \frac{1}{2 \kappa} = \frac{B^2}{\kappa}$, which gives $B = \sqrt{\kappa}$. \\
-
+Normalizing: $1 = \int_{-\infty}^{0} B^2 e^{2 \kappa x} + \int_{0}^{\infty} B^2 e^{-2 \kappa x} = B^2 \frac{1}{2 \kappa} + B^2 \frac{1}{2 \kappa} = \frac{B^2}{\kappa}$, which gives $B = \sqrt{\kappa}$. 
 The normalized wavefunction is: 
 \begin{align*}
 \psi(x) = 
@@ -289,10 +291,10 @@ The normalized wavefunction is:
 
 \underline{$\textit{Scattering states } (E > 0) \textit{ -- reflection and transmission}$:} \\
 
-For $x < 0$ the SE reads $$\dv[2]{\psi}{x} = -\frac{2mE}{\hbar^2} \psi = -k^2 \psi, \qquad k \equiv \frac{\sqrt{2mE}}{\hbar}$$
+For $x < 0$ the SE: $\dv[2]{\psi}{x} = -\frac{2mE}{\hbar^2} \psi = -k^2 \psi, \qquad k \equiv \frac{\sqrt{2mE}}{\hbar}$
 
-General sol is $\psi(x) = Ae^{ikx} + Be^{-ikx}$ \\
-For $x > 0$, $\psi(x) = Fe^{ikx} + Ge^{-ikx}$ \\
+General sol is $\psi(x) = Ae^{ikx} + Be^{-ikx}$.
+For $x > 0$, $\psi(x) = Fe^{ikx} + Ge^{-ikx}$
 
 Continuity of $\psi(x)$ at $x = 0$: $F+G=A+B$ \\
 
@@ -319,7 +321,7 @@ $T = \frac{J_{tra}}{J_{inc}} = \frac{\kappa}{k} |\frac{C}{A}|^2 = \frac{4k \kapp
 $R + T = 1$
 
 \subsection{\underline{Tunneling}}
-Consider a particle mass $m$ and energy $E < V_0$ approaching from the left a potential barrier of height $V_0$:
+Mass $m$ and energy $E < V_0$ approach from left a potential barrier of height $V_0$:
 $$V(x) = \left\{ V_0, -a < x < a; \quad 0, |x| > a \right\}$$
 
 $\psi_{I}(x) = Ae^{ikx} + Be^{-ikx}, \psi_{II}(x) = Ce^{\kappa x} + De^{-\kappa x}, \psi_{III}(x) = Fe^{ikx}$ \\
@@ -329,9 +331,12 @@ Applying continuity of $\psi(x)$ and $\psi'(x)$ at $x = \pm a$:
     $B = \frac{e^{-2iak}(e^{4a\kappa} - 1)(k^2 + \kappa^2)}{e^{4a\kappa} (k + i\kappa)^2 - (k - i \kappa)^2} A,$
     $C = ...A, D = ... A, F = ...A$
 
-Bc the speeds of particles in $I$ and $II$ are same, $T = |\frac{F}{A}|^2 = \frac{(2 k \kappa)^2}{(k^2 + \kappa^2)^2 \sinh^2(2\kappa a) + (2 k \kappa)^2}$
+Bc the speeds of particles in $I$ and $II$ are same, 
 
-$T \approx e^{-2 \gamma}$, where $\gamma = \int_{a}^{b} \sqrt{\frac{2m (V(x) - E)}{\hbar^2}} dx$
+\tiny
+$T = |\frac{F}{A}|^2 = \frac{(2 k \kappa)^2}{(k^2 + \kappa^2)^2 \sinh^2(2\kappa a) + (2 k \kappa)^2}$.
+$T \approx e^{-2 \gamma}$, $\gamma = \int_{a}^{b} \sqrt{\frac{2m (V(x) - E)}{\hbar^2}} dx$
+\scriptsize
 
 Lifetime of a particle of mass $m$ and energy $E$: \\
 Particle has velocity $v = \sqrt{\frac{2E}{m}}$ and bounced back and forth in the wall. When it hits the right wall, it has probability $T=e^{-2\gamma}$ for tunneling, where $\gamma = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}(b-a)$ ($b-a$ is width of well). It needs a number $N$ of bounces on the right wall st $NT \sim 1$ for it to tunnel. Therefore, $N \sim \frac{1}{T} = e^{2\gamma}$. The time interval btwn bounces off the right wall is $t = \frac{2a}{v}$ ($a$ is length to the left). Lifetime is $\tau \sim Nt = \frac{2a}{\sqrt{\frac{2E}{m}}} e^{2 \sqrt{\frac{2m(V_0 - E)}{\hbar^2}} (b-a)}$.
@@ -339,8 +344,8 @@ Particle has velocity $v = \sqrt{\frac{2E}{m}}$ and bounced back and forth in th
 \subsection{\underline{2.6 The Finite Square Well}}
 $V(x) = 
 \begin{cases}
-    -V_{0}, \quad \textrm{for } -a < x < a &\\
-    0, \qquad \textrm{ for } |x| > a &
+    -V_{0}, \quad \textrm{for } -a < x < a \qquad
+    0, \quad \textrm{ for } |x| > a &
 \end{cases}$
 
 %\vspace{-5em}
@@ -419,8 +424,7 @@ $V_{1}$ does not support an odd bound state, since there is no intersection pt, 
 % \medskip
 \hrule height 0.3pt \thinspace
 
-\textbf{Wide and deep well}:
-$z_n \approx \frac{n \pi}{2}, n = 1, 2, 3, ..., \quad E_n = -V_0 + \frac{\hbar^2 \pi^2 n^2}{2m(2a)^2}, n = 1, 2, ...$
+\textbf{Wide \& deep well}: $z_n \approx \frac{n \pi}{2}, n = 1, 2, .. . E_n = -V_0 + \frac{\hbar^2 \pi^2 n^2}{2m(2a)^2}, n = 1, 2, ..$
 
 Thus, the energy levels of the infinite square well of width $2a$ are reproduced for $E_n - (-V_0) = E_n + V_0$, which is the energy above the bottom of the well. As $V_0 \rightarrow \infty$, finite sq well goes to infinite sq well.
 
