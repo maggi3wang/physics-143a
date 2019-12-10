@@ -56,7 +56,7 @@ Properties of solutions for TI potentials:
         at time $t$, the time evolution is 
         $\psi(\vec{r}, t) = \sum_n c_n \psi_n(\vec{r}, t) = \sum_n c_n \psi_n(\vec{r}) e^{-\frac{i}{\hbar} E_n t}$
 
-        Once we've expanded a given initial wavefunction in terms of a linear combo of the stationary wavefunctions $\psi_n(\vec{r})$, the time evolution follows simply by putting a factor of $e^{-i/\hbar E_n t}$ to each term containing $\psi_n(\vec{r})$.
+        %Once we've expanded a given initial wavefunction in terms of a linear combo of the stationary wavefunctions $\psi_n(\vec{r})$, the time evolution follows simply by putting a factor of $e^{-i/\hbar E_n t}$ to each term containing $\psi_n(\vec{r})$.
 
     \item \textbf{Normalization.}
         The constant coefficients are constrained by $\sum_n |c_n|^2 = 1$
@@ -244,7 +244,7 @@ In particular, $\int_{-\infty}^{\infty} f(x) \delta(x-a) dx = f(a)$
 
 $V(x) = -\alpha \delta(x)$, where $\alpha$ is positive constant. $-\frac{\hbar^2}{2m} \dv[2]{\psi}{x} - \alpha \delta(x) \psi = E \psi$
 
-\underline{$\textit{Bound states } (E < 0)$:} \\
+\underline{$\textit{Bound states } (E < 0)$:} To solve for min $V_0$, set $E=0$ \\
 
 \textbf{REGION I}, $x < 0, V(x) = 0$, 
 $\dv[2]{\psi_{I}}{x} - \kappa^2 \psi_{I} = 0$, where $\kappa \equiv \frac{\sqrt{-2mE}}{\hbar}$. \\
@@ -270,14 +270,12 @@ $\psi(x) = \left\{ Be^{\kappa x}, (x \leq 0), Be^{-\kappa x}, (x \geq 0) \right\
 The discontinuity of $\psi'(x)$ across $x=0$ follows from 
 \begin{align*}
     \psi'_{II}(0) - \psi'_{I}(0) 
-    &= \lim_{\epsilon \rightarrow 0} \int_{-\epsilon}^{\epsilon} \psi''(x) dx = \lim_{\epsilon \rightarrow 0} \int_{-\epsilon}^{\epsilon} \frac{2m}{\hbar^2} (V(x) - E) \psi(x) dx \\
-    &= - \frac{2m}{\hbar^2} \int_{-\epsilon}^{\epsilon} \alpha \delta(x) \psi(x) dx = \frac{2m}{\hbar^2} \alpha \psi(0) = - \frac{2m}{\hbar^2} \alpha F
+    &= \lim_{\epsilon \rightarrow 0} \int_{0-\epsilon}^{0+\epsilon} \psi''(x) dx = \lim_{\epsilon \rightarrow 0} \int_{-\epsilon}^{\epsilon} \frac{2m}{\hbar^2} (V(x) - E) \psi(x) dx \\
+    &= - \frac{2m}{\hbar^2} \int_{-\epsilon}^{\epsilon} \alpha \delta(x-0) \psi(x) dx = \frac{2m}{\hbar^2} \alpha \psi(0) = - \frac{2m}{\hbar^2} \alpha F
 \end{align*}
 
-Taking the derivatives directly, $\psi'_{II}(0) - \psi'_{I}(0) = -\kappa F - \kappa B$. Therefore,
-    $\kappa F + \kappa B = \frac{2m}{\hbar^2} \alpha F \rightarrow \kappa = \frac{m \alpha}{\hbar^2} \rightarrow E = - \frac{m \alpha^2}{2 \hbar^2}$
-
-Only one $E$, so only one bound state.
+Derivatives directly: $\psi'_{II}(0) - \psi'_{I}(0) = -\kappa F - \kappa B$. Therefore,
+    $\kappa F + \kappa B = \frac{2m}{\hbar^2} \alpha F \rightarrow \kappa = \frac{m \alpha}{\hbar^2} \rightarrow E = - \frac{m \alpha^2}{2 \hbar^2}$. Only 1 $E \rightarrow$ 1 boundstate.
 
 Normalizing: $1 = \int_{-\infty}^{0} B^2 e^{2 \kappa x} + \int_{0}^{\infty} B^2 e^{-2 \kappa x} = B^2 \frac{1}{2 \kappa} + B^2 \frac{1}{2 \kappa} = \frac{B^2}{\kappa}$, which gives $B = \sqrt{\kappa}$. 
 The normalized wavefunction is: 

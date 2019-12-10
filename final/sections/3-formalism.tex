@@ -4,9 +4,9 @@
 
 \subsubsection{State vector axiom:} State vector at $t$ is ket $\psi(t)$, or $|\psi \rangle$.
 
-\subsubsection{Probability axiom:} Given a system in state $|\psi \rangle$, a measurement will find it in state $|\phi \rangle$ with probability amplitude $\langle \phi | \psi \rangle$. 
+\subsubsection{Probability axiom:} Given system in state $|\psi \rangle$, measurement will find it in state $|\phi \rangle$ with prob amplitude $\langle \phi | \psi \rangle$. $P(a_1) = P(a_1 | b_1)P(b_1) + P(a_1 | b_2) P(b_2)$.
 
-\subsubsection{Hermitian operator axiom:} Physical observable is represented by a linear and Hermitian operator.
+\subsubsection{Hermitian operator axiom:} Physical observable represented by linear \& HO.
 
 \subsubsection{Measurement axiom:} Measurement of a physical observable results in eigenvalue of observable. Observable $\widehat{A}$, we have $\widehat{A} | a \rangle = a | a \rangle$, where $a$ is eigenvalue and $|a \rangle$ is eigenvector. Measurement of physical quantity represented by $\widehat{A}$ collapses the state $|\psi \rangle$ before measurement into an eigenstate $|a \rangle$ of $\widehat{A}$.
 
@@ -146,6 +146,16 @@ $\psi(\vec{r}, t) = \langle \vec{r} | \psi(t) \rangle, \qquad \psi(\vec{r}, t)^*
 
 $\langle \vec{r} | \widehat{O} | \psi(t) \rangle = \widehat{O} (\vec{r}, -i \hbar \vec{\grad}) \psi(\vec{r}, t), \langle \vec{O} \rangle = \int d^3 \vec{r} \psi(\vec{r}, t)^* \vec{O}(\vec{r}, -i \hbar \vec{\grad}) \psi(\vec{r}, t)$
 
+\hrule height 0.3pt
+
+\tiny
+$\widehat{q} | q \rangle = q | q \rangle \rightarrow \langle x | \widehat{q} | q \rangle = q \langle x | q \rangle$,
+$\langle x | \widehat{q} | q \rangle = \langle x | c \widehat{x} + d \widehat{p} | q \rangle = (cx - i \hbar d \dv{}{x}) \langle x | q \rangle$
+
+$(cx - i\hbar d \dv{}{x}) < x | q > = q <x | q>$
+
+\scriptsize
+
 \subsubsection{Operators and wavefunction in momentum representation}
 
 $\widehat{\vec{r}} = i \hbar \vec{\grad}_{\vec{p}}$, or in 1D, $\widehat{x} = i \hbar \pdv{}{p}$, $\widehat{\vec{p}} = \vec{p}$, where $\vec{p}^* = \vec{p}$.
@@ -164,15 +174,14 @@ $i \hbar \pdv{}{t} | \psi(t) \rangle = \widehat{H} | \psi(t) \rangle$, where $\w
 \smallskip \hrule height 0.3pt
 
 \subsection{\underline{Commuting operators}}
-If $[\widehat{A}, \widehat{B}] = 0$ and the states are nondegenerate, $|\psi \rangle$ is a simultaneous eigenstate of $\widehat{A}$ and $\widehat{B}$.
+If $[\widehat{A}, \widehat{B}] = 0$ \& states are nondegener, $|\psi \rangle$ is a simultan. eigenstate of $\widehat{A}$ \& $\widehat{B}$.
 
 $|\psi \rangle = |ab \rangle$, and $\widehat{A} | ab \rangle = a | ab \rangle$, $\widehat{B} | ab \rangle = b | ab \rangle$
 
 \subsection{\underline{Non-commuting operators and the general uncertainty principle}}
 
-$(\Delta A)^2 (\Delta B)^2 \geq (\frac{1}{2i} \langle [ \widehat{A}, \widehat{B} ] \rangle)^2$
-
-Cannot construct simulatneous eigenstates (which correspond to definite eigenvalues) of non-commuting observables.
+$(\Delta A)^2 (\Delta B)^2 \geq (\frac{1}{2i} \langle [ \widehat{A}, \widehat{B} ] \rangle)^2$.
+Cannot construct simultaneous eigenstates (which correspond to definite eigenvalues) of non-commuting observables.
 
 \subsection{\underline{Time evolution of expectation value of an operator and Ehrenfest's theorem}}
 
