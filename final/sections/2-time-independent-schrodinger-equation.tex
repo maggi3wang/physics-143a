@@ -127,7 +127,7 @@ $k_n = \frac{n \pi}{a}, n = 1,.. \quad \psi_n(x) = \sqrt{\frac{2}{a}} \sin(\frac
 They are complete, in the sense that any other function, $f(x)$, can be expressed as a linear combination of them (Fourier series), Dirichlet's theorem:
     $$f(x) = \sum_{n=1}^{\infty} c_n \psi_n(x) = \sqrt{\frac{2}{a}} \sum_{n=1}^{\infty} c_n \sin(\frac{n \pi}{a} x)$$
 
-Fourier's trick: $c_n = \int \psi_n(x)^* f(x) dx$
+Fourier's trick: $c_n = \int \psi_n(x)^* f(x) dx$, 
 $c_m = \frac{2}{a} \int_0^a f(x) \sin(\frac{m \pi x}{a}) dx$
 
 $|c_n|^2$: probability that a measurement of the energy would yield the value $E_n$. \\
@@ -339,7 +339,7 @@ $T \approx e^{-2 \gamma}$, $\gamma = \int_{a}^{b} \sqrt{\frac{2m (V(x) - E)}{\hb
 \scriptsize
 
 Lifetime of a particle of mass $m$ and energy $E$: \\
-Particle has velocity $v = \sqrt{\frac{2E}{m}}$ and bounced back and forth in the wall. When it hits the right wall, it has probability $T=e^{-2\gamma}$ for tunneling, where $\gamma = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}(b-a)$ ($b-a$ is width of well). It needs a number $N$ of bounces on the right wall st $NT \sim 1$ for it to tunnel. Therefore, $N \sim \frac{1}{T} = e^{2\gamma}$. The time interval btwn bounces off the right wall is $t = \frac{2a}{v}$ ($a$ is length to the left). Lifetime is $\tau \sim Nt = \frac{2a}{\sqrt{\frac{2E}{m}}} e^{2 \sqrt{\frac{2m(V_0 - E)}{\hbar^2}} (b-a)}$.
+Particle has velocity $v = \sqrt{\frac{2(E-0)}{m}}$ and bounced back and forth in the wall. When it hits the right wall, it has probability $T=e^{-2\gamma}$ for tunneling, where $\gamma = \sqrt{\frac{2m(V_0 - E)}{\hbar^2}}(b-a)$ ($b-a$ is width of finite barrier). It needs a number $N$ of bounces on the right wall st $NT \sim 1$ for it to tunnel. Therefore, $N \sim \frac{1}{T} = e^{2\gamma}$. The time interval btwn bounces off the right wall is $t = \frac{2a}{v}$ ($a$ is length to the left). Lifetime is $\tau \sim Nt = \frac{2a}{\sqrt{\frac{2(E-0)}{m}}} e^{2 \sqrt{\frac{2m(V_0 - E)}{\hbar^2}} (b-a)}$.
 
 \subsection{\underline{2.6 The Finite Square Well}}
 $V(x) = 

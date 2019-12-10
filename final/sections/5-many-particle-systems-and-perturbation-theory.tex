@@ -89,6 +89,11 @@ $\Psi_{\textrm{tot}-} = \Psi(\vec{r}_1, \vec{r}_2)_{-} \chi(1, 2)_{+}$, antisym,
 
 $\Psi_{\textrm{tot}-}(q_1, q_2) = \frac{1}{\sqrt{2}}(\psi_{100}(\vec{r}_1 - \vec{r}_0) \psi_{100}(\vec{r}_2 + \vec{r}_0) + \psi_{100}(\vec{r}_1 + \vec{r}_0) \psi_{100}(\vec{r}_2 - \vec{r}_0)) = \frac{1}{\sqrt{2}} (|\frac{1}{2} \frac{1}{2} (1) \rangle | \frac{1}{2} -\frac{1}{2} (2) \rangle - | \frac{1}{2} -\frac{1}{2}(1) \rangle | \frac{1}{2} \frac{1}{2} (2) \rangle)$
 
+\tiny
+He: electrons are fermions, antisym under exch. $\psi_{100}(r, \theta, \phi) = \sqrt{\frac{Z^3}{\pi a^3} e^{-\frac{Zr}{a}}}$, $Z=2$, where $a$ is Bohr radius. Slater det, $\psi_{100}(\vec{r}_1) \psi_{100}(\vec{r}_2) \frac{1}{\sqrt{2}} (\chi_{\frac{1}{2} \frac{1}{2}} (1) \chi_{\frac{1}{2} -\frac{1}{2}} (2) - \chi_{\frac{1}{2} -\frac{1}{2}}(1) \chi_{\frac{1}{2} \frac{1}{2}} (2))$
+
+\scriptsize
+
 \hrule height 0.07pt
 
 $d$-fold degen., energy level occupied by $N > 2d$ num of spin-half id fermions $\rightarrow$ color.
@@ -97,7 +102,7 @@ $d$-fold degen., energy level occupied by $N > 2d$ num of spin-half id fermions 
 
 \subsection{\underline{5.3 Perturbation theory}}
 
-Time-dependent Hamiltonian $\widehat{H}_0$ with known wavefunctions $|\psi_a^{(0)}\rangle$ and energies $E_a^{(0)}$, $\widehat{H}_0 |\phi_a^{(0)} \rangle = E_a^{(0)} | \psi_a^{(0)} \rangle$
+Time-dependent Hamiltonian $\widehat{H}_0$ with known wavefunctions $|\psi_a^{(0)}\rangle$ and energies $E_a^{(0)}$, $\widehat{H}_0 |\psi_a^{(0)} \rangle = E_a^{(0)} | \psi_a^{(0)} \rangle$
 
 SE w new Hamiltonian: $i \hbar \pdv{}{t} | \psi_n \rangle = (\widehat{H}_0 + \widehat{H}'(t) | \psi_n \rangle$. We call $\widehat{H}_0$ the unperturbed Hamiltonian and $\widehat{H}'(t)$ the perturbation, which could be time-dep.
 
@@ -131,7 +136,7 @@ $a \neq n$, $E_n^{(0)} - E_a^{(0)} \neq 0$, $\delta_{an} = 0$.
 
 $E_n = E_n^{(0)} + H'_{nm}$, $|\psi_n \rangle = | \psi_n^{(0)} - \sum_{m \neq n} \frac{H'_{mn}}{E^{(0)}_m - E^{(0)}_n} | \psi_m^{(0)} \rangle$
 
-$|\frac{H'_{mn}}{E_m^{(0)} - E_n^{(0)}}| << 1$, matrix elements of the perturbation btwn the unperturbed states must be much smaller than the diff btwn corresponding unpert. E's. 
+$|\frac{H'_{mn}}{E_m^{(0)} - E_n^{(0)}}| << 1$, $|\langle m | \widehat{H}' | n \rangle | << |E_n^{(0)} - E_m^{(0)}|$, $\alpha (\frac{\hbar}{m \omega})^2 (n+1)^2 << \hbar \omega$ matrix elements of the perturb. btwn the unpert. states must be much smaller than the diff btwn corresponding unpert. E's. 
 
 \textbf{Second order}:
 $E_n = E_n^{(0)} + H'_{nn} - \sum_{m \neq n} \frac{|H'_{mn}|^2}{E_m^{(0)} - E_n^{(0)}}$
@@ -162,7 +167,9 @@ Relativistic energy of the electron: $E = mc^2 \sqrt{1 + \frac{\vec{p}^2}{m^2 c^
 
 $E = mc^2(1 + \frac{1}{2} \frac{\vec{p}^2}{m^2 c^2} - \frac{1}{2}\frac{1}{2}\frac{1}{2} (\frac{\vec{p}^2}{m^2 c^2})^2 + \dots) = mc^2 + \frac{\vec{p}^2}{2m} - \frac{\vec{p}^4}{8m^3c^4} + \dots$
 
-KE perturbation: $\widehat{H}_k = -\frac{\widehat{\vec{p}}^4}{8 m^3 c^4}$
+KE perturbation: $\widehat{H}_k = -\frac{\widehat{\vec{p}}^4}{8 m^3 c^4}$, all commute bc $|\vec{p}|$ is invar under rot.
+
+Use $\widehat{H} = E_n = \frac{\widehat{p}^2}{2m} + \widehat{V}(r) \rightarrow \widehat{p}^2 = 2m(E_n - \widehat{V}(r))$
 
 \subsubsection{Spin-orbit correction}
 
@@ -175,8 +182,17 @@ Thomas precession: electron is rotating and accelerating around tne nucleus, and
 $\widehat{H}_{\textrm{SO}} = \frac{1}{2m^2c^2 r} \dv{\widehat{V}}{r} \widehat{\vec{L}} \cdot \widehat{\vec{S}}$. For hydrogenic atoms, $\widehat{V} = -\frac{Ze^2}{4 \pi \epsilon_0 r}$ and $\dv{\widehat{V}}{r} = \frac{Ze^2}{4 \pi \epsilon_0 r^2}$
 $\rightarrow \widehat{H}_{\textrm{SO}} = \frac{Ze^2}{8 \pi \epsilon_0 m^2 c^2 r^3} \widehat{\vec{L}} \cdot \widehat{\vec{S}}$
 
+Use $J=L+S$, $\widehat{\vec{L}} \cdot \widehat{\vec{S}} = \frac{1}{2} (\widehat{\vec{J}}^2 - \widehat{\vec{L}}^2 - \widehat{\vec{S}}^2)$. Doesn't commute w $L$, $S$.
+
+$\langle n(l,s)j,m_j|..|n(l,s)j, m_j\rangle$
+
+$\frac{1}{4} mc^2 Z^4 \alpha^4 \frac{1}{n^3 j(j+\frac{1}{2})}$ for $j=l+\frac{1}{2}$, $-\frac{1}{4} mc^2 Z^4 \alpha^4 \frac{1}{n^3 (j+\frac{1}{2}(j+1)}$ for $j=l - \frac{1}{2}$, $l\neq 0$
+
 \subsubsection{Darwin correction}
 
 For states with $l=0$, no orbital angular momentum, no spin-orbit interaction.
 $\widehat{H}_D = \frac{\hbar^2 Z e^2}{8 m^2 c^2 \epsilon_0} \delta^3 (\vec{r})$
 
+Invariant under rot and does not contain spin, commutes w all given operators.
+
+$E_{n00}^{(1)} = \langle \psi_{n00} | \delta H_D | \psi_{n00} \rangle = \frac{\pi}{2} \frac{e^2 \hbar^2}{m^2 c^2} |\psi_{n00}(0)|^2 = \frac{1}{2} mc^2 Z^4 \alpha^4 \frac{1}{n^3}$
